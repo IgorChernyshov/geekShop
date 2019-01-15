@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9C04368F21E9D4EC00EF8C71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04368E21E9D4EC00EF8C71 /* AppDelegate.swift */; };
-		9C04369121E9D4EC00EF8C71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04369021E9D4EC00EF8C71 /* ViewController.swift */; };
-		9C04369421E9D4EC00EF8C71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C04369221E9D4EC00EF8C71 /* Main.storyboard */; };
 		9C04369621E9D4EE00EF8C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C04369521E9D4EE00EF8C71 /* Assets.xcassets */; };
 		9C04369921E9D4EE00EF8C71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C04369721E9D4EE00EF8C71 /* LaunchScreen.storyboard */; };
 		9C0436A421E9D4EE00EF8C71 /* geekShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0436A321E9D4EE00EF8C71 /* geekShopTests.swift */; };
@@ -28,8 +26,6 @@
 /* Begin PBXFileReference section */
 		9C04368B21E9D4EC00EF8C71 /* geekShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geekShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C04368E21E9D4EC00EF8C71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C04369021E9D4EC00EF8C71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9C04369321E9D4EC00EF8C71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C04369521E9D4EE00EF8C71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C04369821E9D4EE00EF8C71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C04369A21E9D4EE00EF8C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,12 +73,10 @@
 		9C04368D21E9D4EC00EF8C71 /* geekShop */ = {
 			isa = PBXGroup;
 			children = (
-				9C04368E21E9D4EC00EF8C71 /* AppDelegate.swift */,
-				9C04369021E9D4EC00EF8C71 /* ViewController.swift */,
-				9C04369221E9D4EC00EF8C71 /* Main.storyboard */,
-				9C04369521E9D4EE00EF8C71 /* Assets.xcassets */,
-				9C04369721E9D4EE00EF8C71 /* LaunchScreen.storyboard */,
-				9C04369A21E9D4EE00EF8C71 /* Info.plist */,
+				9C0436AE21E9DC1D00EF8C71 /* App */,
+				9C0436B321E9DC6700EF8C71 /* Core */,
+				9C0436B521E9DC8500EF8C71 /* Environments */,
+				9C0436B421E9DC7700EF8C71 /* Resources */,
 			);
 			path = geekShop;
 			sourceTree = "<group>";
@@ -94,6 +88,70 @@
 				9C0436A521E9D4EE00EF8C71 /* Info.plist */,
 			);
 			path = geekShopTests;
+			sourceTree = "<group>";
+		};
+		9C0436AE21E9DC1D00EF8C71 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9C04368E21E9D4EC00EF8C71 /* AppDelegate.swift */,
+				9C0436B121E9DC5100EF8C71 /* Assembly */,
+				9C0436AF21E9DC3300EF8C71 /* BusinessLogic */,
+				9C0436B021E9DC4400EF8C71 /* Entity */,
+				9C0436B221E9DC5A00EF8C71 /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9C0436AF21E9DC3300EF8C71 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		9C0436B021E9DC4400EF8C71 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9C0436B121E9DC5100EF8C71 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		9C0436B221E9DC5A00EF8C71 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		9C0436B321E9DC6700EF8C71 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9C0436B421E9DC7700EF8C71 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C04369521E9D4EE00EF8C71 /* Assets.xcassets */,
+				9C04369721E9D4EE00EF8C71 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C0436B521E9DC8500EF8C71 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				9C04369A21E9D4EE00EF8C71 /* Info.plist */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +237,6 @@
 			files = (
 				9C04369921E9D4EE00EF8C71 /* LaunchScreen.storyboard in Resources */,
 				9C04369621E9D4EE00EF8C71 /* Assets.xcassets in Resources */,
-				9C04369421E9D4EC00EF8C71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C04369121E9D4EC00EF8C71 /* ViewController.swift in Sources */,
 				9C04368F21E9D4EC00EF8C71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +277,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9C04369221E9D4EC00EF8C71 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C04369321E9D4EC00EF8C71 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9C04369721E9D4EE00EF8C71 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73YFFUD89Y;
-				INFOPLIST_FILE = geekShop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/geekShop/Environments/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73YFFUD89Y;
-				INFOPLIST_FILE = geekShop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/geekShop/Environments/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
