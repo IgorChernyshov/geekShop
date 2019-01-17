@@ -12,16 +12,17 @@
 		9C04369621E9D4EE00EF8C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C04369521E9D4EE00EF8C71 /* Assets.xcassets */; };
 		9C04369921E9D4EE00EF8C71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C04369721E9D4EE00EF8C71 /* LaunchScreen.storyboard */; };
 		9C0436A421E9D4EE00EF8C71 /* geekShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0436A321E9D4EE00EF8C71 /* geekShopTests.swift */; };
-		9C17BC9D21EF437F00F5760B /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BC9C21EF437F00F5760B /* AbstractErrorParser.swift */; };
-		9C17BC9F21EF4A3300F5760B /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BC9E21EF4A3300F5760B /* ErrorParser.swift */; };
-		9C17BCA121EF4AC400F5760B /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCA021EF4AC400F5760B /* DataRequest.swift */; };
-		9C17BCA321EF55B800F5760B /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCA221EF55B800F5760B /* RequestRouter.swift */; };
-		9C17BCA521EF652C00F5760B /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCA421EF652C00F5760B /* LoginResult.swift */; };
-		9C17BCA821EF660800F5760B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCA721EF660800F5760B /* User.swift */; };
-		9C17BCAA21EF66C300F5760B /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCA921EF66C300F5760B /* AuthRequestFactory.swift */; };
-		9C17BCAC21EF674C00F5760B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCAB21EF674C00F5760B /* Auth.swift */; };
-		9C17BCAE21EF6E2000F5760B /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCAD21EF6E2000F5760B /* RequestFactory.swift */; };
-		9C17BCB021F0DDA300F5760B /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCAF21F0DDA300F5760B /* AbstractRequestFactory.swift */; };
+		9C17BCB221F0E02400F5760B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB121F0E02400F5760B /* AuthService.swift */; };
+		9C17BCB421F0E10000F5760B /* AuthServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB321F0E10000F5760B /* AuthServiceImplementation.swift */; };
+		9C17BCB621F0E32900F5760B /* NetworkServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB521F0E32900F5760B /* NetworkServiceFactory.swift */; };
+		9C17BCB821F0E51500F5760B /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB721F0E51500F5760B /* LoginRequest.swift */; };
+		9C17BCBA21F0E59100F5760B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB921F0E59100F5760B /* LoginResponse.swift */; };
+		9C17BCBC21F0E5A300F5760B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCBB21F0E5A300F5760B /* User.swift */; };
+		9C17BCBE21F0E68400F5760B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCBD21F0E68400F5760B /* NetworkService.swift */; };
+		9C17BCC021F0E70000F5760B /* NetworkServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCBF21F0E70000F5760B /* NetworkServiceImplementation.swift */; };
+		9C17BCC221F0E83400F5760B /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCC121F0E83400F5760B /* ErrorParser.swift */; };
+		9C17BCC421F0E85300F5760B /* ErrorParserImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCC321F0E85300F5760B /* ErrorParserImplementation.swift */; };
+		9C17BCC621F0E89E00F5760B /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCC521F0E89E00F5760B /* RequestRouter.swift */; };
 		F06E92415FDA6CC939DD1AE2 /* Pods_geekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D553FD623A74914BB23EC442 /* Pods_geekShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,16 +47,17 @@
 		9C04369F21E9D4EE00EF8C71 /* geekShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geekShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0436A321E9D4EE00EF8C71 /* geekShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geekShopTests.swift; sourceTree = "<group>"; };
 		9C0436A521E9D4EE00EF8C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C17BC9C21EF437F00F5760B /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
-		9C17BC9E21EF4A3300F5760B /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
-		9C17BCA021EF4AC400F5760B /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
-		9C17BCA221EF55B800F5760B /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
-		9C17BCA421EF652C00F5760B /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
-		9C17BCA721EF660800F5760B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		9C17BCA921EF66C300F5760B /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
-		9C17BCAB21EF674C00F5760B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
-		9C17BCAD21EF6E2000F5760B /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
-		9C17BCAF21F0DDA300F5760B /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
+		9C17BCB121F0E02400F5760B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		9C17BCB321F0E10000F5760B /* AuthServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceImplementation.swift; sourceTree = "<group>"; };
+		9C17BCB521F0E32900F5760B /* NetworkServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceFactory.swift; sourceTree = "<group>"; };
+		9C17BCB721F0E51500F5760B /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		9C17BCB921F0E59100F5760B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		9C17BCBB21F0E5A300F5760B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9C17BCBD21F0E68400F5760B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9C17BCBF21F0E70000F5760B /* NetworkServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceImplementation.swift; sourceTree = "<group>"; };
+		9C17BCC121F0E83400F5760B /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		9C17BCC321F0E85300F5760B /* ErrorParserImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParserImplementation.swift; sourceTree = "<group>"; };
+		9C17BCC521F0E89E00F5760B /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		A132F36D29C040C416B6F9FC /* Pods-geekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geekShop/Pods-geekShop.debug.xcconfig"; sourceTree = "<group>"; };
 		AC7FC375208E0E35C5D2671C /* Pods-geekShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-geekShop/Pods-geekShop.release.xcconfig"; sourceTree = "<group>"; };
 		D553FD623A74914BB23EC442 /* Pods_geekShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geekShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,13 +202,11 @@
 		9C17BC9B21EF434100F5760B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9C17BC9C21EF437F00F5760B /* AbstractErrorParser.swift */,
-				9C17BC9E21EF4A3300F5760B /* ErrorParser.swift */,
-				9C17BCA021EF4AC400F5760B /* DataRequest.swift */,
-				9C17BCAF21F0DDA300F5760B /* AbstractRequestFactory.swift */,
-				9C17BCA221EF55B800F5760B /* RequestRouter.swift */,
-				9C17BCA421EF652C00F5760B /* LoginResult.swift */,
-				9C17BCA721EF660800F5760B /* User.swift */,
+				9C17BCBD21F0E68400F5760B /* NetworkService.swift */,
+				9C17BCBF21F0E70000F5760B /* NetworkServiceImplementation.swift */,
+				9C17BCC121F0E83400F5760B /* ErrorParser.swift */,
+				9C17BCC321F0E85300F5760B /* ErrorParserImplementation.swift */,
+				9C17BCC521F0E89E00F5760B /* RequestRouter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -214,9 +214,12 @@
 		9C17BCA621EF65D600F5760B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9C17BCA921EF66C300F5760B /* AuthRequestFactory.swift */,
-				9C17BCAB21EF674C00F5760B /* Auth.swift */,
-				9C17BCAD21EF6E2000F5760B /* RequestFactory.swift */,
+				9C17BCB121F0E02400F5760B /* AuthService.swift */,
+				9C17BCB321F0E10000F5760B /* AuthServiceImplementation.swift */,
+				9C17BCB521F0E32900F5760B /* NetworkServiceFactory.swift */,
+				9C17BCB721F0E51500F5760B /* LoginRequest.swift */,
+				9C17BCB921F0E59100F5760B /* LoginResponse.swift */,
+				9C17BCBB21F0E5A300F5760B /* User.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -392,17 +395,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C17BCB021F0DDA300F5760B /* AbstractRequestFactory.swift in Sources */,
-				9C17BCA521EF652C00F5760B /* LoginResult.swift in Sources */,
+				9C17BCB421F0E10000F5760B /* AuthServiceImplementation.swift in Sources */,
+				9C17BCB821F0E51500F5760B /* LoginRequest.swift in Sources */,
+				9C17BCC421F0E85300F5760B /* ErrorParserImplementation.swift in Sources */,
+				9C17BCBE21F0E68400F5760B /* NetworkService.swift in Sources */,
+				9C17BCBA21F0E59100F5760B /* LoginResponse.swift in Sources */,
 				9C04368F21E9D4EC00EF8C71 /* AppDelegate.swift in Sources */,
-				9C17BCA321EF55B800F5760B /* RequestRouter.swift in Sources */,
-				9C17BC9F21EF4A3300F5760B /* ErrorParser.swift in Sources */,
-				9C17BC9D21EF437F00F5760B /* AbstractErrorParser.swift in Sources */,
-				9C17BCA121EF4AC400F5760B /* DataRequest.swift in Sources */,
-				9C17BCAE21EF6E2000F5760B /* RequestFactory.swift in Sources */,
-				9C17BCAA21EF66C300F5760B /* AuthRequestFactory.swift in Sources */,
-				9C17BCA821EF660800F5760B /* User.swift in Sources */,
-				9C17BCAC21EF674C00F5760B /* Auth.swift in Sources */,
+				9C17BCC221F0E83400F5760B /* ErrorParser.swift in Sources */,
+				9C17BCB221F0E02400F5760B /* AuthService.swift in Sources */,
+				9C17BCC621F0E89E00F5760B /* RequestRouter.swift in Sources */,
+				9C17BCC021F0E70000F5760B /* NetworkServiceImplementation.swift in Sources */,
+				9C17BCB621F0E32900F5760B /* NetworkServiceFactory.swift in Sources */,
+				9C17BCBC21F0E5A300F5760B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
