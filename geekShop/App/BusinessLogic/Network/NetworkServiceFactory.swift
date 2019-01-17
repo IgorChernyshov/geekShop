@@ -35,4 +35,16 @@ class NetworkServiceFactory {
   func makeAuthService() -> AuthService {
     return AuthServiceImplementation(baseURL: baseUrl, networkService: makeNetworkService())
   }
+  
+  func makeRegisterService() -> RegisterService {
+    return RegisterServiceImplementation(baseURL: baseUrl, networkService: makeNetworkService())
+  }
+  
+  func makeLogoutService() -> LogoutService {
+    return LogoutServiceImplementation(baseURL: baseUrl, networkService: makeNetworkService())
+  }
+  
+  func makeChangeUserDataService() -> ChangeUserDataService {
+    return ChangeUserDataServiceImplementation(baseURL: baseUrl, networkService: makeNetworkService())
+  }
 }

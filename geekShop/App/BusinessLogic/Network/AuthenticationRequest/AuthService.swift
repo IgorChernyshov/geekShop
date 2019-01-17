@@ -9,6 +9,6 @@
 import Foundation
 
 protocol AuthService {
-  // Class that implement this protocol must have this method implementation
+  // Class that implements this protocol must have this method implemented
   func login(login: String, password: String, completion: @escaping (User?) -> Void)
 }
