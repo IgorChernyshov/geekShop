@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+enum AppError: Error {
+  case serverError
+}
+
 protocol ErrorParser {
   func parse(_ result: Error) -> Error
   func parse(_ request: URLRequest?, _ response: HTTPURLResponse, _ data: Data?) -> Request.ValidationResult
