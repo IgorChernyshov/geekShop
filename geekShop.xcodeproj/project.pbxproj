@@ -29,6 +29,7 @@
 		9C17BCDC21F1012F00F5760B /* ChangeUserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCDB21F1012F00F5760B /* ChangeUserDataService.swift */; };
 		9C17BCE021F1068100F5760B /* ChangeUserDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCDF21F1068100F5760B /* ChangeUserDataRequest.swift */; };
 		9C17BCE221F1075900F5760B /* ChangeUserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCE121F1075900F5760B /* ChangeUserDataResponse.swift */; };
+		9C17BCE521F44F7100F5760B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCE421F44F7100F5760B /* Configuration.swift */; };
 		F06E92415FDA6CC939DD1AE2 /* Pods_geekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D553FD623A74914BB23EC442 /* Pods_geekShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		9C17BCDB21F1012F00F5760B /* ChangeUserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataService.swift; sourceTree = "<group>"; };
 		9C17BCDF21F1068100F5760B /* ChangeUserDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataRequest.swift; sourceTree = "<group>"; };
 		9C17BCE121F1075900F5760B /* ChangeUserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataResponse.swift; sourceTree = "<group>"; };
+		9C17BCE421F44F7100F5760B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A132F36D29C040C416B6F9FC /* Pods-geekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geekShop/Pods-geekShop.debug.xcconfig"; sourceTree = "<group>"; };
 		AC7FC375208E0E35C5D2671C /* Pods-geekShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-geekShop/Pods-geekShop.release.xcconfig"; sourceTree = "<group>"; };
 		D553FD623A74914BB23EC442 /* Pods_geekShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geekShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				9C04369A21E9D4EE00EF8C71 /* Info.plist */,
+				9C17BCE421F44F7100F5760B /* Configuration.swift */,
 			);
 			path = Environments;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				9C17BCE021F1068100F5760B /* ChangeUserDataRequest.swift in Sources */,
 				9C17BCD721F0FE4800F5760B /* LogoutRequest.swift in Sources */,
 				9C17BCB821F0E51500F5760B /* LoginRequest.swift in Sources */,
+				9C17BCE521F44F7100F5760B /* Configuration.swift in Sources */,
 				9C17BCD921F0FE7F00F5760B /* LogoutResponse.swift in Sources */,
 				9C17BCCC21F0F9FE00F5760B /* RegisterRequest.swift in Sources */,
 				9C17BCBE21F0E68400F5760B /* NetworkService.swift in Sources */,
