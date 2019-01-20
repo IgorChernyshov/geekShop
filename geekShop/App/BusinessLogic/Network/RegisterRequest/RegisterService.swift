@@ -9,6 +9,26 @@
 import Foundation
 
 protocol RegisterService {
-  // Class that implements this protocol must have this method implemented
   func register(login: String, password: String, email: String, completion: @escaping (RegisterResponse?) -> Void)
+}
+
+class RegisterServiceImplementation: RegisterService {
+  
+  let baseURL: URL
+  let networkService: NetworkService
+  
+  init(
+    baseURL: URL,
+    networkService: NetworkService) {
+    
+    self.baseURL = baseURL
+    self.networkService = networkService
+  }
+  
+  func register(login: String, password: String, email: String, completion: @escaping (RegisterResponse?) -> Void) {
+    let request = RegisterRequest(baseURL: baseURL, login: login, password: password, email: email)
+    networkService.request(request) { (response: RegisterResponse?) in
+      completion(response)
+    }
+  }
 }

@@ -9,6 +9,26 @@
 import Foundation
 
 protocol AuthService {
-  // Class that implements this protocol must have this method implemented
   func login(login: String, password: String, completion: @escaping (User?) -> Void)
+}
+
+class AuthServiceImplementation: AuthService {
+  
+  let baseURL: URL
+  let networkService: NetworkService
+  
+  init(
+    baseURL: URL,
+    networkService: NetworkService) {
+    
+    self.baseURL = baseURL
+    self.networkService = networkService
+  }
+  
+  func login(login: String, password: String, completion: @escaping (User?) -> Void) {
+    let request = LoginRequest(baseURL: baseURL, login: login, password: password)
+    networkService.request(request) { (response: LoginResponse?) in
+      completion(response?.user)
+    }
+  }
 }

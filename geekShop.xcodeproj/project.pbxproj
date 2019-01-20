@@ -13,7 +13,6 @@
 		9C04369921E9D4EE00EF8C71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C04369721E9D4EE00EF8C71 /* LaunchScreen.storyboard */; };
 		9C0436A421E9D4EE00EF8C71 /* geekShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0436A321E9D4EE00EF8C71 /* geekShopTests.swift */; };
 		9C17BCB221F0E02400F5760B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB121F0E02400F5760B /* AuthService.swift */; };
-		9C17BCB421F0E10000F5760B /* AuthServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB321F0E10000F5760B /* AuthServiceImplementation.swift */; };
 		9C17BCB621F0E32900F5760B /* NetworkServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB521F0E32900F5760B /* NetworkServiceFactory.swift */; };
 		9C17BCB821F0E51500F5760B /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB721F0E51500F5760B /* LoginRequest.swift */; };
 		9C17BCBA21F0E59100F5760B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCB921F0E59100F5760B /* LoginResponse.swift */; };
@@ -21,18 +20,14 @@
 		9C17BCBE21F0E68400F5760B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCBD21F0E68400F5760B /* NetworkService.swift */; };
 		9C17BCC021F0E70000F5760B /* NetworkServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCBF21F0E70000F5760B /* NetworkServiceImplementation.swift */; };
 		9C17BCC221F0E83400F5760B /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCC121F0E83400F5760B /* ErrorParser.swift */; };
-		9C17BCC421F0E85300F5760B /* ErrorParserImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCC321F0E85300F5760B /* ErrorParserImplementation.swift */; };
 		9C17BCC621F0E89E00F5760B /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCC521F0E89E00F5760B /* RequestRouter.swift */; };
 		9C17BCC821F0F85A00F5760B /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCC721F0F85A00F5760B /* RegisterService.swift */; };
-		9C17BCCA21F0F86900F5760B /* RegisterServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCC921F0F86900F5760B /* RegisterServiceImplementation.swift */; };
 		9C17BCCC21F0F9FE00F5760B /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCCB21F0F9FE00F5760B /* RegisterRequest.swift */; };
 		9C17BCD021F0FAAD00F5760B /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCCF21F0FAAD00F5760B /* RegisterResponse.swift */; };
 		9C17BCD321F0FDBB00F5760B /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCD221F0FDBB00F5760B /* LogoutService.swift */; };
-		9C17BCD521F0FDE400F5760B /* LogoutServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCD421F0FDE400F5760B /* LogoutServiceImplementation.swift */; };
 		9C17BCD721F0FE4800F5760B /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCD621F0FE4800F5760B /* LogoutRequest.swift */; };
 		9C17BCD921F0FE7F00F5760B /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCD821F0FE7F00F5760B /* LogoutResponse.swift */; };
 		9C17BCDC21F1012F00F5760B /* ChangeUserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCDB21F1012F00F5760B /* ChangeUserDataService.swift */; };
-		9C17BCDE21F103F200F5760B /* ChangeUserDataServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCDD21F103F200F5760B /* ChangeUserDataServiceImplementation.swift */; };
 		9C17BCE021F1068100F5760B /* ChangeUserDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCDF21F1068100F5760B /* ChangeUserDataRequest.swift */; };
 		9C17BCE221F1075900F5760B /* ChangeUserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17BCE121F1075900F5760B /* ChangeUserDataResponse.swift */; };
 		F06E92415FDA6CC939DD1AE2 /* Pods_geekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D553FD623A74914BB23EC442 /* Pods_geekShop.framework */; };
@@ -60,7 +55,6 @@
 		9C0436A321E9D4EE00EF8C71 /* geekShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geekShopTests.swift; sourceTree = "<group>"; };
 		9C0436A521E9D4EE00EF8C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C17BCB121F0E02400F5760B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		9C17BCB321F0E10000F5760B /* AuthServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceImplementation.swift; sourceTree = "<group>"; };
 		9C17BCB521F0E32900F5760B /* NetworkServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceFactory.swift; sourceTree = "<group>"; };
 		9C17BCB721F0E51500F5760B /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		9C17BCB921F0E59100F5760B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -68,18 +62,14 @@
 		9C17BCBD21F0E68400F5760B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9C17BCBF21F0E70000F5760B /* NetworkServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceImplementation.swift; sourceTree = "<group>"; };
 		9C17BCC121F0E83400F5760B /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
-		9C17BCC321F0E85300F5760B /* ErrorParserImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParserImplementation.swift; sourceTree = "<group>"; };
 		9C17BCC521F0E89E00F5760B /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		9C17BCC721F0F85A00F5760B /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
-		9C17BCC921F0F86900F5760B /* RegisterServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServiceImplementation.swift; sourceTree = "<group>"; };
 		9C17BCCB21F0F9FE00F5760B /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		9C17BCCF21F0FAAD00F5760B /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		9C17BCD221F0FDBB00F5760B /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
-		9C17BCD421F0FDE400F5760B /* LogoutServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutServiceImplementation.swift; sourceTree = "<group>"; };
 		9C17BCD621F0FE4800F5760B /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
 		9C17BCD821F0FE7F00F5760B /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
 		9C17BCDB21F1012F00F5760B /* ChangeUserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataService.swift; sourceTree = "<group>"; };
-		9C17BCDD21F103F200F5760B /* ChangeUserDataServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataServiceImplementation.swift; sourceTree = "<group>"; };
 		9C17BCDF21F1068100F5760B /* ChangeUserDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataRequest.swift; sourceTree = "<group>"; };
 		9C17BCE121F1075900F5760B /* ChangeUserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataResponse.swift; sourceTree = "<group>"; };
 		A132F36D29C040C416B6F9FC /* Pods-geekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geekShop/Pods-geekShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -227,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				9C17BCC121F0E83400F5760B /* ErrorParser.swift */,
-				9C17BCC321F0E85300F5760B /* ErrorParserImplementation.swift */,
 				9C17BCBD21F0E68400F5760B /* NetworkService.swift */,
 				9C17BCBF21F0E70000F5760B /* NetworkServiceImplementation.swift */,
 				9C17BCC521F0E89E00F5760B /* RequestRouter.swift */,
@@ -251,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				9C17BCB121F0E02400F5760B /* AuthService.swift */,
-				9C17BCB321F0E10000F5760B /* AuthServiceImplementation.swift */,
 				9C17BCB721F0E51500F5760B /* LoginRequest.swift */,
 				9C17BCB921F0E59100F5760B /* LoginResponse.swift */,
 				9C17BCBB21F0E5A300F5760B /* User.swift */,
@@ -265,7 +253,6 @@
 				9C17BCCB21F0F9FE00F5760B /* RegisterRequest.swift */,
 				9C17BCCF21F0FAAD00F5760B /* RegisterResponse.swift */,
 				9C17BCC721F0F85A00F5760B /* RegisterService.swift */,
-				9C17BCC921F0F86900F5760B /* RegisterServiceImplementation.swift */,
 			);
 			path = RegisterRequest;
 			sourceTree = "<group>";
@@ -273,10 +260,9 @@
 		9C17BCD121F0FD9800F5760B /* LogoutRequest */ = {
 			isa = PBXGroup;
 			children = (
-				9C17BCD221F0FDBB00F5760B /* LogoutService.swift */,
-				9C17BCD421F0FDE400F5760B /* LogoutServiceImplementation.swift */,
 				9C17BCD621F0FE4800F5760B /* LogoutRequest.swift */,
 				9C17BCD821F0FE7F00F5760B /* LogoutResponse.swift */,
+				9C17BCD221F0FDBB00F5760B /* LogoutService.swift */,
 			);
 			path = LogoutRequest;
 			sourceTree = "<group>";
@@ -284,10 +270,9 @@
 		9C17BCDA21F1010D00F5760B /* ChangeUserDataRequest */ = {
 			isa = PBXGroup;
 			children = (
-				9C17BCDB21F1012F00F5760B /* ChangeUserDataService.swift */,
-				9C17BCDD21F103F200F5760B /* ChangeUserDataServiceImplementation.swift */,
 				9C17BCDF21F1068100F5760B /* ChangeUserDataRequest.swift */,
 				9C17BCE121F1075900F5760B /* ChangeUserDataResponse.swift */,
+				9C17BCDB21F1012F00F5760B /* ChangeUserDataService.swift */,
 			);
 			path = ChangeUserDataRequest;
 			sourceTree = "<group>";
@@ -463,15 +448,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C17BCB421F0E10000F5760B /* AuthServiceImplementation.swift in Sources */,
 				9C17BCE021F1068100F5760B /* ChangeUserDataRequest.swift in Sources */,
 				9C17BCD721F0FE4800F5760B /* LogoutRequest.swift in Sources */,
-				9C17BCD521F0FDE400F5760B /* LogoutServiceImplementation.swift in Sources */,
 				9C17BCB821F0E51500F5760B /* LoginRequest.swift in Sources */,
 				9C17BCD921F0FE7F00F5760B /* LogoutResponse.swift in Sources */,
 				9C17BCCC21F0F9FE00F5760B /* RegisterRequest.swift in Sources */,
-				9C17BCDE21F103F200F5760B /* ChangeUserDataServiceImplementation.swift in Sources */,
-				9C17BCC421F0E85300F5760B /* ErrorParserImplementation.swift in Sources */,
 				9C17BCBE21F0E68400F5760B /* NetworkService.swift in Sources */,
 				9C17BCD321F0FDBB00F5760B /* LogoutService.swift in Sources */,
 				9C17BCD021F0FAAD00F5760B /* RegisterResponse.swift in Sources */,
@@ -482,7 +463,6 @@
 				9C17BCC221F0E83400F5760B /* ErrorParser.swift in Sources */,
 				9C17BCB221F0E02400F5760B /* AuthService.swift in Sources */,
 				9C17BCC621F0E89E00F5760B /* RequestRouter.swift in Sources */,
-				9C17BCCA21F0F86900F5760B /* RegisterServiceImplementation.swift in Sources */,
 				9C17BCC021F0E70000F5760B /* NetworkServiceImplementation.swift in Sources */,
 				9C17BCE221F1075900F5760B /* ChangeUserDataResponse.swift in Sources */,
 				9C17BCB621F0E32900F5760B /* NetworkServiceFactory.swift in Sources */,

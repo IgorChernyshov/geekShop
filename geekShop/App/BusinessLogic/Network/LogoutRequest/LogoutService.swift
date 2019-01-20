@@ -9,6 +9,26 @@
 import Foundation
 
 protocol LogoutService {
-  // Class that implements this protocol must have this method implemented
   func logout(userID: Int, completion: @escaping (LogoutResponse?) -> Void)
+}
+
+class LogoutServiceImplementation: LogoutService {
+  
+  let baseURL: URL
+  let networkService: NetworkService
+  
+  init(
+    baseURL: URL,
+    networkService: NetworkService) {
+    
+    self.baseURL = baseURL
+    self.networkService = networkService
+  }
+  
+  func logout(userID: Int, completion: @escaping (LogoutResponse?) -> Void) {
+    let request = LogoutRequest(baseURL: baseURL, userID: userID)
+    networkService.request(request) { (response: LogoutResponse?) in
+      completion(response)
+    }
+  }
 }
