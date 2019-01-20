@@ -31,4 +31,5 @@ class RegisterServiceImplementation: RegisterService {
       completion(response)
     }
   }
+  
 }

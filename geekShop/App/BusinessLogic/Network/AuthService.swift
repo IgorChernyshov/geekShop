@@ -31,4 +31,5 @@ class AuthServiceImplementation: AuthService {
       completion(response?.user)
     }
   }
+  
 }

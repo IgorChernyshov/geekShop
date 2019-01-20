@@ -31,4 +31,5 @@ class LogoutServiceImplementation: LogoutService {
       completion(response)
     }
   }
+  
 }
