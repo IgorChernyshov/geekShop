@@ -27,6 +27,7 @@ class NetworkServiceFactory {
     sessionManager: commonSessionManager
   )
   
+  // MARK: - User Account Services
   func makeAuthService() -> AuthService {
     return AuthServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
   }
@@ -41,5 +42,18 @@ class NetworkServiceFactory {
   
   func makeChangeUserDataService() -> ChangeUserProfileService {
     return ChangeUserDataServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
+  }
+  
+  // MARK: - Review Services
+  func makeAddReviewService() -> AddReviewService {
+    return AddReviewServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
+  }
+  
+  func makeApproveReviewService() -> ApproveReviewService {
+    return ApproveReviewServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
+  }
+  
+  func makeRemoveReviewService() -> RemoveReviewService {
+    return RemoveReviewServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
   }
 }

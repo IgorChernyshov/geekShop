@@ -17,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let registerService = NetworkServiceFactory().makeRegisterService()
   let logoutService = NetworkServiceFactory().makeLogoutService()
   let changeUserDataService = NetworkServiceFactory().makeChangeUserDataService()
+  let addReviewService = NetworkServiceFactory().makeAddReviewService()
+  let approveReviewService = NetworkServiceFactory().makeApproveReviewService()
+  let removeReviewService = NetworkServiceFactory().makeRemoveReviewService()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
+    // MARK: - Test API calls
     authService.login(login: "admin", password: "ezP@$$") { user in
       // TODO: If user != nil - change UserDefaults isLoggedIn and open main VC
       print(user)
@@ -48,6 +52,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     changeUserDataService.changeUserProfile(data: newUserProfileData) { response in
         // TODO: If response.result = 1 - show Alert "Profile has been saved" and update profile screen
         print(response)
+    }
+    
+    addReviewService.addReview(userID: 123, text: "Very nice stuff. Received it in three weeks") { response in
+      // TODO: If response.result = 1 - show Alert "Thank you for your review! It will appear on the page soon"
+      print(response)
+    }
+    
+    approveReviewService.approveReview(reviewID: 333) { response in
+      // TODO: If response.result = 1 - show Alert "Review #... has been approved"
+      print(response)
+    }
+    
+    removeReviewService.removeReview(reviewID: 333) { response in
+      // TODO: If response.result = 1 - show Alert "Review #... has been removed"
+      print(response)
     }
     
     return true
