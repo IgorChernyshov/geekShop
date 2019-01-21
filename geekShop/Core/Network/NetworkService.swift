@@ -35,6 +35,7 @@ class NetworkServiceImplementation: NetworkService {
     sessionManager
       .request(request)
       .validate(errorParser.parse).responseData { resрonse in
+        guard resрonse.value != nil else { return }
         do {
           let value = try JSONDecoder().decode(T.self, from: resрonse.result.value!)
           completionHandler(value)
