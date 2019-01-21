@@ -35,14 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       print(response)
     }
     
-    changeUserDataService.changeUserData(
+    let newUserProfileData = UserProfileData(
       userID: 123,
       login: "",
       password: "",
       email: "",
       gender: "",
       creditCardNumber: "1234-5678-9012-3456",
-      bio: "") { response in
+      bio: ""
+    )
+    
+    changeUserDataService.changeUserProfile(data: newUserProfileData) { response in
         // TODO: If response.result = 1 - show Alert "Profile has been saved" and update profile screen
         print(response)
     }

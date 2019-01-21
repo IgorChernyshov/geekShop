@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct ChangeUserDataResponse: Codable {
+struct ChangeUserProfileResponse: Codable {
   let result: Int
 }

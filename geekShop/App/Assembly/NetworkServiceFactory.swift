@@ -39,7 +39,7 @@ class NetworkServiceFactory {
     return LogoutServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
   }
   
-  func makeChangeUserDataService() -> ChangeUserDataService {
+  func makeChangeUserDataService() -> ChangeUserProfileService {
     return ChangeUserDataServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
   }
 }
