@@ -1,5 +1,5 @@
 //
-//  AuthServiceImplementation.swift
+//  AuthService.swift
 //  geekShop
 //
 //  Created by Igor Chernyshov on 17/01/2019.
@@ -8,13 +8,15 @@
 
 import Foundation
 
-// Class implements AuthService protocol
+protocol AuthService {
+  func login(login: String, password: String, completion: @escaping (User?) -> Void)
+}
+
 class AuthServiceImplementation: AuthService {
   
   let baseURL: URL
   let networkService: NetworkService
   
-  // Dependency Injection - Initializer Injection
   init(
     baseURL: URL,
     networkService: NetworkService) {
@@ -29,4 +31,5 @@ class AuthServiceImplementation: AuthService {
       completion(response?.user)
     }
   }
+  
 }

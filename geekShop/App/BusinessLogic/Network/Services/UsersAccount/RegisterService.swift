@@ -1,5 +1,5 @@
 //
-//  RegisterServiceImplementation.swift
+//  RegisterService.swift
 //  geekShop
 //
 //  Created by Igor Chernyshov on 17/01/2019.
@@ -8,13 +8,15 @@
 
 import Foundation
 
-// Class implements RegisterService protocol
+protocol RegisterService {
+  func register(login: String, password: String, email: String, completion: @escaping (RegisterResponse?) -> Void)
+}
+
 class RegisterServiceImplementation: RegisterService {
   
   let baseURL: URL
   let networkService: NetworkService
   
-  // Dependency Injection - Initializer Injection
   init(
     baseURL: URL,
     networkService: NetworkService) {
@@ -29,4 +31,5 @@ class RegisterServiceImplementation: RegisterService {
       completion(response)
     }
   }
+  
 }

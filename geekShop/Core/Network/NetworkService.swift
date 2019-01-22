@@ -10,9 +10,40 @@ import Foundation
 import Alamofire
 
 protocol NetworkService {
-  
   func request<T: Decodable>(
     _ request: URLRequestConvertible,
     completionHandler: @escaping (T?) -> Void)
+}
 
+class NetworkServiceImplementation: NetworkService {
+  
+  let errorParser: ErrorParser
+  let sessionManager: SessionManager
+  
+  init(
+    errorParser: ErrorParser,
+    sessionManager: SessionManager) {
+    
+    self.errorParser = errorParser
+    self.sessionManager = sessionManager
+  }
+  
+  func request<T: Decodable>(
+    _ request: URLRequestConvertible,
+    completionHandler: @escaping (T?) -> Void) {
+    
+    sessionManager
+      .request(request)
+      .validate(errorParser.parse).responseData { resрonse in
+        guard resрonse.value != nil else { return }
+        do {
+          let value = try JSONDecoder().decode(T.self, from: resрonse.result.value!)
+          completionHandler(value)
+        } catch {
+          print(error)
+          completionHandler(nil)
+        }
+    }
+  }
+  
 }

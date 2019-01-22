@@ -1,5 +1,5 @@
 //
-//  LogoutServiceImplementation.swift
+//  LogoutService.swift
 //  geekShop
 //
 //  Created by Igor Chernyshov on 17/01/2019.
@@ -8,13 +8,15 @@
 
 import Foundation
 
-// Class implements RegisterService protocol
+protocol LogoutService {
+  func logout(userID: Int, completion: @escaping (LogoutResponse?) -> Void)
+}
+
 class LogoutServiceImplementation: LogoutService {
   
   let baseURL: URL
   let networkService: NetworkService
   
-  // Dependency Injection - Initializer Injection
   init(
     baseURL: URL,
     networkService: NetworkService) {
@@ -29,4 +31,5 @@ class LogoutServiceImplementation: LogoutService {
       completion(response)
     }
   }
+  
 }
