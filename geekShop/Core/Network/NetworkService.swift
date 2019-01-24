@@ -34,8 +34,24 @@ class NetworkServiceImplementation: NetworkService {
     
     sessionManager
       .request(request)
-      .validate(errorParser.parse).responseData { resрonse in
-        guard resрonse.value != nil else { return }
+      .validate(errorParser.parse).responseData { [weak self] resрonse in
+        if let error = resрonse.error {
+          guard let errorCause = self?.errorParser.parse(error) else { return }
+          
+          switch errorCause {
+          case .canceledRequest:
+            // TODO: Request was canceled. Do not show error to user
+            return
+          case .clientError:
+            // TODO: Show alert "We couldn't complete the operation. Please check your Internet connection and try again"
+            return
+          case .unknownError:
+            // TODO: Unhandled error. Send an error code to developers to create a handler
+            return
+          default:
+            return
+          }
+        }
         do {
           let value = try JSONDecoder().decode(T.self, from: resрonse.result.value!)
           completionHandler(value)
