@@ -52,6 +52,7 @@ class NetworkServiceImplementation: NetworkService {
             return
           }
         }
+        
         do {
           let value = try JSONDecoder().decode(T.self, from: resрonse.result.value!)
           completionHandler(value)
