@@ -13,11 +13,11 @@ struct LogoutRequest: RequestRouter {
   let baseURL: URL
   let userID: Int
   
-  let method: HTTPMethod = .get
-  let path: String = "logout.json"
+  let method: HTTPMethod = .post
+  let path: String = "logout"
   var parameters: Parameters? {
     return [
-      "userID": userID
+      "id_user": userID
     ]
   }
 }

@@ -13,12 +13,12 @@ struct ChangeUserProfileRequest: RequestRouter {
   let baseURL: URL
   let data: UserProfileData
   
-  let method: HTTPMethod = .get
-  let path: String = "changeUserData.json"
+  let method: HTTPMethod = .post
+  let path: String = "changeUserProfile"
   var parameters: Parameters? {
     return [
-      "userID": data.userID,
-      "login": data.login,
+      "id_user": data.userID,
+      "username": data.login,
       "password": data.password,
       "email": data.email,
       "gender": data.gender,

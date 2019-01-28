@@ -13,8 +13,8 @@ struct RemoveReviewRequest: RequestRouter {
   let baseURL: URL
   let reviewID: Int
   
-  let method: HTTPMethod = .get
-  let path: String = "removeReview.json"
+  let method: HTTPMethod = .post
+  let path: String = "removeReview"
   var parameters: Parameters? {
     return [
       "id_comment": reviewID

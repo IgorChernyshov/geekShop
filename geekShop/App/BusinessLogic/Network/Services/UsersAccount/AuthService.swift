@@ -9,7 +9,7 @@
 import Foundation
 
 protocol AuthService {
-  func login(login: String, password: String, completion: @escaping (User?) -> Void)
+  func login(login: String, password: String, cookie: String, completion: @escaping (User?) -> Void)
 }
 
 class AuthServiceImplementation: AuthService {
@@ -25,8 +25,8 @@ class AuthServiceImplementation: AuthService {
     self.networkService = networkService
   }
   
-  func login(login: String, password: String, completion: @escaping (User?) -> Void) {
-    let request = LoginRequest(baseURL: baseURL, login: login, password: password)
+  func login(login: String, password: String, cookie: String, completion: @escaping (User?) -> Void) {
+    let request = LoginRequest(baseURL: baseURL, login: login, password: password, cookie: cookie)
     networkService.request(request) { (response: LoginResponse?) in
       completion(response?.user)
     }

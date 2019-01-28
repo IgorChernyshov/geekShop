@@ -10,4 +10,5 @@ import Foundation
 
 struct ChangeUserProfileResponse: Codable {
   let result: Int
+  let userMessage: String
 }

@@ -14,8 +14,8 @@ struct AddReviewRequest: RequestRouter {
   let userID: Int
   let text: String
   
-  let method: HTTPMethod = .get
-  let path: String = "addReview.json"
+  let method: HTTPMethod = .post
+  let path: String = "addReview"
   var parameters: Parameters? {
     return [
       "id_user": userID,
