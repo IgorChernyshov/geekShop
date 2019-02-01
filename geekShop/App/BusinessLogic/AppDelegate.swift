@@ -24,12 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     // MARK: - Test API calls
-    authService.login(login: "admin", password: "ezP@$$") { user in
+    let newUserProfileData = UserProfileData(
+      userID: 123,
+      login: "Frostfell",
+      password: "321321",
+      email: "ichernyshov@bk.ru",
+      gender: "",
+      creditCardNumber: "1234-5678-9012-3456",
+      bio: ""
+    )
+    
+    authService.login(login: "admin", password: "ezP@$$", cookie: "") { user in
       // TODO: If user != nil - change UserDefaults isLoggedIn and open main VC
       print(user)
     }
     
-    registerService.register(login: "admin", password: "ezP@$$", email: "admin@geekshop.com") { response in
+    registerService.register(data: newUserProfileData) { response in
       // TODO: If response.result = 1 - show Alert "Registration went successful", then login user and open main VC
       print(response)
     }
@@ -38,16 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // TODO: If response.result = 1 - change UserDefaults isLoggedIn and open login screen
       print(response)
     }
-    
-    let newUserProfileData = UserProfileData(
-      userID: 123,
-      login: "",
-      password: "",
-      email: "",
-      gender: "",
-      creditCardNumber: "1234-5678-9012-3456",
-      bio: ""
-    )
     
     changeUserDataService.changeUserProfile(data: newUserProfileData) { response in
         // TODO: If response.result = 1 - show Alert "Profile has been saved" and update profile screen

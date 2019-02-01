@@ -10,4 +10,5 @@ import Foundation
 
 struct RemoveReviewResponse: Codable {
   let result: Int
+  let userMessage: String
 }

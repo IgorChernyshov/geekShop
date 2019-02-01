@@ -13,13 +13,15 @@ struct LoginRequest: RequestRouter {
   let baseURL: URL
   let login: String
   let password: String
+  let cookie: String
   
-  let method: HTTPMethod = .get
-  let path: String = "login.json"
+  let method: HTTPMethod = .post
+  let path: String = "login"
   var parameters: Parameters? {
     return [
       "username": login,
-      "password": password
+      "password": password,
+      "cookie": cookie
     ]
   }
 }

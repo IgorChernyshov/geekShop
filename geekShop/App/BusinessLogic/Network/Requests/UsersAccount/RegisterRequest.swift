@@ -11,17 +11,19 @@ import Alamofire
 
 struct RegisterRequest: RequestRouter {
   let baseURL: URL
-  let login: String
-  let password: String
-  let email: String
+  let data: UserProfileData
   
-  let method: HTTPMethod = .get
-  let path: String = "registerUser.json"
+  let method: HTTPMethod = .post
+  let path: String = "register"
   var parameters: Parameters? {
     return [
-      "username": login,
-      "password": password,
-      "email": email
+      "id_user": data.userID,
+      "username": data.login,
+      "password": data.password,
+      "email": data.email,
+      "gender": data.gender,
+      "credit_card": data.creditCardNumber,
+      "bio": data.bio
     ]
   }
 }

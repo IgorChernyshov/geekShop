@@ -22,180 +22,86 @@ class JSONResponsesTests: XCTestCase {
     super.tearDown()
   }
   
-  func testAddReviewResponseDecodeSucceed() {
-    if let url = testBundle.url(forResource: "addReview", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(AddReviewResponse.self, from: data)) != nil {
-          return
-        }
-      }
+  func successfullyDecode<T: Codable>(json: String, as codable: T.Type) {
+    guard let url = testBundle.url(forResource: json, withExtension: "json"),
+      let data: Data = try? NSData(contentsOf: url) as Data,
+      let _: T = try? JSONDecoder().decode(T.self, from: data) else {
+        XCTFail("Failed to decode JSON response as \(T.self)")
+        return
     }
-    XCTFail("Failed to decode JSON response as AddReviewResponse")
+  }
+  
+  func failToDecode<T: Codable>(codable: T.Type) {
+    guard let url = testBundle.url(forResource: "stub", withExtension: "json"),
+      let data: Data = try? NSData(contentsOf: url) as Data,
+      let _: T = try? JSONDecoder().decode(T.self, from: data) else {
+        return
+    }
+    XCTFail("Successfully decoded stub JSON as \(T.self)")
+  }
+  
+  func testAddReviewResponseDecodeSucceed() {
+    successfullyDecode(json: "addReview", as: AddReviewResponse.self)
   }
   
   func testAddReviewResponseDecodeFailed() {
-    if let url = testBundle.url(forResource: "stub", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(AddReviewResponse.self, from: data)) != nil {
-          XCTFail("Successfully decoded stub JSON as AddReviewResponse")
-          return
-        }
-      }
-    }
+    failToDecode(codable: AddReviewResponse.self)
   }
   
   func testApproveReviewResponseDecodeSucceed() {
-    if let url = testBundle.url(forResource: "approveReview", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(ApproveReviewResponse.self, from: data)) != nil {
-          return
-        }
-      }
-    }
-    XCTFail("Failed to decode JSON response as ApproveReviewResponse")
+    successfullyDecode(json: "approveReview", as: ApproveReviewResponse.self)
   }
   
   func testApproveReviewResponseDecodeFailed() {
-    if let url = testBundle.url(forResource: "stub", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(ApproveReviewResponse.self, from: data)) != nil {
-          XCTFail("Successfully decoded stub JSON as ApproveReviewResponse")
-          return
-        }
-      }
-    }
+    failToDecode(codable: ApproveReviewResponse.self)
   }
   
   func testRemoveReviewResponseDecodeSucceed() {
-    if let url = testBundle.url(forResource: "removeReview", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(RemoveReviewResponse.self, from: data)) != nil {
-          return
-        }
-      }
-    }
-    XCTFail("Failed to decode JSON response as RemoveReviewResponse")
+    successfullyDecode(json: "removeReview", as: RemoveReviewResponse.self)
   }
   
   func testRemoveReviewResponseDecodeFailed() {
-    if let url = testBundle.url(forResource: "stub", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(RemoveReviewResponse.self, from: data)) != nil {
-          XCTFail("Successfully decoded stub JSON as RemoveReviewResponse")
-          return
-        }
-      }
-    }
+    failToDecode(codable: RemoveReviewResponse.self)
   }
   
   func testChangeUserProfileResponseDecodeSucceed() {
-    if let url = testBundle.url(forResource: "changeUserData", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(ChangeUserProfileResponse.self, from: data)) != nil {
-          return
-        }
-      }
-    }
-    XCTFail("Failed to decode JSON response as ChangeUserProfileResponse")
+    successfullyDecode(json: "changeUserData", as: ChangeUserProfileResponse.self)
   }
   
   func testChangeUserProfileResponseDecodeFailed() {
-    if let url = testBundle.url(forResource: "stub", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(ChangeUserProfileResponse.self, from: data)) != nil {
-          XCTFail("Successfully decoded stub JSON as ChangeUserProfileResponse")
-          return
-        }
-      }
-    }
+   failToDecode(codable: ChangeUserProfileResponse.self)
   }
   
   func testLoginResponseDecodeSucceed() {
-    if let url = testBundle.url(forResource: "login", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(LoginResponse.self, from: data)) != nil {
-          return
-        }
-      }
-    }
-    XCTFail("Failed to decode JSON response as LoginResponse")
+    successfullyDecode(json: "login", as: LoginResponse.self)
   }
   
   func testLoginResponseDecodeFailed() {
-    if let url = testBundle.url(forResource: "stub", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(LoginResponse.self, from: data)) != nil {
-          XCTFail("Successfully decoded stub JSON as LoginResponse")
-          return
-        }
-      }
-    }
+    failToDecode(codable: LoginResponse.self)
   }
   
   func testUserDecodeSucceed() {
-    if let url = testBundle.url(forResource: "user", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(User.self, from: data)) != nil {
-          return
-        }
-      }
-    }
-    XCTFail("Failed to decode JSON response as User")
+    successfullyDecode(json: "user", as: User.self)
   }
   
   func testUserDecodeFailed() {
-    if let url = testBundle.url(forResource: "stub", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(User.self, from: data)) != nil {
-          XCTFail("Successfully decoded stub JSON as User")
-          return
-        }
-      }
-    }
+    failToDecode(codable: User.self)
   }
   
   func testLogoutResponseDecodeSucceed() {
-    if let url = testBundle.url(forResource: "logout", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(LogoutResponse.self, from: data)) != nil {
-          return
-        }
-      }
-    }
-    XCTFail("Failed to decode JSON response as LogoutResponse")
+    successfullyDecode(json: "logout", as: LogoutResponse.self)
   }
   
   func testLogoutResponseDecodeFailed() {
-    if let url = testBundle.url(forResource: "stub", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(LogoutResponse.self, from: data)) != nil {
-          XCTFail("Successfully decoded stub JSON as LogoutResponse")
-          return
-        }
-      }
-    }
+    failToDecode(codable: LoginResponse.self)
   }
   
   func testRegisterResponseDecodeSucceed() {
-    if let url = testBundle.url(forResource: "registerUser", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(RegisterResponse.self, from: data)) != nil {
-          return
-        }
-      }
-    }
-    XCTFail("Failed to decode JSON response as RegisterResponse")
+    successfullyDecode(json: "registerUser", as: RegisterResponse.self)
   }
   
   func testRegisterResponseDecodeFailed() {
-    if let url = testBundle.url(forResource: "stub", withExtension: "json") {
-      if let data: Data = try? NSData(contentsOf: url) as Data {
-        if (try? JSONDecoder().decode(RegisterResponse.self, from: data)) != nil {
-          XCTFail("Successfully decoded stub JSON as RegisterResponse")
-          return
-        }
-      }
-    }
+    failToDecode(codable: RegisterResponse.self)
   }
   
 }

@@ -13,8 +13,8 @@ struct ApproveReviewRequest: RequestRouter {
   let baseURL: URL
   let reviewID: Int
   
-  let method: HTTPMethod = .get
-  let path: String = "approveReview.json"
+  let method: HTTPMethod = .post
+  let path: String = "approveReview"
   var parameters: Parameters? {
     return [
       "id_comment": reviewID

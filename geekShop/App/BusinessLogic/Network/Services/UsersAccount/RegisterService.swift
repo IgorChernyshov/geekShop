@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RegisterService {
-  func register(login: String, password: String, email: String, completion: @escaping (RegisterResponse?) -> Void)
+  func register(data: UserProfileData, completion: @escaping (RegisterResponse?) -> Void)
 }
 
 class RegisterServiceImplementation: RegisterService {
@@ -25,8 +25,8 @@ class RegisterServiceImplementation: RegisterService {
     self.networkService = networkService
   }
   
-  func register(login: String, password: String, email: String, completion: @escaping (RegisterResponse?) -> Void) {
-    let request = RegisterRequest(baseURL: baseURL, login: login, password: password, email: email)
+  func register(data: UserProfileData, completion: @escaping (RegisterResponse?) -> Void) {
+    let request = RegisterRequest(baseURL: baseURL, data: data)
     networkService.request(request) { (response: RegisterResponse?) in
       completion(response)
     }
