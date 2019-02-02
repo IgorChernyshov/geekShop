@@ -36,37 +36,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     authService.login(login: "admin", password: "ezP@$$", cookie: "") { user in
       // TODO: If user != nil - change UserDefaults isLoggedIn and open main VC
-      print(user)
+      print(user.debugDescription)
     }
     
     registerService.register(data: newUserProfileData) { response in
       // TODO: If response.result = 1 - show Alert "Registration went successful", then login user and open main VC
-      print(response)
+      print(response.debugDescription)
     }
     
     logoutService.logout(userID: 123) { response in
       // TODO: If response.result = 1 - change UserDefaults isLoggedIn and open login screen
-      print(response)
+      print(response.debugDescription)
     }
     
     changeUserDataService.changeUserProfile(data: newUserProfileData) { response in
         // TODO: If response.result = 1 - show Alert "Profile has been saved" and update profile screen
-        print(response)
+        print(response.debugDescription)
     }
     
     addReviewService.addReview(userID: 123, text: "Very nice stuff. Received it in three weeks") { response in
       // TODO: If response.result = 1 - show Alert "Thank you for your review! It will appear on the page soon"
-      print(response)
+      print(response.debugDescription)
     }
     
     approveReviewService.approveReview(reviewID: 333) { response in
       // TODO: If response.result = 1 - show Alert "Review #... has been approved"
-      print(response)
+      print(response.debugDescription)
     }
     
     removeReviewService.removeReview(reviewID: 333) { response in
       // TODO: If response.result = 1 - show Alert "Review #... has been removed"
-      print(response)
+      print(response.debugDescription)
     }
     
     return true
