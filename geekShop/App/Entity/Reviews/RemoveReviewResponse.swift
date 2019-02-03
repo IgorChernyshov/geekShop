@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ Entity that decodes server response for RemoveReviewRequest.
+ */
+
 struct RemoveReviewResponse: Codable {
   let result: Int
   let userMessage: String

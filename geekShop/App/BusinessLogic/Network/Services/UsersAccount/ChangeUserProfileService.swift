@@ -8,6 +8,11 @@
 
 import Foundation
 
+/*
+ This class sends a request to the server to change user's profile data.
+ Completion handler returns server's response as a JSON.
+ */
+
 protocol ChangeUserProfileService {
   func changeUserProfile(
     data: UserProfileData,

@@ -8,6 +8,11 @@
 
 import Foundation
 
+/*
+ This class sends a request to the server to add new review.
+ Completion handler returns server's response as a JSON.
+ */
+
 protocol AddReviewService {
   func addReview(userID: Int, text: String, completion: @escaping (AddReviewResponse?) -> Void)
 }

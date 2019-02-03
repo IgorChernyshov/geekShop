@@ -8,6 +8,11 @@
 
 import Foundation
 
+/*
+ This class sends a request to the server to remove a specific review of a product.
+ Completion handler returns server's response as a JSON.
+ */
+
 protocol RemoveReviewService {
   func removeReview(reviewID: Int, completion: @escaping (RemoveReviewResponse?) -> Void)
 }

@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ Entity that decodes server response for LoginRequest.
+ */
+
 struct LoginResponse: Codable {
   let result: Int
   let user: User

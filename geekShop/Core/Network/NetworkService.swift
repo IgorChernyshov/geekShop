@@ -9,6 +9,13 @@
 import Foundation
 import Alamofire
 
+/*
+ This class:
+ - allows other *Service classes to send requests to the server
+ - sends errors to ErrorParser
+ - decodes JSON response with a proper Codable entity
+ */
+
 protocol NetworkService {
   func request<T: Decodable>(
     _ request: URLRequestConvertible,

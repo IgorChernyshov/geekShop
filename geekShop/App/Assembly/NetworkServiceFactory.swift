@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+/*
+ This factory creates implementations of network services.
+ */
+
 class NetworkServiceFactory {
   
   private let configuration = Configuration()
@@ -27,7 +31,7 @@ class NetworkServiceFactory {
     sessionManager: commonSessionManager
   )
   
-  // MARK: - User Account Services
+  // MARK: - User's Account Services
   func makeAuthService() -> AuthService {
     return AuthServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
   }

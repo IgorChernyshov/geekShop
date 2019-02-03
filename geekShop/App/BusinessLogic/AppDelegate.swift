@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
+  // Create test instances of services to test API calls
   let authService = NetworkServiceFactory().makeAuthService()
   let registerService = NetworkServiceFactory().makeRegisterService()
   let logoutService = NetworkServiceFactory().makeLogoutService()
@@ -23,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-    // MARK: - Test API calls
     let newUserProfileData = UserProfileData(
       userID: 123,
       login: "Frostfell",
@@ -34,24 +34,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       bio: ""
     )
     
-    authService.login(login: "admin", password: "ezP@$$", cookie: "") { user in
-      // TODO: If user != nil - change UserDefaults isLoggedIn and open main VC
-      print(user.debugDescription)
-    }
+    // MARK: - Test API calls
     
     registerService.register(data: newUserProfileData) { response in
       // TODO: If response.result = 1 - show Alert "Registration went successful", then login user and open main VC
       print(response.debugDescription)
     }
     
-    logoutService.logout(userID: 123) { response in
-      // TODO: If response.result = 1 - change UserDefaults isLoggedIn and open login screen
+    changeUserDataService.changeUserProfile(data: newUserProfileData) { response in
+      // TODO: If response.result = 1 - show Alert "Profile has been saved" and update profile screen
       print(response.debugDescription)
     }
     
-    changeUserDataService.changeUserProfile(data: newUserProfileData) { response in
-        // TODO: If response.result = 1 - show Alert "Profile has been saved" and update profile screen
-        print(response.debugDescription)
+    authService.login(login: "admin", password: "ezP@$$", cookie: "") { user in
+      // TODO: If user != nil - change UserDefaults isLoggedIn and open main VC
+      print(user.debugDescription)
+    }
+    
+    logoutService.logout(userID: 123) { response in
+      // TODO: If response.result = 1 - change UserDefaults isLoggedIn and open login screen
+      print(response.debugDescription)
     }
     
     addReviewService.addReview(userID: 123, text: "Very nice stuff. Received it in three weeks") { response in

@@ -9,6 +9,12 @@
 import Foundation
 import Alamofire
 
+/*
+ This class parses errors that can raise during network requests.
+ It handles errors that didn't reach the server as well as
+ error codes that were returned as a response from the server.
+ */
+
 enum AppError: Error {
   case authenticationError
   case canceledRequest

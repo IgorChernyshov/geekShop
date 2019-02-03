@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+/*
+ This structure is used to create a request to the server to change user's profile data.
+ */
+
 struct ChangeUserProfileRequest: RequestRouter {
   let baseURL: URL
   let data: UserProfileData

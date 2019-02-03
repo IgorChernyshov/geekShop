@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ Entity that decodes server response for LogoutRequest.
+ */
+
 struct LogoutResponse: Codable {
   let result: Int
 }

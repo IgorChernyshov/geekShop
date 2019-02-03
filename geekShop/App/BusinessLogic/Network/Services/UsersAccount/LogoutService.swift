@@ -8,6 +8,11 @@
 
 import Foundation
 
+/*
+ This class sends a request to the server to log out a user.
+ Completion handler returns server's response as a JSON.
+ */
+
 protocol LogoutService {
   func logout(userID: Int, completion: @escaping (LogoutResponse?) -> Void)
 }

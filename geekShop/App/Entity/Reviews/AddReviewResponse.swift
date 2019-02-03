@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ Entity that decodes server response for AddReviewRequest.
+ */
+
 struct AddReviewResponse: Codable {
   let result: Int
   let userMessage: String

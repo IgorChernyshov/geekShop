@@ -8,6 +8,11 @@
 
 import Foundation
 
+/*
+ This class sends a request to the server to approve a specific review of a product.
+ Completion handler returns server's response as a JSON.
+ */
+
 protocol ApproveReviewService {
   func approveReview(reviewID: Int, completion: @escaping (ApproveReviewResponse?) -> Void)
 }
