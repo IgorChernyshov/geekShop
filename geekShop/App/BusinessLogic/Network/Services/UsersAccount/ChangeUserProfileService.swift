@@ -14,9 +14,7 @@ import Foundation
  */
 
 protocol ChangeUserProfileService {
-  func changeUserProfile(
-    data: UserProfileData,
-    completion: @escaping (ChangeUserProfileResponse?) -> Void)
+  func changeUserProfile(data: UserProfileData, completion: @escaping (ChangeUserProfileResponse?) -> Void)
 }
 
 class ChangeUserDataServiceImplementation: ChangeUserProfileService {

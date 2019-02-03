@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
+    // MARK: - Test API calls
+    
     let newUserProfileData = UserProfileData(
       userID: 123,
       login: "Frostfell",
@@ -33,8 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       creditCardNumber: "1234-5678-9012-3456",
       bio: ""
     )
-    
-    // MARK: - Test API calls
     
     registerService.register(data: newUserProfileData) { response in
       // TODO: If response.result = 1 - show Alert "Registration went successful", then login user and open main VC
