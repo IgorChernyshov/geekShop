@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let addItemToBasketService = NetworkServiceFactory().makeAddItemToBasketService()
   let removeItemFromBasketService = NetworkServiceFactory().makeRemoveItemFromBasketService()
   let getItemListService = NetworkServiceFactory().makeGetItemsListService()
+  let getUsersBasketService = NetworkServiceFactory().makeGetUsersBasketService()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
@@ -96,6 +97,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     getItemListService.getItemsList(pageNumber: 1, categoryID: 12) { response in
+      print(response.debugDescription)
+    }
+    
+    getUsersBasketService.getUsersBasket(userID: 123) { response in
       print(response.debugDescription)
     }
     

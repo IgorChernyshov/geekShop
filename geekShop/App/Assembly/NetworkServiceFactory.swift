@@ -76,4 +76,8 @@ class NetworkServiceFactory {
   func makeGetItemsListService() -> GetItemsListService {
     return GetItemsListServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
   }
+  
+  func makeGetUsersBasketService() -> GetUsersBasketService {
+    return GetUsersBasketServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
+  }
 }
