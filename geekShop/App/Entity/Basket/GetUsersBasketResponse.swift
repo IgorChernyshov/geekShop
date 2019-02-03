@@ -14,6 +14,10 @@ import Foundation
 
 struct GetUsersBasketResponse: Codable {
   
+  // Indicates whether the request was successful or not
+  
+  let result: Int
+  
   // If request was successful
   
   let sumTotal: Int?
@@ -22,7 +26,6 @@ struct GetUsersBasketResponse: Codable {
   
   // If request was unsuccessful
   
-  let result: Int?
   let userMessage: String?
   
 }

@@ -14,14 +14,17 @@ import Foundation
 
 struct GetItemsListResponse: Codable {
   
-  // If request was successful
+  // Indicates whether the request was successful or not
+  
+  let result: Int
+  
+  // If the request was successful
   
   let pageNumber: Int?
   let products: [Item]?
   
-  // If request was unsuccessful
+  // If the request was unsuccessful
   
-  let result: Int?
   let userMessage: String?
   
 }
