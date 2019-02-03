@@ -21,10 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let addReviewService = NetworkServiceFactory().makeAddReviewService()
   let approveReviewService = NetworkServiceFactory().makeApproveReviewService()
   let removeReviewService = NetworkServiceFactory().makeRemoveReviewService()
+  let addItemToBasketService = NetworkServiceFactory().makeAddItemToBasketService()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-    // MARK: - Test API calls
+    // MARK: - Test user-related API calls
     
     let newUserProfileData = UserProfileData(
       userID: 123,
@@ -56,6 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       print(response.debugDescription)
     }
     
+    // MARK: - Test review-related API calls
+    
     addReviewService.addReview(userID: 123, text: "Very nice stuff. Received it in three weeks") { response in
       // TODO: If response.result = 1 - show Alert "Thank you for your review! It will appear on the page soon"
       print(response.debugDescription)
@@ -68,6 +71,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     removeReviewService.removeReview(reviewID: 333) { response in
       // TODO: If response.result = 1 - show Alert "Review #... has been removed"
+      print(response.debugDescription)
+    }
+    
+    // MARK: - Test basket-related API calls
+    
+    addItemToBasketService.addItemToBasket(productID: 5, quantity: 1) { response in
       print(response.debugDescription)
     }
     

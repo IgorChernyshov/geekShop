@@ -48,6 +48,9 @@
 		9C17BD1521FA49CC00F5760B /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C17BD1421FA49CC00F5760B /* login.json */; };
 		9C17BD1721FA49D000F5760B /* logout.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C17BD1621FA49D000F5760B /* logout.json */; };
 		9C17BD1921FA49FF00F5760B /* stub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C17BD1821FA49FF00F5760B /* stub.json */; };
+		9CD71DEA220742040032023F /* AddItemToBasketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DE9220742040032023F /* AddItemToBasketRequest.swift */; };
+		9CD71DED220742E30032023F /* AddItemToBasketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DEC220742E30032023F /* AddItemToBasketService.swift */; };
+		9CD71DF022074C1B0032023F /* AddItemToBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DEF22074C1B0032023F /* AddItemToBasketResponse.swift */; };
 		9CF459DD21FD9C5600DCB6D0 /* registerUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CF459DC21FD9C5600DCB6D0 /* registerUser.json */; };
 		9CF459DF21FD9CC400DCB6D0 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CF459DE21FD9CC400DCB6D0 /* user.json */; };
 		F06E92415FDA6CC939DD1AE2 /* Pods_geekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D553FD623A74914BB23EC442 /* Pods_geekShop.framework */; };
@@ -110,6 +113,9 @@
 		9C17BD1421FA49CC00F5760B /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		9C17BD1621FA49D000F5760B /* logout.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logout.json; sourceTree = "<group>"; };
 		9C17BD1821FA49FF00F5760B /* stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stub.json; sourceTree = "<group>"; };
+		9CD71DE9220742040032023F /* AddItemToBasketRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemToBasketRequest.swift; sourceTree = "<group>"; };
+		9CD71DEC220742E30032023F /* AddItemToBasketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemToBasketService.swift; sourceTree = "<group>"; };
+		9CD71DEF22074C1B0032023F /* AddItemToBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemToBasketResponse.swift; sourceTree = "<group>"; };
 		9CF459DC21FD9C5600DCB6D0 /* registerUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = registerUser.json; sourceTree = "<group>"; };
 		9CF459DE21FD9CC400DCB6D0 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		A132F36D29C040C416B6F9FC /* Pods-geekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geekShop/Pods-geekShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +218,7 @@
 		9C0436B021E9DC4400EF8C71 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				9CD71DEE22074C090032023F /* Basket */,
 				9C17BCFA21F5DE6B00F5760B /* Reviews */,
 				9C17BCF921F5DE5B00F5760B /* UsersAccount */,
 			);
@@ -281,6 +288,7 @@
 		9C17BCE321F44BF400F5760B /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				9CD71DE8220741DA0032023F /* Basket */,
 				9C17BCEB21F5DB8D00F5760B /* Reviews */,
 				9C17BCEA21F5DB7B00F5760B /* UsersAccount */,
 			);
@@ -290,6 +298,7 @@
 		9C17BCE821F5DB5400F5760B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9CD71DEB220742C80032023F /* Basket */,
 				9C17BCEC21F5DBB000F5760B /* Reviews */,
 				9C17BCE921F5DB6D00F5760B /* UsersAccount */,
 			);
@@ -383,6 +392,30 @@
 				9C17BD1821FA49FF00F5760B /* stub.json */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		9CD71DE8220741DA0032023F /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				9CD71DE9220742040032023F /* AddItemToBasketRequest.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		9CD71DEB220742C80032023F /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				9CD71DEC220742E30032023F /* AddItemToBasketService.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		9CD71DEE22074C090032023F /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				9CD71DEF22074C1B0032023F /* AddItemToBasketResponse.swift */,
+			);
+			path = Basket;
 			sourceTree = "<group>";
 		};
 		E53E4D3A94FD3ABA0C81C775 /* Pods */ = {
@@ -584,13 +617,16 @@
 				9C17BCEE21F5DBF100F5760B /* AddReviewRequest.swift in Sources */,
 				9C17BCBA21F0E59100F5760B /* LoginResponse.swift in Sources */,
 				9C17BCDC21F1012F00F5760B /* ChangeUserProfileService.swift in Sources */,
+				9CD71DEA220742040032023F /* AddItemToBasketRequest.swift in Sources */,
 				9C04368F21E9D4EC00EF8C71 /* AppDelegate.swift in Sources */,
 				9C17BCC221F0E83400F5760B /* ErrorParser.swift in Sources */,
 				9C17BCFE21F5DFAF00F5760B /* ApproveReviewResponse.swift in Sources */,
 				9C17BCB221F0E02400F5760B /* AuthService.swift in Sources */,
+				9CD71DED220742E30032023F /* AddItemToBasketService.swift in Sources */,
 				9C17BCC621F0E89E00F5760B /* RequestRouter.swift in Sources */,
 				9C17BCFC21F5DE8A00F5760B /* AddReviewResponse.swift in Sources */,
 				9C17BCE221F1075900F5760B /* ChangeUserProfileResponse.swift in Sources */,
+				9CD71DF022074C1B0032023F /* AddItemToBasketResponse.swift in Sources */,
 				9C17BCB621F0E32900F5760B /* NetworkServiceFactory.swift in Sources */,
 				9C17BCE721F5CA6500F5760B /* UserProfileData.swift in Sources */,
 				9C17BCBC21F0E5A300F5760B /* User.swift in Sources */,
