@@ -53,7 +53,8 @@ class ErrorParserImplementation: ErrorParser {
     switch response.statusCode {
     case 200..<300:
       // This status code means success. Yet still need to check if we have received some data
-      if data == nil {
+      let dataIsEmpty = data == nil
+      if dataIsEmpty {
         // TODO: Show alert to user "Looks like something is broken on our side. Please, try again later"
         return .failure(AppError.serverError)
       } else {
