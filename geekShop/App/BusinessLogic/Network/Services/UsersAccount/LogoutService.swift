@@ -18,7 +18,7 @@ protocol LogoutService {
   ///
   /// - Parameters:
   ///   - userID: an ID of user to log out
-  ///   - completion: a JSON response from the server which shows whether request was successfull or not
+  ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func logout(userID: Int, completion: @escaping (LogoutResponse?) -> Void)
 }
 

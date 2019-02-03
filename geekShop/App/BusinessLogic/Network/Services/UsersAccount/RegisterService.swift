@@ -19,7 +19,7 @@ protocol RegisterService {
   /// - Parameters:
   ///   - data: new user's data. userID, username, password and email are mandatory parameters.
   ///           Other parameters are optional.
-  ///   - completion: a JSON response from the server which shows whether request was successfull or not
+  ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func register(data: UserProfileData, completion: @escaping (RegisterResponse?) -> Void)
 }
 

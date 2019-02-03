@@ -18,7 +18,7 @@ protocol ApproveReviewService {
   ///
   /// - Parameters:
   ///   - reviewID: ID of the review to approve
-  ///   - completion: a JSON response from the server which shows whether request was successfull or not
+  ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func approveReview(reviewID: Int, completion: @escaping (ApproveReviewResponse?) -> Void)
 }
 

@@ -18,7 +18,7 @@ protocol RemoveReviewService {
   ///
   /// - Parameters:
   ///   - reviewID: ID of the review to remove
-  ///   - completion: a JSON response from the server which shows whether request was successfull or not
+  ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func removeReview(reviewID: Int, completion: @escaping (RemoveReviewResponse?) -> Void)
 }
 
