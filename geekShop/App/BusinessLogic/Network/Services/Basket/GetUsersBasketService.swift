@@ -14,12 +14,14 @@ import Foundation
  */
 
 protocol GetUsersBasketService {
+  
   /// A service to send a request to the server to get items of a specific category at a specific page.
   ///
   /// - Parameters:
   ///   - userID: an id of a user whose basket to return
   ///   - completion: a JSON response from the server with requested items in user's basket or an error message
   func getUsersBasket(userID: Int, completion: @escaping (GetUsersBasketResponse?) -> Void)
+  
 }
 
 class GetUsersBasketServiceImplementation: GetUsersBasketService {
@@ -41,4 +43,5 @@ class GetUsersBasketServiceImplementation: GetUsersBasketService {
       completion(response)
     }
   }
+  
 }

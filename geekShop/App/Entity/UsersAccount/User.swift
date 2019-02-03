@@ -13,6 +13,7 @@ import Foundation
  */
 
 struct User: Codable {
+  
   let id: Int
   let login: String
   let name: String
@@ -24,4 +25,5 @@ struct User: Codable {
     case name = "user_name"
     case lastname = "user_lastname"
   }
+  
 }

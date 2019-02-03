@@ -14,6 +14,7 @@ import Foundation
  */
 
 protocol ChangeUserProfileService {
+  
   /// A service to send a request to the server to change user's data.
   ///
   /// - Parameters:
@@ -21,6 +22,7 @@ protocol ChangeUserProfileService {
   ///           Other fields will be changed if parameters.
   ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func changeUserProfile(data: UserProfileData, completion: @escaping (ChangeUserProfileResponse?) -> Void)
+  
 }
 
 class ChangeUserDataServiceImplementation: ChangeUserProfileService {

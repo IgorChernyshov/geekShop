@@ -14,12 +14,14 @@ import Foundation
  */
 
 protocol LogoutService {
+  
   /// A service to send a request to the server to log out user.
   ///
   /// - Parameters:
   ///   - userID: an ID of user to log out
   ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func logout(userID: Int, completion: @escaping (LogoutResponse?) -> Void)
+  
 }
 
 class LogoutServiceImplementation: LogoutService {

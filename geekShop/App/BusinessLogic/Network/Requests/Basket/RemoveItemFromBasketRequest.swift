@@ -14,6 +14,7 @@ import Alamofire
  */
 
 struct RemoveItemFromBasketRequest: RequestRouter {
+  
   let baseURL: URL
   let productID: Int
   
@@ -24,4 +25,5 @@ struct RemoveItemFromBasketRequest: RequestRouter {
       "id_product": productID
     ]
   }
+
 }

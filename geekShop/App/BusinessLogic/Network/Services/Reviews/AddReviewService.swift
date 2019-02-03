@@ -14,6 +14,7 @@ import Foundation
  */
 
 protocol AddReviewService {
+  
   /// A service to send a request to the server to add a review.
   ///
   /// - Parameters:
@@ -21,6 +22,7 @@ protocol AddReviewService {
   ///   - text: content of the review
   ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func addReview(userID: Int, text: String, completion: @escaping (AddReviewResponse?) -> Void)
+  
 }
 
 class AddReviewServiceImplementation: AddReviewService {

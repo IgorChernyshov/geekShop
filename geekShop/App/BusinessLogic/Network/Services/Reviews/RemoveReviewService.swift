@@ -14,12 +14,14 @@ import Foundation
  */
 
 protocol RemoveReviewService {
+  
   /// A service to send a request to the server to remove a review.
   ///
   /// - Parameters:
   ///   - reviewID: ID of the review to remove
   ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func removeReview(reviewID: Int, completion: @escaping (RemoveReviewResponse?) -> Void)
+  
 }
 
 class RemoveReviewServiceImplementation: RemoveReviewService {

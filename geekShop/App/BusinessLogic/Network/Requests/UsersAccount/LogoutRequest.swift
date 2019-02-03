@@ -14,6 +14,7 @@ import Alamofire
  */
 
 struct LogoutRequest: RequestRouter {
+  
   let baseURL: URL
   let userID: Int
   
@@ -24,4 +25,5 @@ struct LogoutRequest: RequestRouter {
       "id_user": userID
     ]
   }
+  
 }

@@ -13,6 +13,8 @@ import Foundation
  */
 
 struct RemoveItemFromBasketResponse: Codable {
+  
   let result: Int
   let userMessage: String
+  
 }

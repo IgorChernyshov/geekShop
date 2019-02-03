@@ -14,6 +14,7 @@ import Foundation
  */
 
 protocol AddItemToBasketService {
+  
   /// A service to send a request to the server to add an item to the basket.
   ///
   /// - Parameters:
@@ -21,6 +22,7 @@ protocol AddItemToBasketService {
   ///   - quantity: number of items that must be added
   ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func addItemToBasket(productID: Int, quantity: Int, completion: @escaping (AddItemToBasketResponse?) -> Void)
+  
 }
 
 class AddItemToBasketServiceImplementation: AddItemToBasketService {
@@ -42,4 +44,5 @@ class AddItemToBasketServiceImplementation: AddItemToBasketService {
       completion(response)
     }
   }
+  
 }

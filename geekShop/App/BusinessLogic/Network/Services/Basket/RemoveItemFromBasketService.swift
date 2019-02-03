@@ -14,12 +14,14 @@ import Foundation
  */
 
 protocol RemoveItemFromBasketService {
+  
   /// A service to send a request to the server to remove an item from the basket.
   ///
   /// - Parameters:
   ///   - productID: an ID of the item that must be removed
   ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func removeItemFromBasket(productID: Int, completion: @escaping (RemoveItemFromBasketResponse?) -> Void)
+  
 }
 
 class RemoveItemFromBasketServiceImplementation: RemoveItemFromBasketService {
@@ -41,4 +43,5 @@ class RemoveItemFromBasketServiceImplementation: RemoveItemFromBasketService {
       completion(response)
     }
   }
+  
 }

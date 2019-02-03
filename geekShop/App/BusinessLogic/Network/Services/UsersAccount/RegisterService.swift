@@ -14,6 +14,7 @@ import Foundation
  */
 
 protocol RegisterService {
+  
   /// A service to send a request to the server to log out user.
   ///
   /// - Parameters:
@@ -21,6 +22,7 @@ protocol RegisterService {
   ///           Other parameters are optional.
   ///   - completion: a JSON response from the server which shows whether the request was successfull or not
   func register(data: UserProfileData, completion: @escaping (RegisterResponse?) -> Void)
+  
 }
 
 class RegisterServiceImplementation: RegisterService {

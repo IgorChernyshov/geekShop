@@ -14,6 +14,7 @@ import Foundation
  */
 
 protocol GetItemsListService {
+  
   /// A service to send a request to the server to get items of a specific category at a specific page.
   ///
   /// - Parameters:
@@ -21,6 +22,7 @@ protocol GetItemsListService {
   ///   - categoryID: category of a requested product
   ///   - completion: a JSON response from the server with requested items or an error message
   func getItemsList(pageNumber: Int, categoryID: Int, completion: @escaping (GetItemsListResponse?) -> Void)
+  
 }
 
 class GetItemsListServiceImplementation: GetItemsListService {
@@ -42,4 +44,5 @@ class GetItemsListServiceImplementation: GetItemsListService {
       completion(response)
     }
   }
+  
 }

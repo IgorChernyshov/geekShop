@@ -13,6 +13,8 @@ import Foundation
  */
 
 struct AddItemToBasketResponse: Codable {
+  
   let result: Int
   let userMessage: String
+  
 }
