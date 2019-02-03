@@ -16,10 +16,15 @@ import Alamofire
  */
 
 enum AppError: Error {
+  // Server returns an authentication error
   case authenticationError
+  // Client has canceled a request
   case canceledRequest
+  // The request didn't reach the server
   case clientError
+  // Server didn't return an error but the response has no data
   case serverError
+  // This error is not specified. It will be reported to developers
   case unknownError
 }
 

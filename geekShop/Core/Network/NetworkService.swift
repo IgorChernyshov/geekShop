@@ -49,7 +49,7 @@ class NetworkServiceImplementation: NetworkService {
           
           switch errorCause {
           case .canceledRequest:
-            // TODO: Request was canceled. Do not show error to user
+            // TODO: Request was canceled. Do not show an error to user
             return
           case .clientError:
             // TODO: Show alert "We couldn't complete the operation.
