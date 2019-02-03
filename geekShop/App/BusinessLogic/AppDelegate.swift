@@ -14,14 +14,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   // Create test instances of services to test API calls
+  
+  // User-related services
+  
   let authService = NetworkServiceFactory().makeAuthService()
   let registerService = NetworkServiceFactory().makeRegisterService()
   let logoutService = NetworkServiceFactory().makeLogoutService()
   let changeUserDataService = NetworkServiceFactory().makeChangeUserDataService()
+  
+  // Review-related services
+  
   let addReviewService = NetworkServiceFactory().makeAddReviewService()
   let approveReviewService = NetworkServiceFactory().makeApproveReviewService()
   let removeReviewService = NetworkServiceFactory().makeRemoveReviewService()
+  
+  // Basket-related services
+  
   let addItemToBasketService = NetworkServiceFactory().makeAddItemToBasketService()
+  let removeItemFromBasketService = NetworkServiceFactory().makeRemoveItemFromBasketService()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
@@ -77,6 +87,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Test basket-related API calls
     
     addItemToBasketService.addItemToBasket(productID: 5, quantity: 1) { response in
+      print(response.debugDescription)
+    }
+    
+    removeItemFromBasketService.removeItemFromBasket(productID: 7) { response in
       print(response.debugDescription)
     }
     
