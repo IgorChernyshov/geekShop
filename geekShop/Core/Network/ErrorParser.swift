@@ -29,9 +29,19 @@ enum AppError: Error {
 }
 
 protocol ErrorParser {
-  // This method parses errors that did not reach the server
+  /// This method parses errors that did not reach the server
+  ///
+  /// - Parameter result: an error that is returned when a request cannot reach the server
+  /// - Returns: One of the errors that is handled by ErrorParser
   func parse(_ result: Error) -> AppError
-  // This method parses errors that were received from the server
+  
+  /// This method parses an answer that was received from the server
+  ///
+  /// - Parameters:
+  ///   - request: a request that was sent to the server
+  ///   - response: a response that was received from the server
+  ///   - data: data that was received from the server with a response
+  /// - Returns: A result of a request to the server
   func parse(_ request: URLRequest?, _ response: HTTPURLResponse, _ data: Data?) -> Request.ValidationResult
 }
 
