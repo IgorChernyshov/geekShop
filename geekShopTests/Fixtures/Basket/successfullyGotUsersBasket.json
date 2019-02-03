@@ -1,4 +1,19 @@
 {
   "result": 1,
-  "userMessage": "Ваш отзыв был передан на модерацию"
+  "sumTotal": 132800,
+  "itemsCount": 2,
+  "products": [
+    {
+      "productID": 1,
+      "productName": "Laptop",
+      "price": 78600,
+      "quantity": 1
+    },
+    {
+      "productID": 1,
+      "productName": "Desktop",
+      "price": 54200,
+      "quantity": 1
+    }
+  ]
 }

@@ -1,8 +1,11 @@
 {
+  "result": 1,
   "page_number": 1,
-  "products": {
-    "productID": 1,
-    "productName": "Laptop",
-    "price": 78600,
-  }
+  "products": [
+    {
+      "productID": 1,
+      "productName": "Laptop",
+      "price": 78600
+    }
+  ]
 }

@@ -1,4 +1,6 @@
 {
-  "result": 1,
-  "userMessage": "Ваш отзыв был передан на модерацию"
+  "productID": 1,
+  "productName": "Laptop",
+  "price": 78600,
+  "quantity": 1
 }
