@@ -62,6 +62,14 @@
 		9CD71E0C22075C460032023F /* GetUsersBasketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71E0B22075C460032023F /* GetUsersBasketService.swift */; };
 		9CD71E0E22075D200032023F /* GetUsersBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71E0D22075D200032023F /* GetUsersBasketResponse.swift */; };
 		9CD71E1522075F2C0032023F /* ItemInBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71E1422075F2C0032023F /* ItemInBasket.swift */; };
+		9CD71E172207610A0032023F /* addItemToBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CD71E162207610A0032023F /* addItemToBasket.json */; };
+		9CD71E1D2207620B0032023F /* removeItemFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CD71E1C2207620B0032023F /* removeItemFromBasket.json */; };
+		9CD71E1F2207624A0032023F /* successfullyGotItemsList.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CD71E1E2207624A0032023F /* successfullyGotItemsList.json */; };
+		9CD71E212207631B0032023F /* failedToGetItemsList.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CD71E202207631B0032023F /* failedToGetItemsList.json */; };
+		9CD71E23220763D00032023F /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CD71E22220763D00032023F /* item.json */; };
+		9CD71E25220764350032023F /* successfullyGotUsersBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CD71E24220764350032023F /* successfullyGotUsersBasket.json */; };
+		9CD71E27220764910032023F /* failedToGetUsersBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CD71E26220764910032023F /* failedToGetUsersBasket.json */; };
+		9CD71E29220764B20032023F /* itemInBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CD71E28220764B20032023F /* itemInBasket.json */; };
 		9CF459DD21FD9C5600DCB6D0 /* registerUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CF459DC21FD9C5600DCB6D0 /* registerUser.json */; };
 		9CF459DF21FD9CC400DCB6D0 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CF459DE21FD9CC400DCB6D0 /* user.json */; };
 		F06E92415FDA6CC939DD1AE2 /* Pods_geekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D553FD623A74914BB23EC442 /* Pods_geekShop.framework */; };
@@ -138,6 +146,14 @@
 		9CD71E0B22075C460032023F /* GetUsersBasketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersBasketService.swift; sourceTree = "<group>"; };
 		9CD71E0D22075D200032023F /* GetUsersBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersBasketResponse.swift; sourceTree = "<group>"; };
 		9CD71E1422075F2C0032023F /* ItemInBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInBasket.swift; sourceTree = "<group>"; };
+		9CD71E162207610A0032023F /* addItemToBasket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addItemToBasket.json; sourceTree = "<group>"; };
+		9CD71E1C2207620B0032023F /* removeItemFromBasket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = removeItemFromBasket.json; sourceTree = "<group>"; };
+		9CD71E1E2207624A0032023F /* successfullyGotItemsList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successfullyGotItemsList.json; sourceTree = "<group>"; };
+		9CD71E202207631B0032023F /* failedToGetItemsList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = failedToGetItemsList.json; sourceTree = "<group>"; };
+		9CD71E22220763D00032023F /* item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = item.json; sourceTree = "<group>"; };
+		9CD71E24220764350032023F /* successfullyGotUsersBasket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successfullyGotUsersBasket.json; sourceTree = "<group>"; };
+		9CD71E26220764910032023F /* failedToGetUsersBasket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = failedToGetUsersBasket.json; sourceTree = "<group>"; };
+		9CD71E28220764B20032023F /* itemInBasket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = itemInBasket.json; sourceTree = "<group>"; };
 		9CF459DC21FD9C5600DCB6D0 /* registerUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = registerUser.json; sourceTree = "<group>"; };
 		9CF459DE21FD9CC400DCB6D0 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		A132F36D29C040C416B6F9FC /* Pods-geekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geekShop/Pods-geekShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -403,15 +419,10 @@
 		9C17BD0B21FA417A00F5760B /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				9C17BD0C21FA418500F5760B /* addReview.json */,
-				9C17BD0E21FA470C00F5760B /* approveReview.json */,
-				9C17BD1021FA48DD00F5760B /* removeReview.json */,
-				9C17BD1221FA490E00F5760B /* changeUserData.json */,
-				9C17BD1421FA49CC00F5760B /* login.json */,
-				9CF459DE21FD9CC400DCB6D0 /* user.json */,
-				9C17BD1621FA49D000F5760B /* logout.json */,
-				9CF459DC21FD9C5600DCB6D0 /* registerUser.json */,
-				9C17BD1821FA49FF00F5760B /* stub.json */,
+				9CD71E18220761100032023F /* Basket */,
+				9CD71E1B2207615F0032023F /* General */,
+				9CD71E192207611A0032023F /* Reviews */,
+				9CD71E1A220761360032023F /* UsersAccount */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -449,6 +460,51 @@
 				9CD71DF9220750230032023F /* RemoveItemFromBasketResponse.swift */,
 			);
 			path = Basket;
+			sourceTree = "<group>";
+		};
+		9CD71E18220761100032023F /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				9CD71E162207610A0032023F /* addItemToBasket.json */,
+				9CD71E202207631B0032023F /* failedToGetItemsList.json */,
+				9CD71E26220764910032023F /* failedToGetUsersBasket.json */,
+				9CD71E22220763D00032023F /* item.json */,
+				9CD71E28220764B20032023F /* itemInBasket.json */,
+				9CD71E1C2207620B0032023F /* removeItemFromBasket.json */,
+				9CD71E1E2207624A0032023F /* successfullyGotItemsList.json */,
+				9CD71E24220764350032023F /* successfullyGotUsersBasket.json */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		9CD71E192207611A0032023F /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				9C17BD0C21FA418500F5760B /* addReview.json */,
+				9C17BD0E21FA470C00F5760B /* approveReview.json */,
+				9C17BD1021FA48DD00F5760B /* removeReview.json */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
+		9CD71E1A220761360032023F /* UsersAccount */ = {
+			isa = PBXGroup;
+			children = (
+				9C17BD1221FA490E00F5760B /* changeUserData.json */,
+				9C17BD1421FA49CC00F5760B /* login.json */,
+				9C17BD1621FA49D000F5760B /* logout.json */,
+				9CF459DC21FD9C5600DCB6D0 /* registerUser.json */,
+				9CF459DE21FD9CC400DCB6D0 /* user.json */,
+			);
+			path = UsersAccount;
+			sourceTree = "<group>";
+		};
+		9CD71E1B2207615F0032023F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				9C17BD1821FA49FF00F5760B /* stub.json */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		E53E4D3A94FD3ABA0C81C775 /* Pods */ = {
@@ -557,13 +613,21 @@
 			files = (
 				9C17BD0D21FA418500F5760B /* addReview.json in Resources */,
 				9C17BD0F21FA470C00F5760B /* approveReview.json in Resources */,
+				9CD71E1D2207620B0032023F /* removeItemFromBasket.json in Resources */,
 				9C17BD1521FA49CC00F5760B /* login.json in Resources */,
+				9CD71E23220763D00032023F /* item.json in Resources */,
+				9CD71E29220764B20032023F /* itemInBasket.json in Resources */,
+				9CD71E212207631B0032023F /* failedToGetItemsList.json in Resources */,
 				9C17BD1721FA49D000F5760B /* logout.json in Resources */,
+				9CD71E27220764910032023F /* failedToGetUsersBasket.json in Resources */,
+				9CD71E25220764350032023F /* successfullyGotUsersBasket.json in Resources */,
 				9CF459DF21FD9CC400DCB6D0 /* user.json in Resources */,
 				9C17BD1321FA490E00F5760B /* changeUserData.json in Resources */,
 				9C17BD1121FA48DE00F5760B /* removeReview.json in Resources */,
 				9C17BD1921FA49FF00F5760B /* stub.json in Resources */,
 				9CF459DD21FD9C5600DCB6D0 /* registerUser.json in Resources */,
+				9CD71E172207610A0032023F /* addItemToBasket.json in Resources */,
+				9CD71E1F2207624A0032023F /* successfullyGotItemsList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
