@@ -72,4 +72,8 @@ class NetworkServiceFactory {
   func makeRemoveItemFromBasketService() -> RemoveItemFromBasketService {
     return RemoveItemFromBasketServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
   }
+  
+  func makeGetItemsListService() -> GetItemsListService {
+    return GetItemsListServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
+  }
 }

@@ -54,6 +54,10 @@
 		9CD71DF622074F4E0032023F /* RemoveItemFromBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DF522074F4E0032023F /* RemoveItemFromBasket.swift */; };
 		9CD71DF822074F850032023F /* RemoveItemFromBasketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DF722074F850032023F /* RemoveItemFromBasketService.swift */; };
 		9CD71DFA220750230032023F /* RemoveItemFromBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DF9220750230032023F /* RemoveItemFromBasketResponse.swift */; };
+		9CD71DFF220752680032023F /* GetItemsListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DFE220752680032023F /* GetItemsListRequest.swift */; };
+		9CD71E012207538A0032023F /* GetItemsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71E002207538A0032023F /* GetItemsListService.swift */; };
+		9CD71E03220754CC0032023F /* GetItemsListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71E02220754CC0032023F /* GetItemsListResponse.swift */; };
+		9CD71E08220758190032023F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71E07220758190032023F /* Item.swift */; };
 		9CF459DD21FD9C5600DCB6D0 /* registerUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CF459DC21FD9C5600DCB6D0 /* registerUser.json */; };
 		9CF459DF21FD9CC400DCB6D0 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CF459DE21FD9CC400DCB6D0 /* user.json */; };
 		F06E92415FDA6CC939DD1AE2 /* Pods_geekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D553FD623A74914BB23EC442 /* Pods_geekShop.framework */; };
@@ -122,6 +126,10 @@
 		9CD71DF522074F4E0032023F /* RemoveItemFromBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveItemFromBasket.swift; sourceTree = "<group>"; };
 		9CD71DF722074F850032023F /* RemoveItemFromBasketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveItemFromBasketService.swift; sourceTree = "<group>"; };
 		9CD71DF9220750230032023F /* RemoveItemFromBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveItemFromBasketResponse.swift; sourceTree = "<group>"; };
+		9CD71DFE220752680032023F /* GetItemsListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemsListRequest.swift; sourceTree = "<group>"; };
+		9CD71E002207538A0032023F /* GetItemsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemsListService.swift; sourceTree = "<group>"; };
+		9CD71E02220754CC0032023F /* GetItemsListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemsListResponse.swift; sourceTree = "<group>"; };
+		9CD71E07220758190032023F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9CF459DC21FD9C5600DCB6D0 /* registerUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = registerUser.json; sourceTree = "<group>"; };
 		9CF459DE21FD9CC400DCB6D0 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		A132F36D29C040C416B6F9FC /* Pods-geekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geekShop/Pods-geekShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -405,6 +413,7 @@
 			children = (
 				9CD71DE9220742040032023F /* AddItemToBasketRequest.swift */,
 				9CD71DF522074F4E0032023F /* RemoveItemFromBasket.swift */,
+				9CD71DFE220752680032023F /* GetItemsListRequest.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -414,6 +423,7 @@
 			children = (
 				9CD71DEC220742E30032023F /* AddItemToBasketService.swift */,
 				9CD71DF722074F850032023F /* RemoveItemFromBasketService.swift */,
+				9CD71E002207538A0032023F /* GetItemsListService.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -423,6 +433,8 @@
 			children = (
 				9CD71DEF22074C1B0032023F /* AddItemToBasketResponse.swift */,
 				9CD71DF9220750230032023F /* RemoveItemFromBasketResponse.swift */,
+				9CD71E02220754CC0032023F /* GetItemsListResponse.swift */,
+				9CD71E07220758190032023F /* Item.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -614,7 +626,9 @@
 				9C17BCB821F0E51500F5760B /* LoginRequest.swift in Sources */,
 				9C17BCE521F44F7100F5760B /* Configuration.swift in Sources */,
 				9C17BCD921F0FE7F00F5760B /* LogoutResponse.swift in Sources */,
+				9CD71E08220758190032023F /* Item.swift in Sources */,
 				9C17BCF421F5DC6700F5760B /* AddReviewService.swift in Sources */,
+				9CD71E03220754CC0032023F /* GetItemsListResponse.swift in Sources */,
 				9CD71DFA220750230032023F /* RemoveItemFromBasketResponse.swift in Sources */,
 				9C17BCCC21F0F9FE00F5760B /* RegisterRequest.swift in Sources */,
 				9C17BCBE21F0E68400F5760B /* NetworkService.swift in Sources */,
@@ -625,7 +639,9 @@
 				9C17BCF021F5DC4C00F5760B /* ApproveReviewRequest.swift in Sources */,
 				9C17BCC821F0F85A00F5760B /* RegisterService.swift in Sources */,
 				9C17BD0021F5E03300F5760B /* RemoveReviewResponse.swift in Sources */,
+				9CD71E012207538A0032023F /* GetItemsListService.swift in Sources */,
 				9C17BCEE21F5DBF100F5760B /* AddReviewRequest.swift in Sources */,
+				9CD71DFF220752680032023F /* GetItemsListRequest.swift in Sources */,
 				9C17BCBA21F0E59100F5760B /* LoginResponse.swift in Sources */,
 				9C17BCDC21F1012F00F5760B /* ChangeUserProfileService.swift in Sources */,
 				9CD71DEA220742040032023F /* AddItemToBasketRequest.swift in Sources */,
