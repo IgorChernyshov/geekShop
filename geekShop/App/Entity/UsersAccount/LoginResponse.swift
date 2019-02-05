@@ -13,6 +13,8 @@ import Foundation
  */
 
 struct LoginResponse: Codable {
+  
   let result: Int
   let user: User
+  
 }

@@ -18,15 +18,18 @@ enum RequestRouterEncoding {
 }
 
 protocol RequestRouter: URLRequestConvertible {
+  
   var baseURL: URL { get }
   var method: HTTPMethod { get }
   var path: String { get }
   var parameters: Parameters? { get }
   var fullURL: URL { get }
   var encoding: RequestRouterEncoding { get }
+  
 }
 
 extension RequestRouter {
+  
   var fullURL: URL {
     return baseURL.appendingPathComponent(path)
   }

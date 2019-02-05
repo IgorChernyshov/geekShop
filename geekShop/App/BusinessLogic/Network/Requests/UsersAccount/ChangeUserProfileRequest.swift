@@ -14,6 +14,7 @@ import Alamofire
  */
 
 struct ChangeUserProfileRequest: RequestRouter {
+  
   let baseURL: URL
   let data: UserProfileData
   
@@ -30,4 +31,5 @@ struct ChangeUserProfileRequest: RequestRouter {
       "bio": data.bio
     ]
   }
+  
 }

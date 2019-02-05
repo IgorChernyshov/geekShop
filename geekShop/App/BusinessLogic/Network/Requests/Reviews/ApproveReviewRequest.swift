@@ -14,6 +14,7 @@ import Alamofire
  */
 
 struct ApproveReviewRequest: RequestRouter {
+  
   let baseURL: URL
   let reviewID: Int
   
@@ -24,4 +25,5 @@ struct ApproveReviewRequest: RequestRouter {
       "id_comment": reviewID
     ]
   }
+  
 }

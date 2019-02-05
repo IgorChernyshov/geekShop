@@ -13,6 +13,8 @@ import Foundation
  */
 
 struct ApproveReviewResponse: Codable {
+  
   let result: Int
   let userMessage: String
+  
 }

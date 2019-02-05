@@ -14,6 +14,7 @@ import Foundation
  */
 
 protocol AuthService {
+  
   /// A service to send a request to the server to authenticate a user.
   ///
   /// - Parameters:
@@ -22,6 +23,7 @@ protocol AuthService {
   ///   - cookie: send a cookie to the server if user is already logged in
   ///   - completion: a JSON response from the server which either returns information about logged in user or an error
   func login(login: String, password: String, cookie: String, completion: @escaping (User?) -> Void)
+  
 }
 
 class AuthServiceImplementation: AuthService {

@@ -14,6 +14,7 @@ import Alamofire
  */
 
 struct LoginRequest: RequestRouter {
+  
   let baseURL: URL
   let login: String
   let password: String
@@ -28,4 +29,5 @@ struct LoginRequest: RequestRouter {
       "cookie": cookie
     ]
   }
+  
 }

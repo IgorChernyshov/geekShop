@@ -62,4 +62,23 @@ class NetworkServiceFactory {
   func makeRemoveReviewService() -> RemoveReviewService {
     return RemoveReviewServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
   }
+  
+  // MARK: - Methods to create Basket services
+  
+  func makeAddItemToBasketService() -> AddItemToBasketService {
+    return AddItemToBasketServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
+  }
+  
+  func makeRemoveItemFromBasketService() -> RemoveItemFromBasketService {
+    return RemoveItemFromBasketServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
+  }
+  
+  func makeGetItemsListService() -> GetItemsListService {
+    return GetItemsListServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
+  }
+  
+  func makeGetUsersBasketService() -> GetUsersBasketService {
+    return GetUsersBasketServiceImplementation(baseURL: configuration.baseUrl, networkService: networkService)
+  }
+  
 }

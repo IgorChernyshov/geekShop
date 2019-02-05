@@ -17,9 +17,11 @@ import Alamofire
  */
 
 protocol NetworkService {
+  
   func request<T: Decodable>(
     _ request: URLRequestConvertible,
     completionHandler: @escaping (T?) -> Void)
+  
 }
 
 class NetworkServiceImplementation: NetworkService {

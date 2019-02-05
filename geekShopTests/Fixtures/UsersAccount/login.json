@@ -2,9 +2,9 @@
   "result": 1,
   "user": {
     "id_user": 123,
-    "user_login": "geekbrains",
-    "user_name": "John",
-    "user_lastname": "Doe"
+    "user_login": "Frostfell",
+    "user_name": "Igor",
+    "user_lastname": "Chernyshov"
   },
   "authToken": "some_authorizaion_token"
 }
