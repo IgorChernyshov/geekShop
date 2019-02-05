@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ This structure contains application's configuraion items.
+ */
+
 struct Configuration {
   let baseUrl = URL(string: "http://localhost:8080/")!
 }

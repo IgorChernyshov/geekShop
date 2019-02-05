@@ -8,10 +8,19 @@
 
 import Foundation
 
+/*
+ This class sends a request to the server to change user's profile data.
+ Completion handler returns server's response as a JSON.
+ */
+
 protocol ChangeUserProfileService {
-  func changeUserProfile(
-    data: UserProfileData,
-    completion: @escaping (ChangeUserProfileResponse?) -> Void)
+  /// A service to send a request to the server to change user's data.
+  ///
+  /// - Parameters:
+  ///   - data: user's data that must be changed. userID, username and password are mandatory parameters.
+  ///           Other fields will be changed if parameters.
+  ///   - completion: a JSON response from the server which shows whether request was successfull or not
+  func changeUserProfile(data: UserProfileData, completion: @escaping (ChangeUserProfileResponse?) -> Void)
 }
 
 class ChangeUserDataServiceImplementation: ChangeUserProfileService {

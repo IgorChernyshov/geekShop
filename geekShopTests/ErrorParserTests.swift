@@ -10,6 +10,10 @@ import XCTest
 import Alamofire
 @testable import geekShop
 
+/*
+ This class tests if different errors are parsed correctly
+ */
+
 class ErrorParserTests: XCTestCase {
   
   var errorParser: ErrorParser!

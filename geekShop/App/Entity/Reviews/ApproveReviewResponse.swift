@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ Entity that decodes server response for ApproveReviewRequest.
+ */
+
 struct ApproveReviewResponse: Codable {
   let result: Int
   let userMessage: String

@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+/*
+ This structure is used to create a request to the server to log in a user.
+ */
+
 struct LoginRequest: RequestRouter {
   let baseURL: URL
   let login: String

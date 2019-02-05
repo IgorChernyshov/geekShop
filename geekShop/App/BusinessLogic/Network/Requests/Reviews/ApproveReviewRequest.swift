@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+/*
+ This structure is used to create a request to the server to approve a specific review of a product.
+ */
+
 struct ApproveReviewRequest: RequestRouter {
   let baseURL: URL
   let reviewID: Int

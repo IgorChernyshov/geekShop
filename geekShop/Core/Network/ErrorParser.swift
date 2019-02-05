@@ -9,16 +9,29 @@
 import Foundation
 import Alamofire
 
+/*
+ This class parses errors that can raise during network requests.
+ It handles errors that didn't reach the server as well as
+ error codes that were returned as a response from the server.
+ */
+
 enum AppError: Error {
+  // Server returns an authentication error
   case authenticationError
+  // Client has canceled a request
   case canceledRequest
+  // The request didn't reach the server
   case clientError
+  // Server didn't return an error but the response has no data
   case serverError
+  // This error is not specified. It will be reported to developers
   case unknownError
 }
 
 protocol ErrorParser {
+  // This method parses errors that did not reach the server
   func parse(_ result: Error) -> AppError
+  // This method parses errors that were received from the server
   func parse(_ request: URLRequest?, _ response: HTTPURLResponse, _ data: Data?) -> Request.ValidationResult
 }
 

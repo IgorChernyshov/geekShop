@@ -8,6 +8,11 @@
 
 import Foundation
 
+/*
+ Entity that contains user's data to call RegisterService.register method to register users
+ and ChangeUserProfileService.changeUserProfile method.
+ */
+
 struct UserProfileData {
   let userID: Int
   let login: String

@@ -9,6 +9,10 @@
 import XCTest
 @testable import geekShop
 
+/*
+ This class tests if JSON stubs that are identical to responses from the server are parsed succesfully
+ */
+
 class JSONResponsesTests: XCTestCase {
   
   var testBundle: Bundle!

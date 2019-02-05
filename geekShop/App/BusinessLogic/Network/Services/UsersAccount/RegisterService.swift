@@ -8,7 +8,18 @@
 
 import Foundation
 
+/*
+ This class sends a request to the server to register new user.
+ Completion handler returns server's response as a JSON.
+ */
+
 protocol RegisterService {
+  /// A service to send a request to the server to log out user.
+  ///
+  /// - Parameters:
+  ///   - data: new user's data. userID, username, password and email are mandatory parameters.
+  ///           Other parameters are optional.
+  ///   - completion: a JSON response from the server which shows whether request was successfull or not
   func register(data: UserProfileData, completion: @escaping (RegisterResponse?) -> Void)
 }
 

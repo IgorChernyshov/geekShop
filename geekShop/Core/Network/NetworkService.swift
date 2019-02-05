@@ -9,6 +9,13 @@
 import Foundation
 import Alamofire
 
+/*
+ This class:
+ - allows other *Service classes to send requests to the server
+ - sends errors to ErrorParser if encounter any
+ - decodes JSON response with a proper Codable entity
+ */
+
 protocol NetworkService {
   func request<T: Decodable>(
     _ request: URLRequestConvertible,
@@ -34,16 +41,19 @@ class NetworkServiceImplementation: NetworkService {
     
     sessionManager
       .request(request)
-      .validate(errorParser.parse).responseData { [weak self] resрonse in
+      .validate(errorParser.parse)
+      .responseData { [weak self] resрonse in
         if let error = resрonse.error {
+          // This part only handles errors for requests that didn't reach the server
           guard let errorCause = self?.errorParser.parse(error) else { return }
           
           switch errorCause {
           case .canceledRequest:
-            // TODO: Request was canceled. Do not show error to user
+            // TODO: Request was canceled. Do not show an error to user
             return
           case .clientError:
-            // TODO: Show alert "We couldn't complete the operation. Please check your Internet connection and try again"
+            // TODO: Show alert "We couldn't complete the operation.
+            // Please check your Internet connection and try again"
             return
           case .unknownError:
             // TODO: Unhandled error. Send an error code to developers to create a handler

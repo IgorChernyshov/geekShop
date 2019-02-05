@@ -8,7 +8,19 @@
 
 import Foundation
 
+/*
+ This class sends a request to the server to log in a user.
+ Completion handler returns server's response as a JSON.
+ */
+
 protocol AuthService {
+  /// A service to send a request to the server to authenticate a user.
+  ///
+  /// - Parameters:
+  ///   - login: user's login
+  ///   - password: user's password
+  ///   - cookie: send a cookie to the server if user is already logged in
+  ///   - completion: a JSON response from the server which either returns information about logged in user or an error
   func login(login: String, password: String, cookie: String, completion: @escaping (User?) -> Void)
 }
 

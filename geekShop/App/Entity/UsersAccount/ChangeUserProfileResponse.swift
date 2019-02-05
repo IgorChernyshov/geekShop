@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ Entity that decodes server response for ChangeUserProfileRequest.
+ */
+
 struct ChangeUserProfileResponse: Codable {
   let result: Int
   let userMessage: String

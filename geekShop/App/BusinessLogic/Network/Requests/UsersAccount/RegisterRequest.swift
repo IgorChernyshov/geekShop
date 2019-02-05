@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+/*
+ This structure is used to create a request to the server to register new user.
+ */
+
 struct RegisterRequest: RequestRouter {
   let baseURL: URL
   let data: UserProfileData

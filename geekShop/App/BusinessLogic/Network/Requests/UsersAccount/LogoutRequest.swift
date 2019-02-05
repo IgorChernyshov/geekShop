@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+/*
+ This structure is used to create a request to the server to log out a user.
+ */
+
 struct LogoutRequest: RequestRouter {
   let baseURL: URL
   let userID: Int

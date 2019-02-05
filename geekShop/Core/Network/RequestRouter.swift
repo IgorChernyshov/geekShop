@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+/*
+ This protocol helps to build Alamofire's requests from *Request structures.
+ */
+
 enum RequestRouterEncoding {
   case url, json
 }

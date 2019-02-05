@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+/*
+ This structure is used to create a request to the server to remove a specific review of a product.
+ */
+
 struct RemoveReviewRequest: RequestRouter {
   let baseURL: URL
   let reviewID: Int
