@@ -55,8 +55,12 @@ class ErrorParserImplementation: ErrorParser {
     let error = result as NSError
     switch error.code {
     case -999:
+      // A request has been cancelled
       return .canceledRequest
     case -1001, -1005, -1009:
+      // -1001: request timed out
+      // -1005: network connection lost
+      // -1009: not connected to Internet
       return .clientError
     default:
       return .unknownError
