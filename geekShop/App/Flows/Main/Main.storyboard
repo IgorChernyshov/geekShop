@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCw-fF-wFa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shop-->
+        <scene sceneID="4FG-Bj-ZHB">
+            <objects>
+                <viewController id="o9M-80-EBd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nep-Am-V1i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="xRK-1c-kKx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shop" id="lMT-KR-nB2">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="y3P-Yj-ytr"/>
+                        <barButtonItem key="rightBarButtonItem" title="Profile" id="Ptv-i2-6zT">
+                            <connections>
+                                <segue destination="XGw-ig-bSB" kind="show" id="tLc-6S-P0V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGa-Iu-azJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784.79999999999995" y="-155.17241379310346"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="pSO-o0-7D9">
+            <objects>
+                <viewController id="XGw-ig-bSB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZyD-TX-ImX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LEn-p0-Ulg" userLabel="Controls Stack">
+                                <rect key="frame" x="16" y="80" width="343" height="420"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqC-XD-Qhn">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="14"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="l09-QL-EJl" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22" width="343" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhH-ko-5Oc">
+                                        <rect key="frame" x="0.0" y="60" width="343" height="14"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xmt-Y7-ZOr" userLabel="Password Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="82" width="343" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdZ-Qr-8hY">
+                                        <rect key="frame" x="0.0" y="120" width="343" height="14"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lbD-BW-Pvl" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="142" width="343" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqq-Sr-MvM">
+                                        <rect key="frame" x="0.0" y="180" width="343" height="14"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MGI-m3-9av">
+                                        <rect key="frame" x="0.0" y="202" width="343" height="29"/>
+                                        <segments>
+                                            <segment title="Unknown"/>
+                                            <segment title="Male"/>
+                                            <segment title="Female"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="credit card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEI-5J-2r5">
+                                        <rect key="frame" x="0.0" y="238" width="343" height="14"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="credit card number" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Eb-lH-GYx" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="260" width="343" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="cc-number"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAu-C3-Yqj">
+                                        <rect key="frame" x="0.0" y="298" width="343" height="14"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s78-bW-Lpg">
+                                        <rect key="frame" x="0.0" y="320" width="343" height="100"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="i9Y-ro-bAL"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="s78-bW-Lpg" firstAttribute="trailing" secondItem="l09-QL-EJl" secondAttribute="trailing" id="1WB-bv-AjE"/>
+                                    <constraint firstItem="l09-QL-EJl" firstAttribute="width" secondItem="MGI-m3-9av" secondAttribute="width" id="6gz-zW-bCD"/>
+                                    <constraint firstItem="dqC-XD-Qhn" firstAttribute="leading" secondItem="l09-QL-EJl" secondAttribute="leading" id="7vY-Pb-bVq"/>
+                                    <constraint firstItem="Cqq-Sr-MvM" firstAttribute="leading" secondItem="MGI-m3-9av" secondAttribute="leading" id="Hxr-fn-StB"/>
+                                    <constraint firstItem="aEI-5J-2r5" firstAttribute="leading" secondItem="3Eb-lH-GYx" secondAttribute="leading" id="MCn-Eb-yx8"/>
+                                    <constraint firstItem="rAu-C3-Yqj" firstAttribute="leading" secondItem="3Eb-lH-GYx" secondAttribute="leading" id="UsV-si-eRT"/>
+                                    <constraint firstItem="FhH-ko-5Oc" firstAttribute="leading" secondItem="xmt-Y7-ZOr" secondAttribute="leading" id="cg1-FV-laO"/>
+                                    <constraint firstItem="MdZ-Qr-8hY" firstAttribute="leading" secondItem="lbD-BW-Pvl" secondAttribute="leading" id="ckg-ez-AnO"/>
+                                    <constraint firstItem="lbD-BW-Pvl" firstAttribute="width" secondItem="xmt-Y7-ZOr" secondAttribute="width" id="gCc-La-m47"/>
+                                    <constraint firstItem="s78-bW-Lpg" firstAttribute="leading" secondItem="l09-QL-EJl" secondAttribute="leading" id="mXn-bQ-MNu"/>
+                                    <constraint firstItem="xmt-Y7-ZOr" firstAttribute="width" secondItem="l09-QL-EJl" secondAttribute="width" id="oBs-qt-W68"/>
+                                    <constraint firstItem="3Eb-lH-GYx" firstAttribute="width" secondItem="lbD-BW-Pvl" secondAttribute="width" id="rlP-xm-n8X"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v1e-AN-SoG" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LEn-p0-Ulg" secondAttribute="bottom" constant="16" id="6FS-8C-FlT"/>
+                            <constraint firstItem="LEn-p0-Ulg" firstAttribute="centerX" secondItem="ZyD-TX-ImX" secondAttribute="centerX" id="ddV-ZN-Uhw"/>
+                            <constraint firstItem="LEn-p0-Ulg" firstAttribute="top" secondItem="v1e-AN-SoG" secondAttribute="top" constant="16" id="et8-BQ-m3C"/>
+                            <constraint firstItem="LEn-p0-Ulg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v1e-AN-SoG" secondAttribute="leading" constant="16" id="uaR-AM-EF0"/>
+                            <constraint firstItem="v1e-AN-SoG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LEn-p0-Ulg" secondAttribute="trailing" constant="16" id="ziC-jl-QdZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v1e-AN-SoG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="VAe-Bk-dCi">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="1w2-AP-1To"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQh-Dz-7OO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829.5999999999999" y="-155.17241379310346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yqv-K4-QnZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NCw-fF-wFa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mWv-kP-wyz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o9M-80-EBd" kind="relationship" relationship="rootViewController" id="Tmu-kZ-XsX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fqb-lO-V6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154.40000000000001" y="-155.17241379310346"/>
+        </scene>
+    </scenes>
+</document>
