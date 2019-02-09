@@ -13,7 +13,7 @@
         <!--Geek Shop-->
         <scene sceneID="uA1-kv-zFk">
             <objects>
-                <viewController id="7Z4-6y-O1H" sceneMemberID="viewController">
+                <viewController id="7Z4-6y-O1H" customClass="SignInViewController" customModule="geekShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="F4L-En-Csn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="5fG-ib-lCe" kind="showDetail" id="Y4Z-xA-Ugq"/>
+                                            <action selector="signInButtonWasPressed:" destination="7Z4-6y-O1H" eventType="touchUpInside" id="PB3-ho-vMk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-if-WNJ">
@@ -84,9 +84,6 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="wir-hf-REH" kind="show" id="YPc-vj-lGk"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -104,6 +101,13 @@
                     <navigationItem key="navigationItem" title="Geek Shop" id="4Gp-bb-3ht">
                         <barButtonItem key="backBarButtonItem" title="Back" id="sry-Bc-OyC"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="loginTextField" destination="J2R-iA-xf4" id="i9n-Hz-Jsl"/>
+                        <outlet property="passwordTextField" destination="sEA-LQ-BPO" id="4hQ-tT-Ikx"/>
+                        <outlet property="signInButton" destination="0l9-Gr-agO" id="DFb-82-s2d"/>
+                        <segue destination="wir-hf-REH" kind="show" identifier="toSignUpVC" id="7bI-gE-1XN"/>
+                        <segue destination="5fG-ib-lCe" kind="presentation" identifier="toMainVC" id="Rdv-R7-96O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcV-Gi-Lk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,7 +124,7 @@
         <!--Sign Up-->
         <scene sceneID="xe9-hD-9d6">
             <objects>
-                <viewController id="wir-hf-REH" sceneMemberID="viewController">
+                <viewController id="wir-hf-REH" customClass="SignUpViewController" customModule="geekShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ArT-cg-IWT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +153,7 @@
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="re-enter password" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="oVH-yj-miZ" userLabel="Re-Enter Password Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat password" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="oVH-yj-miZ" userLabel="Re-Enter Password Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="76" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
@@ -199,6 +203,12 @@
                         <viewLayoutGuide key="safeArea" id="iK9-nB-ybL"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="Cy0-BF-vIf"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="8DL-is-T6r" id="Rtv-Z3-CR0"/>
+                        <outlet property="loginTextField" destination="w0b-zd-5F2" id="V5h-HG-o5G"/>
+                        <outlet property="passwordTextField" destination="NwS-2l-Wuh" id="rYS-M4-Q05"/>
+                        <outlet property="repeatPasswordTextField" destination="oVH-yj-miZ" id="any-Qa-bGc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRs-y5-Axq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
