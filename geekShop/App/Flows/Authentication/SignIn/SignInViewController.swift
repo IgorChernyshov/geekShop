@@ -16,7 +16,7 @@ class SignInViewController: UIViewController {
   @IBOutlet weak var signInButton: UIButton!
   
   // MARK: - Services
-  let authService = NetworkServiceFactory().makeAuthService()
+  private let authService = NetworkServiceFactory().makeAuthService()
   
   // MARK: - Buttons configuration
   @IBAction func signInButtonWasPressed(_ sender: Any) {
@@ -33,7 +33,24 @@ class SignInViewController: UIViewController {
     }
   }
   
-  func loginAndPasswordInserted() -> Bool {
+  @IBAction func signUpButtonWasPressed(_ sender: Any) {
+    self.performSegue(withIdentifier: "toSignUpVC", sender: self)
+  }
+  
+  // MARK: - Controller methods
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    if let userLogin = UserDefaults.standard.string(forKey: "currentUserLogin") {
+      self.loginTextField.text = userLogin
+    }
+    if let userPassword = UserDefaults.standard.string(forKey: "currentUserPassword") {
+      self.passwordTextField.text = userPassword
+    }
+  }
+  
+  private func loginAndPasswordInserted() -> Bool {
     var loginInserted: Bool {
       if loginTextField.text != "" {
         return true
