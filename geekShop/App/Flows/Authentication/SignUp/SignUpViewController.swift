@@ -8,6 +8,10 @@
 
 import UIKit
 
+/*
+ This controller allows a user to create a new account
+ */
+
 class SignUpViewController: UIViewController {
   
   // MARK: - Outlets
@@ -21,7 +25,7 @@ class SignUpViewController: UIViewController {
   
   private let registerService = NetworkServiceFactory().makeRegisterService()
   
-  // MARK: - Buttons Configuration
+  // MARK: - Methods called by button tap
   
   @IBAction func signUpButtonWasPressed(_ sender: Any) {
     if allFieldsAreFilled() {

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/*
+ This controller shows user's profile data and allows to change it
+ */
+
 class UserProfileViewController: UIViewController {
   
   // MARK: - Outlets
@@ -23,7 +27,7 @@ class UserProfileViewController: UIViewController {
   
   let changeUserDataService = NetworkServiceFactory().makeChangeUserDataService()
   
-  // MARK: - Buttons configuration
+  // MARK: - Methods called by button tap
   
   @IBAction func saveButtonWasPressed(_ sender: Any) {
     let login = loginTextField.text ?? ""
@@ -57,6 +61,6 @@ class UserProfileViewController: UIViewController {
     }
     alertController.addAction(okAction)
     present(alertController, animated: true, completion: nil)
-  }  
+  }
 
 }

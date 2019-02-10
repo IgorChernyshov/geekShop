@@ -8,6 +8,10 @@
 
 import UIKit
 
+/*
+ This controller allows a user to either sign into the application or to open account creation screen
+ */
+
 class SignInViewController: UIViewController {
   
   // MARK: - Outlets
@@ -20,7 +24,7 @@ class SignInViewController: UIViewController {
   
   private let authService = NetworkServiceFactory().makeAuthService()
   
-  // MARK: - Buttons configuration
+  // MARK: - Methods called by button tap
   
   @IBAction func signInButtonWasPressed(_ sender: Any) {
     if loginAndPasswordInserted() {
