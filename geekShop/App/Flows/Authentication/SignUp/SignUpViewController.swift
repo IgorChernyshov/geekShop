@@ -11,15 +11,18 @@ import UIKit
 class SignUpViewController: UIViewController {
   
   // MARK: - Outlets
+  
   @IBOutlet weak var loginTextField: GreenPlaceholderTextField!
   @IBOutlet weak var passwordTextField: GreenPlaceholderTextField!
   @IBOutlet weak var repeatPasswordTextField: GreenPlaceholderTextField!
   @IBOutlet weak var emailTextField: GreenPlaceholderTextField!
   
   // MARK: - Services
+  
   private let registerService = NetworkServiceFactory().makeRegisterService()
   
   // MARK: - Buttons Configuration
+  
   @IBAction func signUpButtonWasPressed(_ sender: Any) {
     if allFieldsAreFilled() {
       let login = loginTextField.text!
@@ -72,10 +75,5 @@ class SignUpViewController: UIViewController {
     alertController.addAction(okAction)
     present(alertController, animated: true, completion: nil)
   }
-  
-  //  registerService.register(data: newUserProfileData) { response in
-  //  // TODO: If response.result = 1 - show Alert "Registration went successful", then login user and open main VC
-  //  print(response.debugDescription)
-  //  }
-  
+
 }

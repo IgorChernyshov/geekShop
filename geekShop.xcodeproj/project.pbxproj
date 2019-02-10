@@ -53,6 +53,7 @@
 		9CC54823220DAFFE008DA2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC54822220DAFFE008DA2B6 /* Main.storyboard */; };
 		9CC54825220DB692008DA2B6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC54824220DB692008DA2B6 /* SignInViewController.swift */; };
 		9CC54828220DB7FD008DA2B6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC54827220DB7FD008DA2B6 /* SignUpViewController.swift */; };
+		9CC5482B220FF315008DA2B6 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5482A220FF315008DA2B6 /* UserProfileViewController.swift */; };
 		9CD71DEA220742040032023F /* AddItemToBasketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DE9220742040032023F /* AddItemToBasketRequest.swift */; };
 		9CD71DED220742E30032023F /* AddItemToBasketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DEC220742E30032023F /* AddItemToBasketService.swift */; };
 		9CD71DF022074C1B0032023F /* AddItemToBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD71DEF22074C1B0032023F /* AddItemToBasketResponse.swift */; };
@@ -142,6 +143,7 @@
 		9CC54822220DAFFE008DA2B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9CC54824220DB692008DA2B6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9CC54827220DB7FD008DA2B6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9CC5482A220FF315008DA2B6 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		9CD71DE9220742040032023F /* AddItemToBasketRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemToBasketRequest.swift; sourceTree = "<group>"; };
 		9CD71DEC220742E30032023F /* AddItemToBasketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemToBasketService.swift; sourceTree = "<group>"; };
 		9CD71DEF22074C1B0032023F /* AddItemToBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemToBasketResponse.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 		9CC54821220DAFD8008DA2B6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9CC54829220FF2F4008DA2B6 /* UserProfile */,
 				9CC54822220DAFFE008DA2B6 /* Main.storyboard */,
 			);
 			path = Main;
@@ -496,6 +499,14 @@
 				9CC54827220DB7FD008DA2B6 /* SignUpViewController.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		9CC54829220FF2F4008DA2B6 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				9CC5482A220FF315008DA2B6 /* UserProfileViewController.swift */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		9CD71DE8220741DA0032023F /* Basket */ = {
@@ -814,6 +825,7 @@
 				9C17BCE721F5CA6500F5760B /* UserProfileData.swift in Sources */,
 				9C17BCBC21F0E5A300F5760B /* User.swift in Sources */,
 				9CD71E1522075F2C0032023F /* ItemInBasket.swift in Sources */,
+				9CC5482B220FF315008DA2B6 /* UserProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

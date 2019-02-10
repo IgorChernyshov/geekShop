@@ -11,14 +11,17 @@ import UIKit
 class SignInViewController: UIViewController {
   
   // MARK: - Outlets
+  
   @IBOutlet weak var loginTextField: GreenPlaceholderTextField!
   @IBOutlet weak var passwordTextField: GreenPlaceholderTextField!
   @IBOutlet weak var signInButton: UIButton!
   
   // MARK: - Services
+  
   private let authService = NetworkServiceFactory().makeAuthService()
   
   // MARK: - Buttons configuration
+  
   @IBAction func signInButtonWasPressed(_ sender: Any) {
     if loginAndPasswordInserted() {
       let login = loginTextField.text!

@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // User-related services
   
   let logoutService = NetworkServiceFactory().makeLogoutService()
-  let changeUserDataService = NetworkServiceFactory().makeChangeUserDataService()
   
   // Review-related services
   
@@ -36,21 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     // MARK: - Test user-related API calls
-    
-    let newUserProfileData = UserProfileData(
-      userID: 123,
-      login: "Frostfell",
-      password: "321321",
-      email: "ichernyshov@bk.ru",
-      gender: "",
-      creditCardNumber: "1234-5678-9012-3456",
-      bio: ""
-    )
-    
-    changeUserDataService.changeUserProfile(data: newUserProfileData) { response in
-      // TODO: If response.result = 1 - show Alert "Profile has been saved" and update profile screen
-      print(response.debugDescription)
-    }
     
     logoutService.logout(userID: 123) { response in
       // TODO: If response.result = 1 - change UserDefaults isLoggedIn and open login screen

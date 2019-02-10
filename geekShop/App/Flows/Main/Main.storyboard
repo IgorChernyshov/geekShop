@@ -36,7 +36,7 @@
         <!--Profile-->
         <scene sceneID="pSO-o0-7D9">
             <objects>
-                <viewController id="XGw-ig-bSB" sceneMemberID="viewController">
+                <viewController id="XGw-ig-bSB" customClass="UserProfileViewController" customModule="geekShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZyD-TX-ImX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +76,7 @@
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lbD-BW-Pvl" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lbD-BW-Pvl" userLabel="Email Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="142" width="343" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,7 +104,7 @@
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="credit card number" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Eb-lH-GYx" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="credit card number" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Eb-lH-GYx" userLabel="Credit Card Number Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="260" width="343" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -117,7 +117,7 @@
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s78-bW-Lpg">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s78-bW-Lpg" userLabel="Bio Text View">
                                         <rect key="frame" x="0.0" y="320" width="343" height="100"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
@@ -155,8 +155,20 @@
                         <viewLayoutGuide key="safeArea" id="v1e-AN-SoG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="VAe-Bk-dCi">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="1w2-AP-1To"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="1w2-AP-1To">
+                            <connections>
+                                <action selector="saveButtonWasPressed:" destination="XGw-ig-bSB" id="9uV-rT-pes"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bioTextView" destination="s78-bW-Lpg" id="sx5-il-Z8P"/>
+                        <outlet property="creditCardNumberTextField" destination="3Eb-lH-GYx" id="Fs4-mu-wE4"/>
+                        <outlet property="emailTextField" destination="lbD-BW-Pvl" id="uGI-fT-zrs"/>
+                        <outlet property="genderSegmentedControl" destination="MGI-m3-9av" id="qck-bC-h8T"/>
+                        <outlet property="loginTextField" destination="l09-QL-EJl" id="gsk-8k-WGC"/>
+                        <outlet property="passwordTextField" destination="xmt-Y7-ZOr" id="tbt-B5-RZe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQh-Dz-7OO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
