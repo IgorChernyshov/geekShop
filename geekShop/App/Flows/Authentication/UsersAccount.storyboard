@@ -84,6 +84,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signUpButtonWasPressed:" destination="7Z4-6y-O1H" eventType="touchUpInside" id="UHs-FD-VA1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -194,6 +197,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signUpButtonWasPressed:" destination="wir-hf-REH" eventType="touchUpInside" id="pSQ-ea-Rqe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
