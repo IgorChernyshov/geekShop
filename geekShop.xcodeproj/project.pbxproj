@@ -48,6 +48,8 @@
 		9C17BD1521FA49CC00F5760B /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C17BD1421FA49CC00F5760B /* login.json */; };
 		9C17BD1721FA49D000F5760B /* logout.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C17BD1621FA49D000F5760B /* logout.json */; };
 		9C17BD1921FA49FF00F5760B /* stub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C17BD1821FA49FF00F5760B /* stub.json */; };
+		9C72D6472216C4A300FFA814 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D6462216C4A300FFA814 /* ShopViewController.swift */; };
+		9C72D6492216C4C700FFA814 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D6482216C4C700FFA814 /* ItemCell.swift */; };
 		9CC5480D220C7A38008DA2B6 /* UsersAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */; };
 		9CC54820220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */; };
 		9CC54823220DAFFE008DA2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC54822220DAFFE008DA2B6 /* Main.storyboard */; };
@@ -138,6 +140,8 @@
 		9C17BD1421FA49CC00F5760B /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		9C17BD1621FA49D000F5760B /* logout.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logout.json; sourceTree = "<group>"; };
 		9C17BD1821FA49FF00F5760B /* stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stub.json; sourceTree = "<group>"; };
+		9C72D6462216C4A300FFA814 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		9C72D6482216C4C700FFA814 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersAccount.storyboard; sourceTree = "<group>"; };
 		9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPlaceholderTextField.swift; sourceTree = "<group>"; };
 		9CC54822220DAFFE008DA2B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -442,6 +446,15 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		9C72D6442216C46300FFA814 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				9C72D6462216C4A300FFA814 /* ShopViewController.swift */,
+				9C72D6482216C4C700FFA814 /* ItemCell.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
 		9CC5480B220C79F1008DA2B6 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,8 +500,9 @@
 		9CC54821220DAFD8008DA2B6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9CC54829220FF2F4008DA2B6 /* UserProfile */,
 				9CC54822220DAFFE008DA2B6 /* Main.storyboard */,
+				9C72D6442216C46300FFA814 /* Shop */,
+				9CC54829220FF2F4008DA2B6 /* UserProfile */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -811,6 +825,7 @@
 				9C04368F21E9D4EC00EF8C71 /* AppDelegate.swift in Sources */,
 				9C17BCC221F0E83400F5760B /* ErrorParser.swift in Sources */,
 				9C17BCFE21F5DFAF00F5760B /* ApproveReviewResponse.swift in Sources */,
+				9C72D6492216C4C700FFA814 /* ItemCell.swift in Sources */,
 				9C17BCB221F0E02400F5760B /* AuthService.swift in Sources */,
 				9CD71DED220742E30032023F /* AddItemToBasketService.swift in Sources */,
 				9C17BCC621F0E89E00F5760B /* RequestRouter.swift in Sources */,
@@ -823,6 +838,7 @@
 				9CC54820220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift in Sources */,
 				9C17BCB621F0E32900F5760B /* NetworkServiceFactory.swift in Sources */,
 				9C17BCE721F5CA6500F5760B /* UserProfileData.swift in Sources */,
+				9C72D6472216C4A300FFA814 /* ShopViewController.swift in Sources */,
 				9C17BCBC21F0E5A300F5760B /* User.swift in Sources */,
 				9CD71E1522075F2C0032023F /* ItemInBasket.swift in Sources */,
 				9CC5482B220FF315008DA2B6 /* UserProfileViewController.swift in Sources */,

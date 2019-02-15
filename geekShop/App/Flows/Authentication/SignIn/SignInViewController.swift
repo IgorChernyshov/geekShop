@@ -44,7 +44,7 @@ class SignInViewController: UIViewController {
     self.performSegue(withIdentifier: "toSignUpVC", sender: self)
   }
   
-  // MARK: - Controller methods
+  // MARK: - ViewController methods
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
