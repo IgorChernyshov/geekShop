@@ -52,6 +52,7 @@ class UserProfileViewController: UIViewController {
     }
   }
   
+  /// Shows a UIAlertController to inform user that his profile data was changed successfully
   private func showUserProfileWasChangedAlert() {
     let alertController = UIAlertController(title: "Success",
                                             message: "Your data has been changed successfully",
