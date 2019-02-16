@@ -25,7 +25,7 @@ class UserProfileViewController: UIViewController {
   
   // MARK: - Services
   
-  let changeUserDataService = NetworkServiceFactory().makeChangeUserDataService()
+  private let changeUserDataService = NetworkServiceFactory().makeChangeUserDataService()
   
   // MARK: - Methods called by button tap
   

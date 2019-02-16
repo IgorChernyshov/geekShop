@@ -29,9 +29,9 @@ class SignUpViewController: UIViewController {
   
   @IBAction func signUpButtonWasPressed(_ sender: Any) {
     if allFieldsAreFilled() {
-      let login = loginTextField.text!
-      let password = passwordTextField.text!
-      let email = emailTextField.text!
+      let login = loginTextField.text ?? ""
+      let password = passwordTextField.text ?? ""
+      let email = emailTextField.text ?? ""
       
       let userProfileData = UserProfileData(
         userID: 1,

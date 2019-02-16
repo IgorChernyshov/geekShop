@@ -23,6 +23,7 @@ class ItemCell: UITableViewCell {
   
   override func prepareForReuse() {
     super.prepareForReuse()
+    
     self.itemName.text = ""
     self.itemPrice.text = ""
   }

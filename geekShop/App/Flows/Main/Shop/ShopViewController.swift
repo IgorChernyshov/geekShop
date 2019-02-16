@@ -20,7 +20,7 @@ class ShopViewController: UIViewController {
   
   // MARK: - Services
   
-  let getItemListService = NetworkServiceFactory().makeGetItemsListService()
+  private let getItemListService = NetworkServiceFactory().makeGetItemsListService()
   
   // MARK: - ViewController configuration
   
@@ -28,11 +28,11 @@ class ShopViewController: UIViewController {
     configureTableView()
   }
   
-  // MARK: - TableViewController configuration
+  // MARK: - Table View configuration
   
-  var items: [Item] = []
+  private var items: [Item] = []
   
-  func configureTableView() {
+  private func configureTableView() {
     tableView.dataSource = self
     tableView.delegate = self
     
