@@ -23,7 +23,7 @@ class ItemCell: UITableViewCell {
   
   func configure(with item: Item) {
     itemName.text = item.productName
-    itemPrice.text = String(item.price)
+    itemPrice.text = "$\(item.price)"
   }
   
   override func prepareForReuse() {
