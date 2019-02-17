@@ -50,6 +50,7 @@
 		9C17BD1921FA49FF00F5760B /* stub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C17BD1821FA49FF00F5760B /* stub.json */; };
 		9C72D6472216C4A300FFA814 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D6462216C4A300FFA814 /* ShopViewController.swift */; };
 		9C72D6492216C4C700FFA814 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D6482216C4C700FFA814 /* ItemCell.swift */; };
+		9C84CC542219BBE90046AAD7 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC532219BBE90046AAD7 /* ItemDetailsViewController.swift */; };
 		9CC5480D220C7A38008DA2B6 /* UsersAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */; };
 		9CC54820220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */; };
 		9CC54823220DAFFE008DA2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC54822220DAFFE008DA2B6 /* Main.storyboard */; };
@@ -142,6 +143,7 @@
 		9C17BD1821FA49FF00F5760B /* stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stub.json; sourceTree = "<group>"; };
 		9C72D6462216C4A300FFA814 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		9C72D6482216C4C700FFA814 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		9C84CC532219BBE90046AAD7 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersAccount.storyboard; sourceTree = "<group>"; };
 		9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPlaceholderTextField.swift; sourceTree = "<group>"; };
 		9CC54822220DAFFE008DA2B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -455,6 +457,29 @@
 			path = Shop;
 			sourceTree = "<group>";
 		};
+		9C84CC522219BB980046AAD7 /* ItemDetails */ = {
+			isa = PBXGroup;
+			children = (
+				9C84CC532219BBE90046AAD7 /* ItemDetailsViewController.swift */,
+			);
+			path = ItemDetails;
+			sourceTree = "<group>";
+		};
+		9C84CC552219EA4B0046AAD7 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		9C84CC562219EA540046AAD7 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
 		9CC5480B220C79F1008DA2B6 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,7 +517,8 @@
 		9CC5481E220DA8A2008DA2B6 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */,
+				9C84CC562219EA540046AAD7 /* UILabel */,
+				9C84CC552219EA4B0046AAD7 /* UITextField */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -501,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				9CC54822220DAFFE008DA2B6 /* Main.storyboard */,
+				9C84CC522219BB980046AAD7 /* ItemDetails */,
 				9C72D6442216C46300FFA814 /* Shop */,
 				9CC54829220FF2F4008DA2B6 /* UserProfile */,
 			);
@@ -805,6 +832,7 @@
 				9C17BCF421F5DC6700F5760B /* AddReviewService.swift in Sources */,
 				9CD71E03220754CC0032023F /* GetItemsListResponse.swift in Sources */,
 				9CD71DFA220750230032023F /* RemoveItemFromBasketResponse.swift in Sources */,
+				9C84CC542219BBE90046AAD7 /* ItemDetailsViewController.swift in Sources */,
 				9CD71E0C22075C460032023F /* GetUsersBasketService.swift in Sources */,
 				9C17BCCC21F0F9FE00F5760B /* RegisterRequest.swift in Sources */,
 				9C17BCBE21F0E68400F5760B /* NetworkService.swift in Sources */,
