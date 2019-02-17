@@ -8,7 +8,10 @@
 
 import UIKit
 
-@IBDesignable
+/*
+ This textfield has a custom green placeholder to match the theme of the application
+ */
+
 class GreenPlaceholderTextField: UITextField {
   
   override func awakeFromNib() {
