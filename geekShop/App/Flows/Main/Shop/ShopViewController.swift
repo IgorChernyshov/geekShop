@@ -62,8 +62,7 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
       return UITableViewCell()
     }
     
-    cell.itemName.text = items[indexPath.row].productName
-    cell.itemPrice.text = String(items[indexPath.row].price)
+    cell.configure(with: items[indexPath.row])
     
     return cell
   }
