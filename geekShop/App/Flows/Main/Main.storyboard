@@ -23,11 +23,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="60" id="njH-xT-ddc" customClass="ItemCell" customModule="geekShop" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="60" id="njH-xT-ddc" customClass="ItemCell" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="njH-xT-ddc" id="pR6-Q9-N46">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L4M-dO-jbk" userLabel="Labels Stack View">
@@ -59,6 +59,7 @@
                                         <connections>
                                             <outlet property="itemName" destination="qhR-DC-Xsp" id="aF3-lN-e0b"/>
                                             <outlet property="itemPrice" destination="dYP-yv-pfX" id="V4c-HJ-DDf"/>
+                                            <segue destination="mGx-du-CDR" kind="show" identifier="toItemDetailsVC" trigger="accessoryAction" id="mO3-h0-kh4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -71,7 +72,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="y3P-Yj-ytr"/>
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="Ptv-i2-6zT">
                             <connections>
-                                <segue destination="XGw-ig-bSB" kind="show" id="tLc-6S-P0V"/>
+                                <segue destination="XGw-ig-bSB" kind="show" identifier="toProfileVC" id="tLc-6S-P0V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,6 +83,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGa-Iu-azJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="784.79999999999995" y="-155.17241379310346"/>
+        </scene>
+        <!--Item Name-->
+        <scene sceneID="Vbx-dj-U7W">
+            <objects>
+                <viewController storyboardIdentifier="itemDetailsViewController" id="mGx-du-CDR" customClass="ItemDetailsViewController" customModule="geekShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JgX-n4-aCR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="aU9-57-5GW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Item Name" id="um9-cn-wu9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7j-PE-5T4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644" y="294"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pSO-o0-7D9">
@@ -222,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQh-Dz-7OO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727" y="-155"/>
+            <point key="canvasLocation" x="1644" y="-546"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yqv-K4-QnZ">

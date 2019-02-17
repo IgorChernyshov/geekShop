@@ -61,10 +61,17 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") as? ItemCell else {
       return UITableViewCell()
     }
-    
     cell.configure(with: items[indexPath.row])
     
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let itemDetailsVC = storyboard?.instantiateViewController(withIdentifier: "itemDetailsViewController") as? ItemDetailsViewController else {
+      return
+    }
+    itemDetailsVC.detailsForItem = items[indexPath.row].productName
+    navigationController?.pushViewController(itemDetailsVC, animated: true)
   }
   
 }
