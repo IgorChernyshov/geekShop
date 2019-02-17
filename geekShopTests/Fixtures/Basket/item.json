@@ -1,5 +1,6 @@
 {
   "productID": 1,
   "productName": "Laptop",
-  "price": 78600
+  "productDescription": "Description",
+  "price": 1900
 }
