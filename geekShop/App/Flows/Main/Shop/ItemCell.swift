@@ -31,6 +31,7 @@ class ItemCell: UITableViewCell {
     
     self.itemName.text = ""
     self.itemPrice.text = ""
+    self.selectionStyle = .none
   }
   
 }
