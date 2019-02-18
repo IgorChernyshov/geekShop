@@ -70,7 +70,7 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
     guard let itemDetailsVC = storyboard?.instantiateViewController(withIdentifier: "itemDetailsViewController") as? ItemDetailsViewController else {
       return
     }
-    itemDetailsVC.detailsForItem = items[indexPath.row].productName
+    itemDetailsVC.showItem = items[indexPath.row]
     navigationController?.pushViewController(itemDetailsVC, animated: true)
   }
   

@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   // Basket-related services
   
-  let addItemToBasketService = NetworkServiceFactory().makeAddItemToBasketService()
   let removeItemFromBasketService = NetworkServiceFactory().makeRemoveItemFromBasketService()
   let getUsersBasketService = NetworkServiceFactory().makeGetUsersBasketService()
   
@@ -58,10 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // MARK: - Test basket-related API calls
-    
-    addItemToBasketService.addItemToBasket(productID: 5, quantity: 1) { response in
-      print(response.debugDescription)
-    }
     
     removeItemFromBasketService.removeItemFromBasket(productID: 7) { response in
       print(response.debugDescription)
