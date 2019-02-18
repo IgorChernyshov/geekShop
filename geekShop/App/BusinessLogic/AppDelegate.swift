@@ -15,10 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   // Create test instances of services to test API calls
   
-  // User-related services
-  
-  let logoutService = NetworkServiceFactory().makeLogoutService()
-  
   // Review-related services
 
   let approveReviewService = NetworkServiceFactory().makeApproveReviewService()
@@ -30,13 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let getUsersBasketService = NetworkServiceFactory().makeGetUsersBasketService()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    
-    // MARK: - Test user-related API calls
-    
-    logoutService.logout(userID: 123) { response in
-      // TODO: If response.result = 1 - change UserDefaults isLoggedIn and open login screen
-      print(response.debugDescription)
-    }
     
     // MARK: - Test review-related API calls
     

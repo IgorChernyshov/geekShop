@@ -69,7 +69,11 @@
                         <viewLayoutGuide key="safeArea" id="xRK-1c-kKx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shop" id="lMT-KR-nB2">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="y3P-Yj-ytr"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="y3P-Yj-ytr">
+                            <connections>
+                                <action selector="logoutButtonWasPressed:" destination="o9M-80-EBd" id="i8I-qf-EiM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="Ptv-i2-6zT">
                             <connections>
                                 <segue destination="XGw-ig-bSB" kind="show" identifier="toProfileVC" id="tLc-6S-P0V"/>

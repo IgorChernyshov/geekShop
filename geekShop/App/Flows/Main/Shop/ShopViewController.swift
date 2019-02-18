@@ -21,6 +21,7 @@ class ShopViewController: UIViewController {
   // MARK: - Services
   
   private let getItemListService = NetworkServiceFactory().makeGetItemsListService()
+  private let logoutService = NetworkServiceFactory().makeLogoutService()
   
   // MARK: - ViewController configuration
   
@@ -48,6 +49,19 @@ class ShopViewController: UIViewController {
       self?.tableView.reloadData()
     }
   }
+  
+  // MARK: - Methods related to buttons
+  
+  @IBAction func logoutButtonWasPressed(_ sender: Any) {
+    logoutService.logout(userID: 123) { [weak self] response in
+      if response?.result == 1 {
+        UserDefaults.standard.set(false, forKey: "userIsLoggedIn")
+        UserDefaults.standard.set("", forKey: "currentUserLogin")
+        self?.dismiss(animated: true, completion: nil)
+      }
+    }
+  }
+  
   
 }
 
