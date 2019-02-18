@@ -52,11 +52,12 @@ class ShopViewController: UIViewController {
   
   // MARK: - Methods related to buttons
   
+  /// Signs out current user
   @IBAction func logoutButtonWasPressed(_ sender: Any) {
     logoutService.logout(userID: 123) { [weak self] response in
       if response?.result == 1 {
         UserDefaults.standard.set(false, forKey: "userIsLoggedIn")
-        UserDefaults.standard.set("", forKey: "currentUserLogin")
+        UserDefaults.standard.set("", forKey: "currentUserPassword")
         self?.dismiss(animated: true, completion: nil)
       }
     }
