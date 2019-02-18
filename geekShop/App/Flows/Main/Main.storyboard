@@ -103,7 +103,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq8-rd-Gme">
                                         <rect key="frame" x="0.0" y="37.5" width="42.5" height="16.5"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -131,13 +131,13 @@
                         <barButtonItem key="rightBarButtonItem" title="Add review" id="nnt-Mv-5n3">
                             <connections>
                                 <action selector="addReviewButtonWasPressed:" destination="mGx-du-CDR" id="S1V-zg-hSq"/>
-                                <segue destination="7GH-8E-6Zm" kind="show" id="Td7-72-dDh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="itemDescriptionLabel" destination="pPz-B0-Wsz" id="QdS-AK-DZ2"/>
                         <outlet property="itemPriceLabel" destination="Tq8-rd-Gme" id="2mf-eY-27N"/>
+                        <segue destination="7GH-8E-6Zm" kind="show" identifier="toWriteReviewVC" id="fnc-ca-JaE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e7j-PE-5T4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -147,63 +147,50 @@
         <!--Write a review-->
         <scene sceneID="CdM-d3-qfh">
             <objects>
-                <viewController id="7GH-8E-6Zm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="writeReviewViewController" id="7GH-8E-6Zm" customClass="WriteReviewViewController" customModule="geekShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sy0-5f-iKa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalCentering" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="7Zg-GC-09v">
-                                <rect key="frame" x="16" y="80" width="343" height="570"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pros" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7v-bQ-tHR">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="14"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L95-mz-d1X" userLabel="Bio Text View">
-                                        <rect key="frame" x="0.0" y="30" width="343" height="145.5"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cons" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmn-sZ-fSd">
-                                        <rect key="frame" x="0.0" y="191" width="343" height="14"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Br-6K-JnU" userLabel="Bio Text View">
-                                        <rect key="frame" x="0.0" y="221" width="343" height="145.5"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="review" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-5l-7qC">
-                                        <rect key="frame" x="0.0" y="382" width="343" height="14"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4rF-sm-I15" userLabel="Bio Text View">
-                                        <rect key="frame" x="0.0" y="399" width="343" height="171"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rF-sm-I15" userLabel="Bio Text View">
+                                <rect key="frame" x="16" y="104.5" width="343" height="200"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="37Z-l7-nk9"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tell us what you think" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-5l-7qC">
+                                <rect key="frame" x="16" y="80" width="343" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4rF-sm-I15" firstAttribute="leading" secondItem="jsO-zC-7W3" secondAttribute="leading" constant="16" id="Dn3-rj-jDv"/>
+                            <constraint firstItem="jsO-zC-7W3" firstAttribute="trailing" secondItem="cPR-5l-7qC" secondAttribute="trailing" constant="16" id="KHu-4C-AfC"/>
+                            <constraint firstItem="cPR-5l-7qC" firstAttribute="leading" secondItem="jsO-zC-7W3" secondAttribute="leading" constant="16" id="Lb3-xf-Zu6"/>
+                            <constraint firstItem="jsO-zC-7W3" firstAttribute="trailing" secondItem="4rF-sm-I15" secondAttribute="trailing" constant="16" id="Tb8-Sp-uOh"/>
+                            <constraint firstItem="jsO-zC-7W3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4rF-sm-I15" secondAttribute="bottom" constant="16" id="WIs-0G-wuA"/>
+                            <constraint firstItem="4rF-sm-I15" firstAttribute="top" secondItem="cPR-5l-7qC" secondAttribute="bottom" constant="8" id="hIR-A1-H00"/>
+                            <constraint firstItem="cPR-5l-7qC" firstAttribute="top" secondItem="jsO-zC-7W3" secondAttribute="top" constant="16" id="ldi-A9-04z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jsO-zC-7W3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Write a review" id="Fhk-gT-qeN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="0bW-zW-5v6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="0bW-zW-5v6">
+                            <connections>
+                                <action selector="doneButtonWasPressed:" destination="7GH-8E-6Zm" id="71h-le-wMC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="reviewTextView" destination="4rF-sm-I15" id="Rw9-13-cDu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISG-8u-OtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,7 +280,7 @@
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s78-bW-Lpg" userLabel="Bio Text View">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s78-bW-Lpg" userLabel="Bio Text View">
                                         <rect key="frame" x="0.0" y="320" width="343" height="100"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
@@ -325,8 +312,8 @@
                             <constraint firstItem="v1e-AN-SoG" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LEn-p0-Ulg" secondAttribute="bottom" constant="16" id="6FS-8C-FlT"/>
                             <constraint firstItem="LEn-p0-Ulg" firstAttribute="centerX" secondItem="ZyD-TX-ImX" secondAttribute="centerX" id="ddV-ZN-Uhw"/>
                             <constraint firstItem="LEn-p0-Ulg" firstAttribute="top" secondItem="v1e-AN-SoG" secondAttribute="top" constant="16" id="et8-BQ-m3C"/>
-                            <constraint firstItem="LEn-p0-Ulg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v1e-AN-SoG" secondAttribute="leading" constant="16" id="uaR-AM-EF0"/>
-                            <constraint firstItem="v1e-AN-SoG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LEn-p0-Ulg" secondAttribute="trailing" constant="16" id="ziC-jl-QdZ"/>
+                            <constraint firstItem="LEn-p0-Ulg" firstAttribute="leading" secondItem="v1e-AN-SoG" secondAttribute="leading" constant="16" id="uaR-AM-EF0"/>
+                            <constraint firstItem="v1e-AN-SoG" firstAttribute="trailing" secondItem="LEn-p0-Ulg" secondAttribute="trailing" constant="16" id="ziC-jl-QdZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v1e-AN-SoG"/>
                     </view>

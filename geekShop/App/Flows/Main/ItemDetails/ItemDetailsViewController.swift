@@ -60,14 +60,17 @@ class ItemDetailsViewController: UIViewController {
     let alertController = UIAlertController(title: "Success",
                                             message: "The product was added to your basket",
                                             preferredStyle: .alert)
-    let okAction = UIAlertAction(title: "Continue", style: .default)
+    let continueAction = UIAlertAction(title: "Continue", style: .default)
     
-    alertController.addAction(okAction)
+    alertController.addAction(continueAction)
     present(alertController, animated: true, completion: nil)
   }
   
   @IBAction func addReviewButtonWasPressed(_ sender: Any) {
+    guard let addReviewVC = storyboard?.instantiateViewController(withIdentifier: "writeReviewViewController") as? WriteReviewViewController else { return }
     
+    addReviewVC.reviewForID = showItem?.productID ?? 0
+    navigationController?.pushViewController(addReviewVC, animated: true)
   }
   
 }
