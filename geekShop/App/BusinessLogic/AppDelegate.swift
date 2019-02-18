@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let logoutService = NetworkServiceFactory().makeLogoutService()
   
   // Review-related services
-  
-  let addReviewService = NetworkServiceFactory().makeAddReviewService()
+
   let approveReviewService = NetworkServiceFactory().makeApproveReviewService()
   let removeReviewService = NetworkServiceFactory().makeRemoveReviewService()
   
@@ -40,11 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // MARK: - Test review-related API calls
-    
-    addReviewService.addReview(userID: 123, text: "Very nice stuff. Received it in three weeks") { response in
-      // TODO: If response.result = 1 - show Alert "Thank you for your review! It will appear on the page soon"
-      print(response.debugDescription)
-    }
     
     approveReviewService.approveReview(reviewID: 333) { response in
       // TODO: If response.result = 1 - show Alert "Review #... has been approved"
