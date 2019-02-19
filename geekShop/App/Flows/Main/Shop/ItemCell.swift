@@ -21,10 +21,17 @@ class ItemCell: UITableViewCell {
   
   // MARK: - Cell's methods
   
+  func configure(with item: Item) {
+    itemName.text = item.productName
+    itemPrice.text = "$\(item.price)"
+  }
+  
   override func prepareForReuse() {
     super.prepareForReuse()
+    
     self.itemName.text = ""
     self.itemPrice.text = ""
+    self.selectionStyle = .none
   }
   
 }

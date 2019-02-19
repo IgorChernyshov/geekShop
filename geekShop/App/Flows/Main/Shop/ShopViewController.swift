@@ -20,7 +20,8 @@ class ShopViewController: UIViewController {
   
   // MARK: - Services
   
-  let getItemListService = NetworkServiceFactory().makeGetItemsListService()
+  private let getItemListService = NetworkServiceFactory().makeGetItemsListService()
+  private let logoutService = NetworkServiceFactory().makeLogoutService()
   
   // MARK: - ViewController configuration
   
@@ -28,11 +29,11 @@ class ShopViewController: UIViewController {
     configureTableView()
   }
   
-  // MARK: - TableViewController configuration
+  // MARK: - Table View configuration
   
-  var items: [Item] = []
+  private var items: [Item] = []
   
-  func configureTableView() {
+  private func configureTableView() {
     tableView.dataSource = self
     tableView.delegate = self
     
@@ -49,6 +50,20 @@ class ShopViewController: UIViewController {
     }
   }
   
+  // MARK: - Methods related to buttons
+  
+  /// Signs out current user
+  @IBAction func logoutButtonWasPressed(_ sender: Any) {
+    logoutService.logout(userID: 123) { [weak self] response in
+      if response?.result == 1 {
+        UserDefaults.standard.set(false, forKey: "userIsLoggedIn")
+        UserDefaults.standard.set("", forKey: "currentUserPassword")
+        self?.dismiss(animated: true, completion: nil)
+      }
+    }
+  }
+  
+  
 }
 
 extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
@@ -61,11 +76,17 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") as? ItemCell else {
       return UITableViewCell()
     }
-    
-    cell.itemName.text = items[indexPath.row].productName
-    cell.itemPrice.text = String(items[indexPath.row].price)
+    cell.configure(with: items[indexPath.row])
     
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let itemDetailsVC = storyboard?.instantiateViewController(withIdentifier: "itemDetailsViewController") as? ItemDetailsViewController else {
+      return
+    }
+    itemDetailsVC.showItem = items[indexPath.row]
+    navigationController?.pushViewController(itemDetailsVC, animated: true)
   }
   
 }

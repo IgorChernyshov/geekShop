@@ -26,6 +26,7 @@ class SignInViewController: UIViewController {
   
   // MARK: - Methods called by button tap
   
+  /// Sends a request to the server to sign in a user
   @IBAction func signInButtonWasPressed(_ sender: Any) {
     if loginAndPasswordInserted() {
       let login = loginTextField.text!
@@ -40,6 +41,24 @@ class SignInViewController: UIViewController {
     }
   }
   
+  /// Checks if both login and password are inserted and the password matches minimum length
+  ///
+  /// - Returns: the result of check up
+  private func loginAndPasswordInserted() -> Bool {
+    var loginInserted: Bool {
+      return loginTextField.text != ""
+    }
+    
+    var passwordInserted: Bool {
+      let minimumPasswordLength: Int = 6
+      
+      return passwordTextField.text?.count ?? 0 >= minimumPasswordLength
+    }
+    
+    return loginInserted && passwordInserted
+  }
+  
+  /// Opens Sign Up screen where user can create a new account
   @IBAction func signUpButtonWasPressed(_ sender: Any) {
     self.performSegue(withIdentifier: "toSignUpVC", sender: self)
   }
@@ -55,25 +74,6 @@ class SignInViewController: UIViewController {
     if let userPassword = UserDefaults.standard.string(forKey: "currentUserPassword") {
       self.passwordTextField.text = userPassword
     }
-  }
-  
-  private func loginAndPasswordInserted() -> Bool {
-    var loginInserted: Bool {
-      if loginTextField.text != "" {
-        return true
-      }
-      return false
-    }
-    
-    var passwordInserted: Bool {
-      let minimumPasswordLength: Int = 6
-      if passwordTextField.text?.count ?? 0 >= minimumPasswordLength {
-        return true
-      }
-      return false
-    }
-    
-    return loginInserted && passwordInserted
   }
   
 }

@@ -23,11 +23,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="60" id="njH-xT-ddc" customClass="ItemCell" customModule="geekShop" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="60" id="njH-xT-ddc" customClass="ItemCell" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="njH-xT-ddc" id="pR6-Q9-N46">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L4M-dO-jbk" userLabel="Labels Stack View">
@@ -59,6 +59,7 @@
                                         <connections>
                                             <outlet property="itemName" destination="qhR-DC-Xsp" id="aF3-lN-e0b"/>
                                             <outlet property="itemPrice" destination="dYP-yv-pfX" id="V4c-HJ-DDf"/>
+                                            <segue destination="mGx-du-CDR" kind="show" identifier="toItemDetailsVC" trigger="accessoryAction" id="mO3-h0-kh4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -68,10 +69,14 @@
                         <viewLayoutGuide key="safeArea" id="xRK-1c-kKx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shop" id="lMT-KR-nB2">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="y3P-Yj-ytr"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="y3P-Yj-ytr">
+                            <connections>
+                                <action selector="logoutButtonWasPressed:" destination="o9M-80-EBd" id="i8I-qf-EiM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="Ptv-i2-6zT">
                             <connections>
-                                <segue destination="XGw-ig-bSB" kind="show" id="tLc-6S-P0V"/>
+                                <segue destination="XGw-ig-bSB" kind="show" identifier="toProfileVC" id="tLc-6S-P0V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,6 +87,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGa-Iu-azJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="784.79999999999995" y="-155.17241379310346"/>
+        </scene>
+        <!--Item Name-->
+        <scene sceneID="Vbx-dj-U7W">
+            <objects>
+                <viewController storyboardIdentifier="itemDetailsViewController" id="mGx-du-CDR" customClass="ItemDetailsViewController" customModule="geekShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JgX-n4-aCR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LsV-xd-w5T">
+                                <rect key="frame" x="16" y="80" width="343" height="104"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPz-B0-Wsz">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq8-rd-Gme">
+                                        <rect key="frame" x="0.0" y="37.5" width="42.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYf-vS-D32">
+                                        <rect key="frame" x="0.0" y="62" width="42" height="42"/>
+                                        <state key="normal" image="addToCart"/>
+                                        <connections>
+                                            <action selector="addToCartButtonWasPressed:" destination="mGx-du-CDR" eventType="touchUpInside" id="5iK-bK-NOC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LsV-xd-w5T" firstAttribute="top" secondItem="aU9-57-5GW" secondAttribute="top" constant="16" id="KIZ-j0-60a"/>
+                            <constraint firstItem="aU9-57-5GW" firstAttribute="trailing" secondItem="LsV-xd-w5T" secondAttribute="trailing" constant="16" id="YKH-yN-FUN"/>
+                            <constraint firstItem="aU9-57-5GW" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LsV-xd-w5T" secondAttribute="bottom" constant="16" id="a6x-Gq-GK5"/>
+                            <constraint firstItem="LsV-xd-w5T" firstAttribute="leading" secondItem="aU9-57-5GW" secondAttribute="leading" constant="16" id="ySY-yp-kxe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aU9-57-5GW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Item Name" id="um9-cn-wu9">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="LsM-aP-qck"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add review" id="nnt-Mv-5n3">
+                            <connections>
+                                <action selector="addReviewButtonWasPressed:" destination="mGx-du-CDR" id="S1V-zg-hSq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="itemDescriptionLabel" destination="pPz-B0-Wsz" id="QdS-AK-DZ2"/>
+                        <outlet property="itemPriceLabel" destination="Tq8-rd-Gme" id="2mf-eY-27N"/>
+                        <segue destination="7GH-8E-6Zm" kind="show" identifier="toWriteReviewVC" id="fnc-ca-JaE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7j-PE-5T4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644" y="293.70314842578711"/>
+        </scene>
+        <!--Write a review-->
+        <scene sceneID="CdM-d3-qfh">
+            <objects>
+                <viewController storyboardIdentifier="writeReviewViewController" id="7GH-8E-6Zm" customClass="WriteReviewViewController" customModule="geekShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sy0-5f-iKa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rF-sm-I15" userLabel="Bio Text View">
+                                <rect key="frame" x="16" y="104.5" width="343" height="200"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="37Z-l7-nk9"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tell us what you think" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-5l-7qC">
+                                <rect key="frame" x="16" y="80" width="343" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4rF-sm-I15" firstAttribute="leading" secondItem="jsO-zC-7W3" secondAttribute="leading" constant="16" id="Dn3-rj-jDv"/>
+                            <constraint firstItem="jsO-zC-7W3" firstAttribute="trailing" secondItem="cPR-5l-7qC" secondAttribute="trailing" constant="16" id="KHu-4C-AfC"/>
+                            <constraint firstItem="cPR-5l-7qC" firstAttribute="leading" secondItem="jsO-zC-7W3" secondAttribute="leading" constant="16" id="Lb3-xf-Zu6"/>
+                            <constraint firstItem="jsO-zC-7W3" firstAttribute="trailing" secondItem="4rF-sm-I15" secondAttribute="trailing" constant="16" id="Tb8-Sp-uOh"/>
+                            <constraint firstItem="jsO-zC-7W3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4rF-sm-I15" secondAttribute="bottom" constant="16" id="WIs-0G-wuA"/>
+                            <constraint firstItem="4rF-sm-I15" firstAttribute="top" secondItem="cPR-5l-7qC" secondAttribute="bottom" constant="8" id="hIR-A1-H00"/>
+                            <constraint firstItem="cPR-5l-7qC" firstAttribute="top" secondItem="jsO-zC-7W3" secondAttribute="top" constant="16" id="ldi-A9-04z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jsO-zC-7W3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Write a review" id="Fhk-gT-qeN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="0bW-zW-5v6">
+                            <connections>
+                                <action selector="doneButtonWasPressed:" destination="7GH-8E-6Zm" id="71h-le-wMC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="reviewTextView" destination="4rF-sm-I15" id="Rw9-13-cDu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISG-8u-OtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524" y="293.70314842578711"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pSO-o0-7D9">
@@ -167,7 +284,7 @@
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s78-bW-Lpg" userLabel="Bio Text View">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s78-bW-Lpg" userLabel="Bio Text View">
                                         <rect key="frame" x="0.0" y="320" width="343" height="100"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
@@ -199,8 +316,8 @@
                             <constraint firstItem="v1e-AN-SoG" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LEn-p0-Ulg" secondAttribute="bottom" constant="16" id="6FS-8C-FlT"/>
                             <constraint firstItem="LEn-p0-Ulg" firstAttribute="centerX" secondItem="ZyD-TX-ImX" secondAttribute="centerX" id="ddV-ZN-Uhw"/>
                             <constraint firstItem="LEn-p0-Ulg" firstAttribute="top" secondItem="v1e-AN-SoG" secondAttribute="top" constant="16" id="et8-BQ-m3C"/>
-                            <constraint firstItem="LEn-p0-Ulg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v1e-AN-SoG" secondAttribute="leading" constant="16" id="uaR-AM-EF0"/>
-                            <constraint firstItem="v1e-AN-SoG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LEn-p0-Ulg" secondAttribute="trailing" constant="16" id="ziC-jl-QdZ"/>
+                            <constraint firstItem="LEn-p0-Ulg" firstAttribute="leading" secondItem="v1e-AN-SoG" secondAttribute="leading" constant="16" id="uaR-AM-EF0"/>
+                            <constraint firstItem="v1e-AN-SoG" firstAttribute="trailing" secondItem="LEn-p0-Ulg" secondAttribute="trailing" constant="16" id="ziC-jl-QdZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v1e-AN-SoG"/>
                     </view>
@@ -222,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQh-Dz-7OO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727" y="-155"/>
+            <point key="canvasLocation" x="1644" y="-546"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yqv-K4-QnZ">
@@ -249,4 +366,7 @@
             <point key="canvasLocation" x="-154.40000000000001" y="-155.17241379310346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addToCart" width="42.240001678466797" height="42.240001678466797"/>
+    </resources>
 </document>

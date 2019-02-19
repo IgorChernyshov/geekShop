@@ -27,11 +27,13 @@ class SignUpViewController: UIViewController {
   
   // MARK: - Methods called by button tap
   
+  
+  /// Sends a request to the server to create a new user
   @IBAction func signUpButtonWasPressed(_ sender: Any) {
     if allFieldsAreFilled() {
-      let login = loginTextField.text!
-      let password = passwordTextField.text!
-      let email = emailTextField.text!
+      let login = loginTextField.text ?? ""
+      let password = passwordTextField.text ?? ""
+      let email = emailTextField.text ?? ""
       
       let userProfileData = UserProfileData(
         userID: 1,
@@ -50,6 +52,7 @@ class SignUpViewController: UIViewController {
     }
   }
   
+  /// Checks if all required fields are filled and both inserted passwords match each other
   private func allFieldsAreFilled() -> Bool {
     var loginIsInserted: Bool {
       return loginTextField.text != ""
@@ -69,6 +72,7 @@ class SignUpViewController: UIViewController {
     return loginIsInserted && passwordsAreValidated && emailIsInserted
   }
   
+  /// Shows a UIAlertController to inform user that his registration was successful
   private func showSuccessfullRegistrationAlert() {
     let alertController = UIAlertController(title: "Success",
                                        message: "Your registration has been completed successfully",
