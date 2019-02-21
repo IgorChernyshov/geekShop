@@ -47,7 +47,7 @@ class ItemDetailsViewController: UIViewController {
   // MARK: - Methods related to buttons
   
   /// Sends a request to the server to add a product to user's basket. Shows a confirmation in case of success.
-  @IBAction func addToCartButtonWasPressed(_ sender: Any) {
+  @IBAction func addToBasketButtonWasPressed(_ sender: Any) {
     addItemToBasketService.addItemToBasket(productID: showItem?.productID ?? 0, quantity: 1) { [weak self] response in
       if response?.result == 1 {
         self?.showItemWasAddedToBasketAlert()

@@ -96,8 +96,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LsV-xd-w5T">
-                                <rect key="frame" x="16" y="80" width="343" height="104"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LsV-xd-w5T">
+                                <rect key="frame" x="16" y="80" width="343" height="164"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPz-B0-Wsz">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="16.5"/>
@@ -106,16 +106,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq8-rd-Gme">
-                                        <rect key="frame" x="0.0" y="37.5" width="42.5" height="16.5"/>
+                                        <rect key="frame" x="0.0" y="31.5" width="42.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYf-vS-D32">
-                                        <rect key="frame" x="0.0" y="62" width="42" height="42"/>
-                                        <state key="normal" image="addToCart"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYf-vS-D32" customClass="GreenRoundedButton" customModule="geekShop" customModuleProvider="target" propertyAccessControl="none">
+                                        <rect key="frame" x="0.0" y="63" width="152" height="42"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <state key="normal" title="Add to basket" image="addToCart">
+                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
-                                            <action selector="addToCartButtonWasPressed:" destination="mGx-du-CDR" eventType="touchUpInside" id="5iK-bK-NOC"/>
+                                            <action selector="addToBasketButtonWasPressed:" destination="mGx-du-CDR" eventType="touchUpInside" id="5iK-bK-NOC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-La-WkO" customClass="GreenRoundedButton" customModule="geekShop" customModuleProvider="target" propertyAccessControl="none">
+                                        <rect key="frame" x="0.0" y="120" width="220" height="44"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="tB5-d9-Qc3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <state key="normal" title="Tap here to write a review">
+                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addReviewButtonWasPressed:" destination="mGx-du-CDR" eventType="touchUpInside" id="zZf-gC-wMK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -132,11 +149,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Item Name" id="um9-cn-wu9">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="LsM-aP-qck"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add review" id="nnt-Mv-5n3">
-                            <connections>
-                                <action selector="addReviewButtonWasPressed:" destination="mGx-du-CDR" id="S1V-zg-hSq"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="itemDescriptionLabel" destination="pPz-B0-Wsz" id="QdS-AK-DZ2"/>

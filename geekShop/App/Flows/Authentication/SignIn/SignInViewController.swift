@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
   
   @IBOutlet weak var loginTextField: GreenPlaceholderTextField!
   @IBOutlet weak var passwordTextField: GreenPlaceholderTextField!
-  @IBOutlet weak var signInButton: UIButton!
+  @IBOutlet weak var signInButton: GreenRoundedButton!
   
   // MARK: - Services
   
