@@ -41,7 +41,7 @@ class ShopViewController: UIViewController {
   }
 
   /// Sends a request to the server to get items list. Returned items will be loaded into tableView
-  func loadItemsList() {
+  private func loadItemsList() {
     getItemListService.getItemsList(pageNumber: 1, categoryID: 1) { [weak self] response in
       guard let itemsList = response?.products else { return }
       
@@ -63,6 +63,13 @@ class ShopViewController: UIViewController {
     }
   }
   
+  /// Sends user to CartViewController which shows items that were added to cart by current user.
+  @IBAction func showCartButtonWasPressed(_ sender: Any) {
+    guard let cartVC = storyboard?.instantiateViewController(withIdentifier: "cartViewController") as?
+      CartViewController else { return }
+    
+    navigationController?.pushViewController(cartVC, animated: true)
+  }
   
 }
 

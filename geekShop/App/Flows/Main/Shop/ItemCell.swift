@@ -16,22 +16,22 @@ class ItemCell: UITableViewCell {
   
   // MARK: - Outlets
   
-  @IBOutlet weak var itemName: UILabel!
-  @IBOutlet weak var itemPrice: UILabel!
+  @IBOutlet weak var itemNameLabel: UILabel!
+  @IBOutlet weak var itemPriceLabel: UILabel!
   
   // MARK: - Cell's methods
   
   func configure(with item: Item) {
-    itemName.text = item.productName
-    itemPrice.text = "$\(item.price)"
+    itemNameLabel.text = item.productName
+    itemPriceLabel.text = "$\(item.price)"
   }
   
   override func prepareForReuse() {
     super.prepareForReuse()
     
-    self.itemName.text = ""
-    self.itemPrice.text = ""
-    self.selectionStyle = .none
+    itemNameLabel.text = ""
+    itemPriceLabel.text = ""
+    selectionStyle = .none
   }
   
 }

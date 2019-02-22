@@ -66,6 +66,7 @@ class ItemDetailsViewController: UIViewController {
     present(alertController, animated: true, completion: nil)
   }
   
+  /// Shows WriteReviewViewController where user can write a review for selected product
   @IBAction func addReviewButtonWasPressed(_ sender: Any) {
     guard let addReviewVC = storyboard?.instantiateViewController(withIdentifier: "writeReviewViewController") as? WriteReviewViewController else { return }
     

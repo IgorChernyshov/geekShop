@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // Basket-related services
   
   let removeItemFromBasketService = NetworkServiceFactory().makeRemoveItemFromBasketService()
-  let getUsersBasketService = NetworkServiceFactory().makeGetUsersBasketService()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
@@ -42,10 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Test basket-related API calls
     
     removeItemFromBasketService.removeItemFromBasket(productID: 7) { response in
-      print(response.debugDescription)
-    }
-    
-    getUsersBasketService.getUsersBasket(userID: 123) { response in
       print(response.debugDescription)
     }
     
