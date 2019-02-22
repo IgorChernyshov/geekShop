@@ -55,6 +55,7 @@
 		9C84CC5E221F09F50046AAD7 /* GreenRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC5D221F09F50046AAD7 /* GreenRoundedButton.swift */; };
 		9C84CC61221FB5840046AAD7 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC60221FB5840046AAD7 /* CartViewController.swift */; };
 		9C84CC63221FB59E0046AAD7 /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC62221FB59E0046AAD7 /* CartItemCell.swift */; };
+		9C84CC6B221FC6930046AAD7 /* geekShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC6A221FC6930046AAD7 /* geekShopUITests.swift */; };
 		9CC5480D220C7A38008DA2B6 /* UsersAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */; };
 		9CC54820220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */; };
 		9CC54823220DAFFE008DA2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC54822220DAFFE008DA2B6 /* Main.storyboard */; };
@@ -90,6 +91,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		9C0436A021E9D4EE00EF8C71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C04368321E9D4EC00EF8C71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C04368A21E9D4EC00EF8C71;
+			remoteInfo = geekShop;
+		};
+		9C84CC6D221FC6930046AAD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9C04368321E9D4EC00EF8C71 /* Project object */;
 			proxyType = 1;
@@ -152,6 +160,9 @@
 		9C84CC5D221F09F50046AAD7 /* GreenRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenRoundedButton.swift; sourceTree = "<group>"; };
 		9C84CC60221FB5840046AAD7 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		9C84CC62221FB59E0046AAD7 /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
+		9C84CC68221FC6930046AAD7 /* geekShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geekShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C84CC6A221FC6930046AAD7 /* geekShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geekShopUITests.swift; sourceTree = "<group>"; };
+		9C84CC6C221FC6930046AAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersAccount.storyboard; sourceTree = "<group>"; };
 		9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPlaceholderTextField.swift; sourceTree = "<group>"; };
 		9CC54822220DAFFE008DA2B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -205,6 +216,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C84CC65221FC6930046AAD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -222,6 +240,7 @@
 			children = (
 				9C04368D21E9D4EC00EF8C71 /* geekShop */,
 				9C0436A221E9D4EE00EF8C71 /* geekShopTests */,
+				9C84CC69221FC6930046AAD7 /* geekShopUITests */,
 				9C04368C21E9D4EC00EF8C71 /* Products */,
 				E53E4D3A94FD3ABA0C81C775 /* Pods */,
 				8A76EABD8547F608E38192E5 /* Frameworks */,
@@ -233,6 +252,7 @@
 			children = (
 				9C04368B21E9D4EC00EF8C71 /* geekShop.app */,
 				9C04369F21E9D4EE00EF8C71 /* geekShopTests.xctest */,
+				9C84CC68221FC6930046AAD7 /* geekShopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -506,6 +526,15 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		9C84CC69221FC6930046AAD7 /* geekShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C84CC6A221FC6930046AAD7 /* geekShopUITests.swift */,
+				9C84CC6C221FC6930046AAD7 /* Info.plist */,
+			);
+			path = geekShopUITests;
+			sourceTree = "<group>";
+		};
 		9CC5480B220C79F1008DA2B6 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -710,6 +739,24 @@
 			productReference = 9C04369F21E9D4EE00EF8C71 /* geekShopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9C84CC67221FC6930046AAD7 /* geekShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C84CC6F221FC6930046AAD7 /* Build configuration list for PBXNativeTarget "geekShopUITests" */;
+			buildPhases = (
+				9C84CC64221FC6930046AAD7 /* Sources */,
+				9C84CC65221FC6930046AAD7 /* Frameworks */,
+				9C84CC66221FC6930046AAD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C84CC6E221FC6930046AAD7 /* PBXTargetDependency */,
+			);
+			name = geekShopUITests;
+			productName = geekShopUITests;
+			productReference = 9C84CC68221FC6930046AAD7 /* geekShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -724,6 +771,10 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					9C04369E21E9D4EE00EF8C71 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9C04368A21E9D4EC00EF8C71;
+					};
+					9C84CC67221FC6930046AAD7 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 9C04368A21E9D4EC00EF8C71;
 					};
@@ -744,6 +795,7 @@
 			targets = (
 				9C04368A21E9D4EC00EF8C71 /* geekShop */,
 				9C04369E21E9D4EE00EF8C71 /* geekShopTests */,
+				9C84CC67221FC6930046AAD7 /* geekShopUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -781,6 +833,13 @@
 				9CF459DD21FD9C5600DCB6D0 /* registerUser.json in Resources */,
 				9CD71E172207610A0032023F /* addItemToBasket.json in Resources */,
 				9CD71E1F2207624A0032023F /* successfullyGotItemsList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C84CC66221FC6930046AAD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +973,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C84CC64221FC6930046AAD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C84CC6B221FC6930046AAD7 /* geekShopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -921,6 +988,11 @@
 			isa = PBXTargetDependency;
 			target = 9C04368A21E9D4EC00EF8C71 /* geekShop */;
 			targetProxy = 9C0436A021E9D4EE00EF8C71 /* PBXContainerItemProxy */;
+		};
+		9C84CC6E221FC6930046AAD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C04368A21E9D4EC00EF8C71 /* geekShop */;
+			targetProxy = 9C84CC6D221FC6930046AAD7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1134,6 +1206,44 @@
 			};
 			name = Release;
 		};
+		9C84CC70221FC6930046AAD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73YFFUD89Y;
+				INFOPLIST_FILE = geekShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frostfell.geekShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = geekShop;
+			};
+			name = Debug;
+		};
+		9C84CC71221FC6930046AAD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73YFFUD89Y;
+				INFOPLIST_FILE = geekShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frostfell.geekShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = geekShop;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1160,6 +1270,15 @@
 			buildConfigurations = (
 				9C0436AC21E9D4EE00EF8C71 /* Debug */,
 				9C0436AD21E9D4EE00EF8C71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C84CC6F221FC6930046AAD7 /* Build configuration list for PBXNativeTarget "geekShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C84CC70221FC6930046AAD7 /* Debug */,
+				9C84CC71221FC6930046AAD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
