@@ -121,6 +121,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="w0b-zd-5F2" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="loginTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="dFX-Pl-GLc"/>
                                         </constraints>
@@ -131,6 +132,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="NwS-2l-Wuh" userLabel="Password Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="CM5-MK-Mgc"/>
                                         </constraints>
@@ -141,6 +143,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat password" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="oVH-yj-miZ" userLabel="Re-Enter Password Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="76" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="repeatPasswordTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="gM9-Kv-2Jb"/>
                                         </constraints>
@@ -151,6 +154,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8DL-is-T6r" userLabel="E-mail Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="114" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="emailTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="msJ-sR-XjP"/>
                                         </constraints>
@@ -161,6 +165,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFH-so-5Jk" customClass="GreenRoundedButton" customModule="geekShop" customModuleProvider="target" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="152" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="submitButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="byi-nE-iVe"/>
                                         </constraints>

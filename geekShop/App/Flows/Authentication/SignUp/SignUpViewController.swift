@@ -49,6 +49,8 @@ class SignUpViewController: UIViewController {
         UserDefaults.standard.set(login, forKey: "currentUserLogin")
         self?.showSuccessfullRegistrationAlert()
       }
+    } else {
+      showUnsuccessfullRegistrationAlert()
     }
   }
   
@@ -77,6 +79,18 @@ class SignUpViewController: UIViewController {
     let alertController = UIAlertController(title: "Success",
                                        message: "Your registration has been completed successfully",
                                        preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] action in
+      self?.navigationController?.popViewController(animated: true)
+    }
+    alertController.addAction(okAction)
+    present(alertController, animated: true, completion: nil)
+  }
+  
+  /// Shows a UIAlertController to inform user that not all fields are filled
+  private func showUnsuccessfullRegistrationAlert() {
+    let alertController = UIAlertController(title: "Error",
+                                            message: "Please fill all fields and check that both passwords match",
+                                            preferredStyle: .alert)
     let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] action in
       self?.navigationController?.popViewController(animated: true)
     }

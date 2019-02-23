@@ -55,8 +55,8 @@
 		9C84CC5E221F09F50046AAD7 /* GreenRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC5D221F09F50046AAD7 /* GreenRoundedButton.swift */; };
 		9C84CC61221FB5840046AAD7 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC60221FB5840046AAD7 /* CartViewController.swift */; };
 		9C84CC63221FB59E0046AAD7 /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC62221FB59E0046AAD7 /* CartItemCell.swift */; };
-		9C84CC6B221FC6930046AAD7 /* geekShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC6A221FC6930046AAD7 /* geekShopUITests.swift */; };
-		9CC5480D220C7A38008DA2B6 /* UsersAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */; };
+		9C84CC6B221FC6930046AAD7 /* AuthenticationFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC6A221FC6930046AAD7 /* AuthenticationFlowUITests.swift */; };
+		9CC5480D220C7A38008DA2B6 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC5480C220C7A38008DA2B6 /* Authentication.storyboard */; };
 		9CC54820220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */; };
 		9CC54823220DAFFE008DA2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC54822220DAFFE008DA2B6 /* Main.storyboard */; };
 		9CC54825220DB692008DA2B6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC54824220DB692008DA2B6 /* SignInViewController.swift */; };
@@ -161,9 +161,9 @@
 		9C84CC60221FB5840046AAD7 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		9C84CC62221FB59E0046AAD7 /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
 		9C84CC68221FC6930046AAD7 /* geekShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geekShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C84CC6A221FC6930046AAD7 /* geekShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geekShopUITests.swift; sourceTree = "<group>"; };
+		9C84CC6A221FC6930046AAD7 /* AuthenticationFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowUITests.swift; sourceTree = "<group>"; };
 		9C84CC6C221FC6930046AAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersAccount.storyboard; sourceTree = "<group>"; };
+		9CC5480C220C7A38008DA2B6 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPlaceholderTextField.swift; sourceTree = "<group>"; };
 		9CC54822220DAFFE008DA2B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9CC54824220DB692008DA2B6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -529,7 +529,7 @@
 		9C84CC69221FC6930046AAD7 /* geekShopUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9C84CC6A221FC6930046AAD7 /* geekShopUITests.swift */,
+				9C84CC6A221FC6930046AAD7 /* AuthenticationFlowUITests.swift */,
 				9C84CC6C221FC6930046AAD7 /* Info.plist */,
 			);
 			path = geekShopUITests;
@@ -540,7 +540,7 @@
 			children = (
 				9CC54826220DB7EA008DA2B6 /* SignUp */,
 				9CC5480E220C7A41008DA2B6 /* SignIn */,
-				9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */,
+				9CC5480C220C7A38008DA2B6 /* Authentication.storyboard */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -805,7 +805,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CC5480D220C7A38008DA2B6 /* UsersAccount.storyboard in Resources */,
+				9CC5480D220C7A38008DA2B6 /* Authentication.storyboard in Resources */,
 				9C04369921E9D4EE00EF8C71 /* LaunchScreen.storyboard in Resources */,
 				9C04369621E9D4EE00EF8C71 /* Assets.xcassets in Resources */,
 				9CC54823220DAFFE008DA2B6 /* Main.storyboard in Resources */,
@@ -977,7 +977,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C84CC6B221FC6930046AAD7 /* geekShopUITests.swift in Sources */,
+				9C84CC6B221FC6930046AAD7 /* AuthenticationFlowUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
