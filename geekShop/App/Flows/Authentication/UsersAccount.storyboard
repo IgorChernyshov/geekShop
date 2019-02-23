@@ -24,6 +24,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="J2R-iA-xf4" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="loginTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Xha-8M-DnE"/>
                                         </constraints>
@@ -34,6 +35,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sEA-LQ-BPO" userLabel="Password Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
@@ -41,6 +43,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-Gr-agO" customClass="GreenRoundedButton" customModule="geekShop" customModuleProvider="target" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="76" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="signInButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="hEn-Iy-41q"/>
                                         </constraints>
@@ -55,6 +58,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-if-WNJ" customClass="GreenRoundedButton" customModule="geekShop" customModuleProvider="target" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="128" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="signUpButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="BWI-pT-dfV"/>
                                         </constraints>

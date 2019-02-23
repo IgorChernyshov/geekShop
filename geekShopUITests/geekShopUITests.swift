@@ -23,27 +23,27 @@ class geekShopUITests: XCTestCase {
   func testSignInSuccessful() {
     authenticateWith(login: "Frostfell", password: "123456")
     
-    let logoutButton = app.buttons["Logout"]
+    let logoutButton = app.buttons["showCartButton"]
     logoutButton.tap()
   }
   
   func testSignInFailed() {
     authenticateWith(login: "Odmin", password: "123")
     
-    let signUpButton = app.buttons["Sign Up"]
+    let signUpButton = app.buttons["signUpButton"]
     signUpButton.tap()
   }
   
   private func authenticateWith(login: String, password: String) {
-    let loginTextField = app.textFields.element(boundBy: 0)
+    let loginTextField = app.textFields["loginTextField"]
     loginTextField.tap()
     loginTextField.typeText(login)
     
-    let passwordTextField = app.secureTextFields.element(boundBy: 0)
+    let passwordTextField = app.secureTextFields["passwordTextField"]
     passwordTextField.tap()
     passwordTextField.typeText(password)
     
-    let signInButton = app.buttons["Sign In"]
+    let signInButton = app.buttons["signInButton"]
     signInButton.tap()
   }
   

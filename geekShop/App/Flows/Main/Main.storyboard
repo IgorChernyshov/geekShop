@@ -68,6 +68,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu2-qB-Gas">
                                         <rect key="frame" x="323" y="3" width="44" height="44"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="showCartButton"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="e0u-ZA-gSk"/>
                                         </constraints>
