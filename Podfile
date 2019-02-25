@@ -9,6 +9,7 @@ target 'geekShop' do
 
   # Pods for geekShop
   pod 'Alamofire', '~> 4.7'
+  pod 'YandexMobileMetrica/Dynamic/Core'
 
   target 'geekShopTests' do
     inherit! :search_paths
