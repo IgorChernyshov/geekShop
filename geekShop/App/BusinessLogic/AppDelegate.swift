@@ -26,6 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
+    // MARK: - Application started in UI Tests mode
+    
+    if CommandLine.arguments.contains("--uitesting") {
+      UserDefaults.standard.set(false, forKey: "userIsLoggedIn")
+      UserDefaults.standard.set("", forKey: "currentUserLogin")
+      UserDefaults.standard.set("", forKey: "currentUserPassword")
+    }
+    
+    // MARK: - Application started in Normal mode
+    
     // MARK: - Test review-related API calls
     
     approveReviewService.approveReview(reviewID: 333) { response in

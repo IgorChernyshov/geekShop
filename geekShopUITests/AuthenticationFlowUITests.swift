@@ -17,6 +17,7 @@ class AuthenticationFlowUITests: XCTestCase {
     continueAfterFailure = false
     
     app = XCUIApplication()
+    app.launchArguments.append("--uitesting")
     app.launch()
   }
   
