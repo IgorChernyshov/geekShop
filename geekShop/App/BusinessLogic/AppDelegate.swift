@@ -13,16 +13,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  // Create test instances of services to test API calls
+  // MARK: - Services
+  
+  // Metrica services
+  
+  let metricaActivator = YandexMetrica()
+  let metrica = YandexMetrica()
+  
+  // Test instances of services to test API calls
   
   // Review-related services
-
+  
   let approveReviewService = NetworkServiceFactory().makeApproveReviewService()
   let removeReviewService = NetworkServiceFactory().makeRemoveReviewService()
   
   // Basket-related services
   
   let removeItemFromBasketService = NetworkServiceFactory().makeRemoveItemFromBasketService()
+  
+  // MARK: - Application launch options
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
@@ -34,7 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       UserDefaults.standard.set("", forKey: "currentUserPassword")
     }
     
-    // MARK: - Application started in Normal mode
+    // MARK: - Default start options
+    
+    metricaActivator.activate()
     
     // MARK: - Test review-related API calls
     
