@@ -25,5 +25,12 @@ platform :ios do
     # clear cached data
     clear_derived_data
     xcclean(scheme: "geekShop", workspace: "geekShop.xcworkspace")
+
+    # update pods
+    cocoapods(use_bundle_exec: false)
+
+    # run tests
+    run_tests
+    
   end
 end
