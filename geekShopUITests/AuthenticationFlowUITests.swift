@@ -54,28 +54,50 @@ class AuthenticationFlowUITests: XCTestCase {
   
   func testSignUpSuccessful() {
     navigateToSignUpController()
-    signUpWith(login: "Igor", password: "123456", email: "test@mail.ru")
+    signUpWith(login: "Igor", password: "123456", repeatedPassword: "123456", email: "test@mail.ru")
+    let alertController = alertWith(title: "Success")
     
-    let successfulRegistrationMessage = "Your registration has been completed successfully"
-    let token = addUIInterruptionMonitor(withDescription: successfulRegistrationMessage,
-                                         handler: { alert in alert.buttons["OK"].tap()
-                                          return true })
-    
-    RunLoop.current.run(until: Date(timeInterval: 2, since: Date()))
-    removeUIInterruptionMonitor(token)
+    alertController.buttons["OK"].tap()
   }
   
-  func testSignUpFailed() {
+  func testSignUpFailedEmptyLogin() {
     navigateToSignUpController()
-    signUpWith(login: "Igor", password: "", email: "test@mail.ru")
+    signUpWith(login: "", password: "123456", repeatedPassword: "123456", email: "test@mail.ru")
+    let alertController = alertWith(title: "Error")
     
-    let unsuccessfulRegistrationMessage = "Please fill all fields and check that both passwords match"
-    let token = addUIInterruptionMonitor(withDescription: unsuccessfulRegistrationMessage,
-                                         handler: { alert in alert.buttons["OK"].tap()
-                                          return true })
+    alertController.buttons["OK"].tap()
+  }
+  
+  func testSignUpFailedEmptyPassword() {
+    navigateToSignUpController()
+    signUpWith(login: "Igor", password: "", repeatedPassword: "123456", email: "test@mail.ru")
+    let alertController = alertWith(title: "Error")
     
-    RunLoop.current.run(until: Date(timeInterval: 2, since: Date()))
-    removeUIInterruptionMonitor(token)
+    alertController.buttons["OK"].tap()
+  }
+  
+  func testSignUpFailedEmptyRepeatedPassword() {
+    navigateToSignUpController()
+    signUpWith(login: "Igor", password: "123456", repeatedPassword: "", email: "test@mail.ru")
+    let alertController = alertWith(title: "Error")
+    
+    alertController.buttons["OK"].tap()
+  }
+  
+  func testSignUpFailedEmptyEmail() {
+    navigateToSignUpController()
+    signUpWith(login: "Igor", password: "123456", repeatedPassword: "123456", email: "")
+    let alertController = alertWith(title: "Error")
+    
+    alertController.buttons["OK"].tap()
+  }
+  
+  func testSignUpFailedPasswordsMismatch() {
+    navigateToSignUpController()
+    signUpWith(login: "Igor", password: "123456", repeatedPassword: "123465", email: "test@mail.ru")
+    let alertController = alertWith(title: "Error")
+    
+    alertController.buttons["OK"].tap()
   }
   
   private func navigateToSignUpController() {
@@ -83,7 +105,7 @@ class AuthenticationFlowUITests: XCTestCase {
     signUpButton.tap()
   }
   
-  private func signUpWith(login: String, password: String, email: String) {
+  private func signUpWith(login: String, password: String, repeatedPassword: String, email: String) {
     let loginTextField = app.textFields["loginTextField"]
     loginTextField.tap()
     loginTextField.typeText(login)
@@ -94,7 +116,7 @@ class AuthenticationFlowUITests: XCTestCase {
     
     let repeatPasswordTextField = app.secureTextFields["repeatPasswordTextField"]
     repeatPasswordTextField.tap()
-    repeatPasswordTextField.typeText(password)
+    repeatPasswordTextField.typeText(repeatedPassword)
     
     let emailTextField = app.textFields["emailTextField"]
     emailTextField.tap()
@@ -102,6 +124,16 @@ class AuthenticationFlowUITests: XCTestCase {
     
     let signUpButton = app.buttons["submitButton"]
     signUpButton.tap()
+  }
+  
+  private func alertWith(title: String) -> XCUIElement {
+    let alertController = app.alerts[title]
+    let exists = NSPredicate(format: "exists == 1")
+    
+    expectation(for: exists, evaluatedWith: alertController, handler: nil)
+    waitForExpectations(timeout: 2, handler: nil)
+    
+    return alertController
   }
   
 }
