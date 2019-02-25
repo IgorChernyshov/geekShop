@@ -22,6 +22,7 @@ class CartViewController: UIViewController {
   // MARK: - Services
   
   let getUsersBasketService = NetworkServiceFactory().makeGetUsersBasketService()
+  let metrica = YandexMetrica()
   
   // MARK: - ViewController configuration
   
@@ -72,6 +73,8 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     let deleteAction = UITableViewRowAction(style: .destructive, title: "Remove") { [weak self] (rowAction, indexPath) in
       guard let strongSelf = self else { return }
       
+      self?.metrica.log(event: "DELETED_ITEM_FROM_BASKET",
+                        parameters: ["itemID": strongSelf.itemsInBasket[indexPath.row].productID])
       strongSelf.itemsInBasket.remove(at: indexPath.row)
       strongSelf.tableView.reloadData()
     }

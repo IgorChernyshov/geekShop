@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // Metrica services
   
   let metricaActivator = YandexMetrica()
-  let metrica = YandexMetrica()
   
   // Test instances of services to test API calls
   

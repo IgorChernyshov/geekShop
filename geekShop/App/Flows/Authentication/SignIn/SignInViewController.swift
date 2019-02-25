@@ -23,6 +23,7 @@ class SignInViewController: UIViewController {
   // MARK: - Services
   
   private let authService = NetworkServiceFactory().makeAuthService()
+  private let metrica = YandexMetrica()
   
   // MARK: - Methods called by button tap
   
@@ -31,11 +32,14 @@ class SignInViewController: UIViewController {
     if loginAndPasswordInserted() {
       let login = loginTextField.text!
       let password = passwordTextField.text!
+      metrica.log(event: "REQUESTED_SIGN_IN")
       
       authService.login(login: login, password: password, cookie: "") { [weak self] user in
         UserDefaults.standard.set(true, forKey: "userIsLoggedIn")
         UserDefaults.standard.set(login, forKey: "currentUserLogin")
         UserDefaults.standard.set(password, forKey: "currentUserPassword")
+        self?.metrica.log(event: "SIGN_IN_SUCCESSFUL")
+        
         self?.performSegue(withIdentifier: "toMainVC", sender: self)
       }
     }
@@ -55,7 +59,17 @@ class SignInViewController: UIViewController {
       return passwordTextField.text?.count ?? 0 >= minimumPasswordLength
     }
     
-    return loginInserted && passwordInserted
+    if !loginInserted {
+      metrica.log(event: "SIGN_IN_FAILED", parameters: ["reason": "Login missing"])
+      return false
+    }
+    
+    if !passwordInserted {
+      metrica.log(event: "SIGN_IN_FAILED", parameters: ["reason": "Password is less than 6 characters"])
+      return false
+    }
+    
+    return true
   }
   
   /// Opens Sign Up screen where user can create a new account

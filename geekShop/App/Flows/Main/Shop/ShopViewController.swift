@@ -22,6 +22,7 @@ class ShopViewController: UIViewController {
   
   private let getItemListService = NetworkServiceFactory().makeGetItemsListService()
   private let logoutService = NetworkServiceFactory().makeLogoutService()
+  private let metrica = YandexMetrica()
   
   // MARK: - ViewController configuration
   
@@ -42,9 +43,12 @@ class ShopViewController: UIViewController {
 
   /// Sends a request to the server to get items list. Returned items will be loaded into tableView
   private func loadItemsList() {
+    metrica.log(event: "REQUESTED_PRODUCTS_LIST")
+    
     getItemListService.getItemsList(pageNumber: 1, categoryID: 1) { [weak self] response in
       guard let itemsList = response?.products else { return }
       
+      self?.metrica.log(event: "LOADED_PRODUCTS_LIST_SUCCESSFULLY")
       self?.items = itemsList
       self?.tableView.reloadData()
     }
@@ -54,10 +58,15 @@ class ShopViewController: UIViewController {
   
   /// Signs out current user
   @IBAction func logoutButtonWasPressed(_ sender: Any) {
+    metrica.log(event: "REQUESTED_LOGOUT")
+    
     logoutService.logout(userID: 123) { [weak self] response in
       if response?.result == 1 {
         UserDefaults.standard.set(false, forKey: "userIsLoggedIn")
         UserDefaults.standard.set("", forKey: "currentUserPassword")
+        
+        self?.metrica.log(event: "LOGOUT_SUCCESSFUL")
+        
         self?.dismiss(animated: true, completion: nil)
       }
     }

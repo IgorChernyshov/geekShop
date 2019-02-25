@@ -26,6 +26,7 @@ class WriteReviewViewController: UIViewController {
   // MARK: - Services
   
   private let addReviewService = NetworkServiceFactory().makeAddReviewService()
+  private let metrica = YandexMetrica()
   
   // MARK: - Button's methods
   
@@ -34,8 +35,11 @@ class WriteReviewViewController: UIViewController {
     guard let reviewText = reviewTextView.text, reviewText != "" else { return }
     reviewTextView.resignFirstResponder()
     
+    metrica.log(event: "REQUESTED_TO_SEND_REVIEW_FOR_APPROVAL")
+    
     addReviewService.addReview(userID: 123, text: reviewText) { [weak self] response in
       if response?.result == 1 {
+        self?.metrica.log(event: "SENT_REVIEW_FOR_APPROVAL")
         self?.showReviewWasSentAlert()
       }
     }
