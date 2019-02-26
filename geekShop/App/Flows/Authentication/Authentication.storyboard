@@ -24,6 +24,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="J2R-iA-xf4" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="loginTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Xha-8M-DnE"/>
                                         </constraints>
@@ -34,13 +35,15 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sEA-LQ-BPO" userLabel="Password Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-Gr-agO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-Gr-agO" customClass="GreenRoundedButton" customModule="geekShop" customModuleProvider="target" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="76" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="signInButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="hEn-Iy-41q"/>
                                         </constraints>
@@ -48,24 +51,14 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="signInButtonWasPressed:" destination="7Z4-6y-O1H" eventType="touchUpInside" id="PB3-ho-vMk"/>
+                                            <action selector="signInButtonWasPressed:" destination="7Z4-6y-O1H" eventType="touchUpInside" id="a8o-xN-1TJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-if-WNJ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-if-WNJ" customClass="GreenRoundedButton" customModule="geekShop" customModuleProvider="target" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="128" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="signUpButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="BWI-pT-dfV"/>
                                         </constraints>
@@ -73,19 +66,8 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="signUpButtonWasPressed:" destination="7Z4-6y-O1H" eventType="touchUpInside" id="UHs-FD-VA1"/>
+                                            <action selector="signUpButtonWasPressed:" destination="7Z4-6y-O1H" eventType="touchUpInside" id="4D5-tN-QMb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -107,7 +89,7 @@
                     <connections>
                         <outlet property="loginTextField" destination="J2R-iA-xf4" id="i9n-Hz-Jsl"/>
                         <outlet property="passwordTextField" destination="sEA-LQ-BPO" id="4hQ-tT-Ikx"/>
-                        <outlet property="signInButton" destination="0l9-Gr-agO" id="DFb-82-s2d"/>
+                        <outlet property="signInButton" destination="0l9-Gr-agO" id="jg6-Y5-0ve"/>
                         <segue destination="wir-hf-REH" kind="show" identifier="toSignUpVC" id="7bI-gE-1XN"/>
                         <segue destination="5fG-ib-lCe" kind="presentation" identifier="toMainVC" id="Rdv-R7-96O"/>
                     </connections>
@@ -139,6 +121,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="w0b-zd-5F2" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="loginTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="dFX-Pl-GLc"/>
                                         </constraints>
@@ -149,6 +132,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="NwS-2l-Wuh" userLabel="Password Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="CM5-MK-Mgc"/>
                                         </constraints>
@@ -159,6 +143,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat password" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="oVH-yj-miZ" userLabel="Re-Enter Password Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="76" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="repeatPasswordTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="gM9-Kv-2Jb"/>
                                         </constraints>
@@ -169,6 +154,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8DL-is-T6r" userLabel="E-mail Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="114" width="200" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="emailTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="msJ-sR-XjP"/>
                                         </constraints>
@@ -176,9 +162,10 @@
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFH-so-5Jk">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFH-so-5Jk" customClass="GreenRoundedButton" customModule="geekShop" customModuleProvider="target" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="152" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="submitButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="byi-nE-iVe"/>
                                         </constraints>
@@ -186,17 +173,6 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signUpButtonWasPressed:" destination="wir-hf-REH" eventType="touchUpInside" id="pSQ-ea-Rqe"/>
                                         </connections>

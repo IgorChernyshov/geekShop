@@ -52,7 +52,14 @@
 		9C72D6492216C4C700FFA814 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D6482216C4C700FFA814 /* ItemCell.swift */; };
 		9C84CC542219BBE90046AAD7 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC532219BBE90046AAD7 /* ItemDetailsViewController.swift */; };
 		9C84CC5B221A9CBC0046AAD7 /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC5A221A9CBC0046AAD7 /* WriteReviewViewController.swift */; };
-		9CC5480D220C7A38008DA2B6 /* UsersAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */; };
+		9C84CC5E221F09F50046AAD7 /* GreenRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC5D221F09F50046AAD7 /* GreenRoundedButton.swift */; };
+		9C84CC61221FB5840046AAD7 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC60221FB5840046AAD7 /* CartViewController.swift */; };
+		9C84CC63221FB59E0046AAD7 /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC62221FB59E0046AAD7 /* CartItemCell.swift */; };
+		9C84CC6B221FC6930046AAD7 /* AuthenticationFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC6A221FC6930046AAD7 /* AuthenticationFlowUITests.swift */; };
+		9C84CC742223D6A10046AAD7 /* Metrica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC732223D6A10046AAD7 /* Metrica.swift */; };
+		9C84CC762223D8790046AAD7 /* YandexMetrica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC752223D8790046AAD7 /* YandexMetrica.swift */; };
+		9C84CC782223DD1E0046AAD7 /* MetricaActivator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84CC772223DD1E0046AAD7 /* MetricaActivator.swift */; };
+		9CC5480D220C7A38008DA2B6 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC5480C220C7A38008DA2B6 /* Authentication.storyboard */; };
 		9CC54820220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */; };
 		9CC54823220DAFFE008DA2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC54822220DAFFE008DA2B6 /* Main.storyboard */; };
 		9CC54825220DB692008DA2B6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC54824220DB692008DA2B6 /* SignInViewController.swift */; };
@@ -87,6 +94,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		9C0436A021E9D4EE00EF8C71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C04368321E9D4EC00EF8C71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C04368A21E9D4EC00EF8C71;
+			remoteInfo = geekShop;
+		};
+		9C84CC6D221FC6930046AAD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9C04368321E9D4EC00EF8C71 /* Project object */;
 			proxyType = 1;
@@ -146,7 +160,16 @@
 		9C72D6482216C4C700FFA814 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9C84CC532219BBE90046AAD7 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		9C84CC5A221A9CBC0046AAD7 /* WriteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
-		9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersAccount.storyboard; sourceTree = "<group>"; };
+		9C84CC5D221F09F50046AAD7 /* GreenRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenRoundedButton.swift; sourceTree = "<group>"; };
+		9C84CC60221FB5840046AAD7 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		9C84CC62221FB59E0046AAD7 /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
+		9C84CC68221FC6930046AAD7 /* geekShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geekShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C84CC6A221FC6930046AAD7 /* AuthenticationFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowUITests.swift; sourceTree = "<group>"; };
+		9C84CC6C221FC6930046AAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C84CC732223D6A10046AAD7 /* Metrica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrica.swift; sourceTree = "<group>"; };
+		9C84CC752223D8790046AAD7 /* YandexMetrica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexMetrica.swift; sourceTree = "<group>"; };
+		9C84CC772223DD1E0046AAD7 /* MetricaActivator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricaActivator.swift; sourceTree = "<group>"; };
+		9CC5480C220C7A38008DA2B6 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		9CC5481F220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPlaceholderTextField.swift; sourceTree = "<group>"; };
 		9CC54822220DAFFE008DA2B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9CC54824220DB692008DA2B6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +222,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C84CC65221FC6930046AAD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -216,6 +246,7 @@
 			children = (
 				9C04368D21E9D4EC00EF8C71 /* geekShop */,
 				9C0436A221E9D4EE00EF8C71 /* geekShopTests */,
+				9C84CC69221FC6930046AAD7 /* geekShopUITests */,
 				9C04368C21E9D4EC00EF8C71 /* Products */,
 				E53E4D3A94FD3ABA0C81C775 /* Pods */,
 				8A76EABD8547F608E38192E5 /* Frameworks */,
@@ -227,6 +258,7 @@
 			children = (
 				9C04368B21E9D4EC00EF8C71 /* geekShop.app */,
 				9C04369F21E9D4EE00EF8C71 /* geekShopTests.xctest */,
+				9C84CC68221FC6930046AAD7 /* geekShopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				9C04368E21E9D4EC00EF8C71 /* AppDelegate.swift */,
+				9C84CC722223D6860046AAD7 /* Log */,
 				9C17BCA621EF65D600F5760B /* Network */,
 			);
 			path = BusinessLogic;
@@ -483,12 +516,48 @@
 			path = WriteReview;
 			sourceTree = "<group>";
 		};
+		9C84CC5C221F09E00046AAD7 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				9C84CC5D221F09F50046AAD7 /* GreenRoundedButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		9C84CC5F221FB56A0046AAD7 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				9C84CC60221FB5840046AAD7 /* CartViewController.swift */,
+				9C84CC62221FB59E0046AAD7 /* CartItemCell.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		9C84CC69221FC6930046AAD7 /* geekShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C84CC6A221FC6930046AAD7 /* AuthenticationFlowUITests.swift */,
+				9C84CC6C221FC6930046AAD7 /* Info.plist */,
+			);
+			path = geekShopUITests;
+			sourceTree = "<group>";
+		};
+		9C84CC722223D6860046AAD7 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				9C84CC732223D6A10046AAD7 /* Metrica.swift */,
+				9C84CC772223DD1E0046AAD7 /* MetricaActivator.swift */,
+				9C84CC752223D8790046AAD7 /* YandexMetrica.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 		9CC5480B220C79F1008DA2B6 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				9CC54826220DB7EA008DA2B6 /* SignUp */,
 				9CC5480E220C7A41008DA2B6 /* SignIn */,
-				9CC5480C220C7A38008DA2B6 /* UsersAccount.storyboard */,
+				9CC5480C220C7A38008DA2B6 /* Authentication.storyboard */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -520,6 +589,7 @@
 		9CC5481E220DA8A2008DA2B6 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				9C84CC5C221F09E00046AAD7 /* UIButton */,
 				9C84CC552219EA4B0046AAD7 /* UITextField */,
 			);
 			path = Basic;
@@ -528,11 +598,12 @@
 		9CC54821220DAFD8008DA2B6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9CC54822220DAFFE008DA2B6 /* Main.storyboard */,
-				9C84CC59221A9CA10046AAD7 /* WriteReview */,
+				9C84CC5F221FB56A0046AAD7 /* Cart */,
 				9C84CC522219BB980046AAD7 /* ItemDetails */,
+				9CC54822220DAFFE008DA2B6 /* Main.storyboard */,
 				9C72D6442216C46300FFA814 /* Shop */,
 				9CC54829220FF2F4008DA2B6 /* UserProfile */,
+				9C84CC59221A9CA10046AAD7 /* WriteReview */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -685,6 +756,24 @@
 			productReference = 9C04369F21E9D4EE00EF8C71 /* geekShopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9C84CC67221FC6930046AAD7 /* geekShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C84CC6F221FC6930046AAD7 /* Build configuration list for PBXNativeTarget "geekShopUITests" */;
+			buildPhases = (
+				9C84CC64221FC6930046AAD7 /* Sources */,
+				9C84CC65221FC6930046AAD7 /* Frameworks */,
+				9C84CC66221FC6930046AAD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C84CC6E221FC6930046AAD7 /* PBXTargetDependency */,
+			);
+			name = geekShopUITests;
+			productName = geekShopUITests;
+			productReference = 9C84CC68221FC6930046AAD7 /* geekShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -699,6 +788,10 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					9C04369E21E9D4EE00EF8C71 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9C04368A21E9D4EC00EF8C71;
+					};
+					9C84CC67221FC6930046AAD7 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 9C04368A21E9D4EC00EF8C71;
 					};
@@ -719,6 +812,7 @@
 			targets = (
 				9C04368A21E9D4EC00EF8C71 /* geekShop */,
 				9C04369E21E9D4EE00EF8C71 /* geekShopTests */,
+				9C84CC67221FC6930046AAD7 /* geekShopUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -728,7 +822,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CC5480D220C7A38008DA2B6 /* UsersAccount.storyboard in Resources */,
+				9CC5480D220C7A38008DA2B6 /* Authentication.storyboard in Resources */,
 				9C04369921E9D4EE00EF8C71 /* LaunchScreen.storyboard in Resources */,
 				9C04369621E9D4EE00EF8C71 /* Assets.xcassets in Resources */,
 				9CC54823220DAFFE008DA2B6 /* Main.storyboard in Resources */,
@@ -756,6 +850,13 @@
 				9CF459DD21FD9C5600DCB6D0 /* registerUser.json in Resources */,
 				9CD71E172207610A0032023F /* addItemToBasket.json in Resources */,
 				9CD71E1F2207624A0032023F /* successfullyGotItemsList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C84CC66221FC6930046AAD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,10 +889,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-geekShop/Pods-geekShop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -823,9 +926,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C84CC782223DD1E0046AAD7 /* MetricaActivator.swift in Sources */,
 				9C17BCF621F5DC7200F5760B /* ApproveReviewService.swift in Sources */,
 				9CD71DF622074F4E0032023F /* RemoveItemFromBasketRequest.swift in Sources */,
 				9C17BCE021F1068100F5760B /* ChangeUserProfileRequest.swift in Sources */,
+				9C84CC61221FB5840046AAD7 /* CartViewController.swift in Sources */,
 				9C17BCD721F0FE4800F5760B /* LogoutRequest.swift in Sources */,
 				9C17BCB821F0E51500F5760B /* LoginRequest.swift in Sources */,
 				9C17BCE521F44F7100F5760B /* Configuration.swift in Sources */,
@@ -850,10 +955,12 @@
 				9C17BCEE21F5DBF100F5760B /* AddReviewRequest.swift in Sources */,
 				9CC54825220DB692008DA2B6 /* SignInViewController.swift in Sources */,
 				9CD71DFF220752680032023F /* GetItemsListRequest.swift in Sources */,
+				9C84CC762223D8790046AAD7 /* YandexMetrica.swift in Sources */,
 				9C17BCBA21F0E59100F5760B /* LoginResponse.swift in Sources */,
 				9C17BCDC21F1012F00F5760B /* ChangeUserProfileService.swift in Sources */,
 				9CD71DEA220742040032023F /* AddItemToBasketRequest.swift in Sources */,
 				9C04368F21E9D4EC00EF8C71 /* AppDelegate.swift in Sources */,
+				9C84CC63221FB59E0046AAD7 /* CartItemCell.swift in Sources */,
 				9C17BCC221F0E83400F5760B /* ErrorParser.swift in Sources */,
 				9C17BCFE21F5DFAF00F5760B /* ApproveReviewResponse.swift in Sources */,
 				9C72D6492216C4C700FFA814 /* ItemCell.swift in Sources */,
@@ -863,7 +970,9 @@
 				9C17BCFC21F5DE8A00F5760B /* AddReviewResponse.swift in Sources */,
 				9C17BCE221F1075900F5760B /* ChangeUserProfileResponse.swift in Sources */,
 				9CD71DF022074C1B0032023F /* AddItemToBasketResponse.swift in Sources */,
+				9C84CC742223D6A10046AAD7 /* Metrica.swift in Sources */,
 				9CD71E0E22075D200032023F /* GetUsersBasketResponse.swift in Sources */,
+				9C84CC5E221F09F50046AAD7 /* GreenRoundedButton.swift in Sources */,
 				9CD71E0A22075C000032023F /* GetUsersBasketRequest.swift in Sources */,
 				9CD71DF822074F850032023F /* RemoveItemFromBasketService.swift in Sources */,
 				9CC54820220DA8CA008DA2B6 /* GreenPlaceholderTextField.swift in Sources */,
@@ -886,6 +995,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C84CC64221FC6930046AAD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C84CC6B221FC6930046AAD7 /* AuthenticationFlowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -893,6 +1010,11 @@
 			isa = PBXTargetDependency;
 			target = 9C04368A21E9D4EC00EF8C71 /* geekShop */;
 			targetProxy = 9C0436A021E9D4EE00EF8C71 /* PBXContainerItemProxy */;
+		};
+		9C84CC6E221FC6930046AAD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C04368A21E9D4EC00EF8C71 /* geekShop */;
+			targetProxy = 9C84CC6D221FC6930046AAD7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1106,6 +1228,44 @@
 			};
 			name = Release;
 		};
+		9C84CC70221FC6930046AAD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73YFFUD89Y;
+				INFOPLIST_FILE = geekShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frostfell.geekShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = geekShop;
+			};
+			name = Debug;
+		};
+		9C84CC71221FC6930046AAD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73YFFUD89Y;
+				INFOPLIST_FILE = geekShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frostfell.geekShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = geekShop;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1132,6 +1292,15 @@
 			buildConfigurations = (
 				9C0436AC21E9D4EE00EF8C71 /* Debug */,
 				9C0436AD21E9D4EE00EF8C71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C84CC6F221FC6930046AAD7 /* Build configuration list for PBXNativeTarget "geekShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C84CC70221FC6930046AAD7 /* Debug */,
+				9C84CC71221FC6930046AAD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
