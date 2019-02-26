@@ -37,6 +37,11 @@ class AuthenticationFlowUITests: XCTestCase {
     signUpButton.tap()
   }
   
+  /// Simulates user actions: inserts login and password to according text fields and click Sign In button.
+  ///
+  /// - Parameters:
+  ///   - login: Text that will be inserted into Login text field.
+  ///   - password: Text that will be inserted into Password text field.
   private func authenticateWith(login: String, password: String) {
     let loginTextField = app.textFields["loginTextField"]
     loginTextField.tap()
@@ -100,11 +105,20 @@ class AuthenticationFlowUITests: XCTestCase {
     alertController.buttons["OK"].tap()
   }
   
+  /// Navigates from Sign In view controller to Sign Up view controller.
   private func navigateToSignUpController() {
     let signUpButton = app.buttons["signUpButton"]
     signUpButton.tap()
   }
   
+  /// Simulates user actions: inserts login, password, repeats password and email to according text fields.
+  /// Clicks Sign In button when all provided data is inserted into text fields.
+  ///
+  /// - Parameters:
+  ///   - login: Text that will be inserted into Login text field.
+  ///   - password: Text that will be inserted into Password text field.
+  ///   - repeatedPassword: Text that will be inserted into Repeated Password text field.
+  ///   - email: Text that will be inserted into E-mail text field.
   private func signUpWith(login: String, password: String, repeatedPassword: String, email: String) {
     let loginTextField = app.textFields["loginTextField"]
     loginTextField.tap()
@@ -126,6 +140,11 @@ class AuthenticationFlowUITests: XCTestCase {
     signUpButton.tap()
   }
   
+  /// This method creates a XCUIElement with a given title.
+  /// It is used to determine whether the test was successful or not.
+  ///
+  /// - Parameter title: UIAlertController's title.
+  /// - Returns: XCUIElement that represents an alert controller.
   private func alertWith(title: String) -> XCUIElement {
     let alertController = app.alerts[title]
     let exists = NSPredicate(format: "exists == 1")
