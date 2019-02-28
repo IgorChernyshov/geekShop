@@ -20,20 +20,20 @@ platform :ios do
   lane :prepare_for_production do
 
     # checkout release branch
-#    ensure_git_status_clean
+    ensure_git_status_clean
 
     # clear cached data
-#    clear_derived_data
-#    xcclean(scheme: "geekShop", workspace: "geekShop.xcworkspace")
+    clear_derived_data
+    xcclean(scheme: "geekShop", workspace: "geekShop.xcworkspace")
 
     # update pods
-#    cocoapods(use_bundle_exec: false)
+    cocoapods(use_bundle_exec: false)
 
     # run tests
-#    run_tests
+    run_tests
 
     # take screenshots
-#    capture_ios_screenshots
+    capture_ios_screenshots
   end
 
   desc "This lane builds the project"
@@ -50,5 +50,29 @@ platform :ios do
       include_bitcode: true,
       silent: false
     )
+
+    # Commit changes to git
+
+    # Build a tag from version and build numbers
+    versionNumber = get_version_number
+    buildNumber = get_build_number
+    tag = "#{versionNumber}.#{buildNumber}"
+
+    # Add changes to git
+    git_add(path: [
+      "./Podfile.lock",
+      "./geekShop.xcodeproj/project.pbxproj",
+      "./geekShop/Info.plist",
+      "./geekShop/Environment/Info.plist",
+      "./geekShopUITests/Info.plist"
+    ])
+    git_commit(path: [
+      "./Podfile.lock",
+      "./geekShop.xcodeproj/project.pbxproj",
+      "./geekShopTests/Info.plist",
+      "./geekShop/Environment/Info.plist",
+      "./geekShopUITests/Info.plist"
+      ], message: "Increased version number")
+    add_git_tag(tag: tag)
   end
 end
