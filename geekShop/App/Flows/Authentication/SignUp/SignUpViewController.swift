@@ -24,6 +24,7 @@ class SignUpViewController: UIViewController {
   // MARK: - Services
   
   private let registerService = NetworkServiceFactory().makeRegisterService()
+  private let metrica = YandexMetrica()
   
   // MARK: - Methods called by button tap
   
@@ -45,10 +46,15 @@ class SignUpViewController: UIViewController {
         bio: ""
       )
       
+      metrica.log(event: "REQUESTED_SIGN_UP")
+      
       registerService.register(data: userProfileData) { [weak self] response in
         UserDefaults.standard.set(login, forKey: "currentUserLogin")
+        self?.metrica.log(event: "SIGN_UP_SUCCESSFUL")
         self?.showSuccessfullRegistrationAlert()
       }
+    } else {
+      showUnsuccessfullRegistrationAlert()
     }
   }
   
@@ -80,6 +86,16 @@ class SignUpViewController: UIViewController {
     let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] action in
       self?.navigationController?.popViewController(animated: true)
     }
+    alertController.addAction(okAction)
+    present(alertController, animated: true, completion: nil)
+  }
+  
+  /// Shows a UIAlertController to inform user that not all fields are filled
+  private func showUnsuccessfullRegistrationAlert() {
+    let alertController = UIAlertController(title: "Error",
+                                            message: "Please fill all fields and check that both passwords match",
+                                            preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default)
     alertController.addAction(okAction)
     present(alertController, animated: true, completion: nil)
   }
