@@ -12,3 +12,5 @@ This project shows features learned during the course "Professional Swift Develo
 + API calls via Alamofire to a mock server written on Swift
 (https://github.com/IgorChernyshov/geekShopMockServer)
 + Code is documented (headers, descriptions, comments)
++ Added Yandex Mobile Metrics analytics tool
++ CI is provided via Fastlane
