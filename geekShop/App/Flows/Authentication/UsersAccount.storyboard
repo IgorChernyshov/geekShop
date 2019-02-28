@@ -132,9 +132,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lpo-sF-T5U">
-                                <rect key="frame" x="87" y="88" width="200" height="196"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lpo-sF-T5U">
+                                <rect key="frame" x="87.5" y="84" width="200" height="196"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="w0b-zd-5F2" userLabel="Login Text" customClass="GreenPlaceholderTextField" customModule="geekShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
@@ -206,6 +205,11 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lpo-sF-T5U" firstAttribute="centerX" secondItem="ArT-cg-IWT" secondAttribute="centerX" id="D0M-eQ-P4D"/>
+                            <constraint firstItem="iK9-nB-ybL" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lpo-sF-T5U" secondAttribute="bottom" constant="20" id="Dkh-sr-mj1"/>
+                            <constraint firstItem="lpo-sF-T5U" firstAttribute="top" secondItem="iK9-nB-ybL" secondAttribute="top" constant="20" id="R2E-oi-bQH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iK9-nB-ybL"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="Cy0-BF-vIf"/>
